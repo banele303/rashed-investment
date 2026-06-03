@@ -6,7 +6,7 @@ export default function About() {
     {
       name: "Ndivhuwo Khangale",
       role: "Executive Director",
-      image: "/extracted_images/image_10.png",
+      image: "/dad.png",
       bio: "Seasoned serial entrepreneur, Business Development champion, and Marketing Communications Specialist with over 26 years of corporate leadership experience.",
       details: [
         "Former spokesperson for the South African Minister of Energy.",
@@ -19,7 +19,7 @@ export default function About() {
     {
       name: "Vhahangwele Khangale",
       role: "Technical Director",
-      image: "/extracted_images/image_11.png",
+      image: "/lady.jpeg",
       bio: "Registered professional Architectural Technologist with 11 years post-registration experience and over 15 years in built environment consulting and construction management.",
       details: [
         "MD of UBK Projects and UBKRothoma Projects (architecture, engineering, and construction).",
@@ -32,7 +32,7 @@ export default function About() {
     {
       name: "Ompha Monica Khangale",
       role: "Marketing Communications Executive",
-      image: "/extracted_images/image_15.png", // Fallback to square-ish 15.png or 16.png
+      image: "/small%20daddy.png", // Updated team image
       bio: "Dynamic and creatively-driven Marketing and Communications professional with 8+ years of experience across corporate, public, and entertainment industries.",
       details: [
         "Collaborated with large-scale SA productions (Idols SA, Big Brother Mzansi, SAMA, Metro FM).",

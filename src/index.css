@@ -1,18 +1,18 @@
 /* CSS Design System for Rashed Investments Website */
 :root {
-  --bg-primary: #0A0D14;
-  --bg-secondary: #121824;
-  --bg-tertiary: #1A2333;
-  --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
-  --accent-gold: #D4AF37;
-  --accent-gold-hover: #F3CD57;
-  --accent-bronze: #C5A880;
-  --accent-glow: rgba(212, 175, 55, 0.15);
+  --bg-primary: #1A1D1A;
+  --bg-secondary: #000000;
+  --bg-tertiary: #1A1D1A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #F8FAFC;
+  --text-muted: #CCCCCC;
+  --accent-gold: #7CA27A; /* Muted Sage Green used as primary accent */
+  --accent-gold-hover: #8FA88F;
+  --accent-bronze: #7CA27A;
+  --accent-glow: rgba(124, 162, 122, 0.15);
   --border-color: rgba(255, 255, 255, 0.07);
-  --border-gold: rgba(212, 175, 55, 0.3);
-  --card-glass: rgba(18, 24, 36, 0.8);
+  --border-gold: rgba(124, 162, 122, 0.3);
+  --card-glass: rgba(26, 29, 26, 0.8);
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -85,7 +85,7 @@ a {
 
 /* Gold Gradient text */
 .text-gold-gradient {
-  background: linear-gradient(135deg, var(--accent-bronze) 0%, var(--accent-gold) 50%, #FFF5D6 100%);
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -183,16 +183,16 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-bronze) 0%, var(--accent-gold) 100%);
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
   color: var(--bg-primary);
   border: none;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 20px rgba(124, 162, 122, 0.25);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
-  background: linear-gradient(135deg, #E5C048 0%, var(--accent-gold-hover) 100%);
+  box-shadow: 0 6px 25px rgba(124, 162, 122, 0.4);
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
 }
 
 .btn-secondary {
