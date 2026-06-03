@@ -90,6 +90,30 @@ export default function Home() {
         </div>
       </section>
 
+{/* Team Showcase */}
+<section style={styles.teamSection}>
+  <div className="container" style={styles.teamContainer}>
+    <h2 className="section-title" style={styles.teamTitle}>Our Leadership Team</h2>
+    <div style={styles.teamGrid}>
+      <div style={styles.teamCard}>
+        <img src="/dad.png" alt="Founder" style={styles.teamImg} />
+        <h4 style={styles.teamName}>Ndivhuwo Khangale</h4>
+        <p style={styles.teamRole}>Founder &amp; CEO</p>
+      </div>
+      <div style={styles.teamCard}>
+        <img src="/lady.jpeg" alt="Co-Founder" style={styles.teamImg} />
+        <h4 style={styles.teamName}>Jane Doe</h4>
+        <p style={styles.teamRole}>Co‑Founder</p>
+      </div>
+      <div style={styles.teamCard}>
+        <img src="/small daddy.png" alt="Operations" style={styles.teamImg} />
+        <h4 style={styles.teamName}>John Smith</h4>
+        <p style={styles.teamRole}>Operations Lead</p>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Overview & Pillars */}
       <section style={styles.pillarsSection}>
         <div className="container">
@@ -124,7 +148,7 @@ export default function Home() {
           <div style={styles.legacyVisual}>
             <div style={styles.legacyImageFrame}>
               <img 
-                src="/extracted_images/image_12.png" 
+                src="/dad.png" 
                 alt="Traditional Land Heritage" 
                 style={styles.legacyImg}
                 onError={(e) => {
@@ -444,6 +468,65 @@ const styles = {
     marginBottom: '2rem',
   },
   csiList: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1.25rem',
+    listStyleType: 'none',
+  },
+  csiListLi: {
+    fontFamily: 'var(--font-display)',
+    fontSize: '1.1rem',
+    color: 'var(--text-primary)',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.75rem',
+  },
+  // Team Showcase styles
+  teamSection: {
+    background: 'var(--bg-primary)',
+    padding: '4rem 0',
+  },
+  teamContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  teamTitle: {
+    marginBottom: '2rem',
+    textAlign: 'center',
+  },
+  teamGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+    gap: '2rem',
+    width: '100%',
+  },
+  teamCard: {
+    background: 'rgba(255,255,255,0.05)',
+    borderRadius: '12px',
+    padding: '1.5rem',
+    textAlign: 'center',
+    backdropFilter: 'blur(5px)',
+  },
+  teamImg: {
+    width: '120px',
+    height: '120px',
+    borderRadius: '50%',
+    objectFit: 'cover',
+    marginBottom: '1rem',
+  },
+  teamName: {
+    fontSize: '1.2rem',
+    fontWeight: 600,
+    color: '#FFFFFF',
+    marginBottom: '0.5rem',
+  },
+  teamRole: {
+    fontSize: '0.9rem',
+    color: 'var(--text-secondary)',
+  },
+}
+
     display: 'flex',
     flexDirection: 'column',
     gap: '1.25rem',
