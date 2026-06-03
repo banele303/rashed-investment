@@ -1,5 +1,8 @@
 import React from 'react'
-import { ArrowRight, Zap, Droplet, Shield, Award, BookOpen, HeartHandshake } from 'lucide-react'
+import { ArrowRight, Zap, Droplet, Shield, Award, BookOpen, HeartHandshake } from 'lucide-react';
+import Carousel from '../components/Carousel';
+import Testimonials from '../components/Testimonials';
+import Gallery from '../components/Gallery';
 import { Link } from 'react-router-dom'
 
 export default function Home() {
@@ -88,7 +91,15 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+              </section>
+
+        {/* Image Carousel */}
+        <Carousel />
+        {/* Testimonials */}
+        <Testimonials />
+        {/* Image Gallery */}
+        <Gallery />
+        {/* Overview & Pillars */}
 
 {/* Team Showcase */}
 <section style={styles.teamSection}>
