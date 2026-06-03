@@ -36,7 +36,7 @@ function Navigation() {
         {/* Logo */}
         <Link to="/" style={styles.logoLink}>
           <img 
-            src="/extracted_images/image_20.png" 
+            src="/rashed-logo.png" 
             alt="Rashed Investments" 
             style={styles.logoImg}
             onError={(e) => {
@@ -125,7 +125,7 @@ function Footer() {
         <div style={styles.footerBrand}>
           <div style={styles.footerLogo}>
             <img 
-              src="/extracted_images/image_20.png" 
+              src="/rashed-logo.png" 
               alt="Rashed Logo" 
               style={styles.logoImg}
               onError={(e) => {
