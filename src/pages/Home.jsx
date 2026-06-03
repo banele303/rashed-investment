@@ -3,7 +3,8 @@ import { ArrowRight, Zap, Droplet, Shield, Award, BookOpen, HeartHandshake } fro
 import Carousel from '../components/Carousel';
 import Testimonials from '../components/Testimonials';
 import Gallery from '../components/Gallery';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function Home() {
   const pillars = [
@@ -538,10 +539,7 @@ const styles = {
   },
 }
 
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1.25rem',
-    listStyleType: 'none',
+
   },
   csiListLi: {
     fontFamily: 'var(--font-display)',
