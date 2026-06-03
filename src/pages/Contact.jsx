@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Phone, Mail, MapPin, Send, CheckCircle2 } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -44,6 +45,10 @@ export default function Contact() {
 
   return (
     <div style={styles.page}>
+      <Helmet>
+        <title>Contact Us | Rashed Investments</title>
+        <meta name="description" content="Get in touch with Rashed Investments for property development, joint ventures, and sustainable infrastructure partnerships." />
+      </Helmet>
       {/* Contact Header */}
       <section style={styles.headerSection}>
         <div className="container" style={styles.headerContainer}>
@@ -67,6 +72,7 @@ export default function Contact() {
 
             <div style={styles.infoCards}>
               <div className="glass-panel" style={styles.infoCard}>
+                <img src="/dad.png" alt="Ndivhuwo Khangale" style={styles.contactAvatar} />
                 <h3 style={styles.directorName}>Ndivhuwo Khangale</h3>
                 <p style={styles.directorRole}>Executive Director</p>
                 <div style={styles.contactRow}>
@@ -80,6 +86,7 @@ export default function Contact() {
               </div>
 
               <div className="glass-panel" style={styles.infoCard}>
+                <img src="/lady.jpeg" alt="Vhahangwele Khangale" style={styles.contactAvatar} />
                 <h3 style={styles.directorName}>Vhahangwele Khangale</h3>
                 <p style={styles.directorRole}>Technical Director</p>
                 <div style={styles.contactRow}>
@@ -287,6 +294,13 @@ const styles = {
   infoCard: {
     padding: '2rem',
     borderRadius: '12px',
+  },
+  contactAvatar: {
+    width: '60px',
+    height: '60px',
+    borderRadius: '50%',
+    objectFit: 'cover',
+    marginBottom: '1rem',
   },
   directorName: {
     fontSize: '1.35rem',

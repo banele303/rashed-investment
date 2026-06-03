@@ -1,5 +1,6 @@
 import React from 'react'
 import { Award, Briefcase, GraduationCap, Linkedin, Mail } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 
 export default function About() {
   const team = [
@@ -46,6 +47,10 @@ export default function About() {
 
   return (
     <div style={styles.page}>
+      <Helmet>
+        <title>About Us | Rashed Investments</title>
+        <meta name="description" content="Learn about Rashed Investments, a 100% Black-owned property development company advancing rural communities." />
+      </Helmet>
       {/* Intro Hero */}
       <section style={styles.introSection}>
         <div className="container" style={styles.introContainer}>

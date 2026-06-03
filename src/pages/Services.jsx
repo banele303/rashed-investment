@@ -1,5 +1,6 @@
 import React from 'react'
 import { CheckCircle, Search, Compass, DollarSign, HardHat, ShieldCheck, ShoppingBag, Droplet, Fuel, Home as HomeIcon, Sun, Heart } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 
 export default function Services() {
   const lifecycle = [
@@ -71,6 +72,18 @@ export default function Services() {
 
   return (
     <div style={styles.page}>
+      <Helmet>
+        <title>Our Services | Rashed Investments</title>
+        <meta name="description" content="Discover our turnkey solutions in retail, commercial, water, sanitation, and renewable energy sectors." />
+      </Helmet>
+      
+      {/* Vision Banner */}
+      <section style={styles.visionBanner}>
+        <div className="container" style={styles.visionContainer}>
+          <h2 style={styles.visionTitle}>Our Vision</h2>
+          <p style={styles.visionText}>To lead the transformation of rural communities through high-quality, sustainable infrastructure and development, fostering economic growth and restoring dignity.</p>
+        </div>
+      </section>
       {/* Services Header */}
       <section style={styles.headerSection}>
         <div className="container" style={styles.headerContainer}>
@@ -149,6 +162,23 @@ export default function Services() {
 const styles = {
   page: {
     backgroundColor: 'var(--bg-primary)',
+  },
+  visionBanner: {
+    background: 'var(--bg-secondary)',
+    padding: '3rem 0',
+    textAlign: 'center',
+  },
+  visionContainer: {
+    maxWidth: '800px',
+    margin: '0 auto',
+  },
+  visionTitle: {
+    fontSize: '2rem',
+    color: 'var(--accent-gold)',
+    marginBottom: '1rem',
+  },
+  visionText: {
+    fontSize: '1.2rem',
   },
   headerSection: {
     background: 'radial-gradient(circle at 90% 10%, rgba(212, 175, 55, 0.05) 0%, transparent 50%)',

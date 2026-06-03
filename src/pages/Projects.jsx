@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Check, ShieldCheck, MapPin, Eye, ShoppingCart, Award, GraduationCap, Users } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import Gallery from '../components/Gallery'
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -30,6 +32,10 @@ export default function Projects() {
 
   return (
     <div style={styles.page}>
+      <Helmet>
+        <title>Our Projects | Rashed Investments</title>
+        <meta name="description" content="Explore Rashed Investments' flagship projects including the Urban Village Lifestyle Shopping Centre." />
+      </Helmet>
       {/* Hero Head */}
       <section style={styles.projectHero}>
         <div className="container" style={styles.projectHeroContainer}>
@@ -121,6 +127,9 @@ export default function Projects() {
                     <span style={styles.specVal}>On-site Treatment</span>
                   </div>
                 </div>
+              </div>
+              <div style={{ marginTop: '4rem' }}>
+                <Gallery />
               </div>
             </div>
           )}
