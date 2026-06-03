@@ -540,13 +540,5 @@ const styles = {
 }
 
 
-  },
-  csiListLi: {
-    fontFamily: 'var(--font-display)',
-    fontSize: '1.1rem',
-    color: 'var(--text-primary)',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '0.75rem',
-  }
+
 }
