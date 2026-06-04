@@ -110,7 +110,7 @@ export default function BlogPost() {
       </Helmet>
 
       {/* Massive Immersive Hero Banner */}
-      <div style={{...styles.heroImage, backgroundImage: \`url('\${post.image}')\`}}>
+      <div style={{...styles.heroImage, backgroundImage: `url(${post.image})`}}>
         <div style={styles.heroOverlay}></div>
         <div className="container" style={styles.heroContent}>
           <Link to="/blog" style={styles.backLinkHero}>
