@@ -290,7 +290,7 @@ const styles = {
     gap: '0.85rem',
   },
   logoImg: {
-    height: '46px',
+    height: '64px',
     width: 'auto',
   },
   desktopNav: {

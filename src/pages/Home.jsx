@@ -349,7 +349,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 60%, var(--bg-secondary) 100%)',
+    background: 'linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.82) 60%, var(--bg-secondary) 100%)',
     zIndex: 1,
   },
   heroContainer: {
