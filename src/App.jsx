@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { Building2, Info, LayoutList, Hammer, Phone, ArrowUpRight, Menu, X } from 'lucide-react'
+import { Building2, Info, LayoutList, Hammer, Phone, ArrowUpRight, Menu, X, Landmark, ExternalLink } from 'lucide-react'
 import { HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -19,7 +19,20 @@ function ScrollToTop() {
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const isActive = (path) => location.pathname === path
 
@@ -32,13 +45,18 @@ function Navigation() {
   ]
 
   return (
-    <nav style={styles.navBar}>
+    <nav style={{
+      ...styles.navBar,
+      background: scrolled ? 'rgba(7, 9, 14, 0.92)' : 'rgba(7, 9, 14, 0.7)',
+      borderBottom: scrolled ? '1px solid var(--border-gold)' : '1px solid rgba(255, 255, 255, 0.05)',
+      boxShadow: scrolled ? '0 10px 30px rgba(0,0,0,0.5)' : 'none',
+    }}>
       <div className="container" style={styles.navContainer}>
         {/* Logo */}
         <Link to="/" style={styles.logoLink}>
           <img 
             src="/rashed-logo.png" 
-            alt="Rashed Investments" 
+            alt="Rashed Investments Logo" 
             style={styles.logoImg}
             onError={(e) => {
               e.target.style.display = 'none';
@@ -51,7 +69,7 @@ function Navigation() {
         </Link>
 
         {/* Desktop Nav */}
-        <div style={styles.desktopNav}>
+        <div style={styles.desktopNav} className="nav-bar-desktop">
           {navLinks.map((link) => {
             const Icon = link.icon
             const active = isActive(link.path)
@@ -61,24 +79,25 @@ function Navigation() {
                 to={link.path} 
                 style={{
                   ...styles.navLink,
-                  color: active ? 'var(--accent-gold)' : 'var(--text-primary)',
-                  borderColor: active ? 'var(--accent-gold)' : 'transparent',
+                  color: active ? 'var(--accent-gold)' : 'var(--text-secondary)',
+                  fontWeight: active ? '700' : '500',
                 }}
               >
-                <Icon size={16} />
+                <Icon size={14} style={{ color: active ? 'var(--accent-gold)' : 'var(--text-muted)' }} />
                 <span>{link.label}</span>
+                {active && <span style={styles.activeIndicator}></span>}
               </Link>
             )
           })}
           <Link to="/contact" className="btn-premium btn-primary" style={styles.navBtn}>
             <span>Get in Touch</span>
-            <ArrowUpRight size={16} />
+            <ArrowUpRight size={14} />
           </Link>
         </div>
 
         {/* Mobile Toggle */}
-        <button style={styles.mobileToggle} onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        <button style={styles.mobileToggle} onClick={() => setIsOpen(!isOpen)} className="nav-toggle-mobile">
+          {isOpen ? <X size={24} color="var(--accent-gold)" /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -96,10 +115,11 @@ function Navigation() {
                 style={{
                   ...styles.mobileNavLink,
                   color: active ? 'var(--accent-gold)' : 'var(--text-primary)',
-                  background: active ? 'rgba(212, 175, 55, 0.05)' : 'transparent',
+                  background: active ? 'rgba(212, 175, 55, 0.08)' : 'transparent',
+                  borderLeft: active ? '3px solid var(--accent-gold)' : '3px solid transparent',
                 }}
               >
-                <Icon size={18} />
+                <Icon size={16} />
                 <span>{link.label}</span>
               </Link>
             )
@@ -139,12 +159,16 @@ function Footer() {
             </div>
           </div>
           <p style={styles.footerBrandDesc}>
-            100% Black-owned property development firm specializing in rural & traditional land development. Advancing sustainable economic activities through innovative basic services, renewable energy, and modern commercial facilities.
+            A 100% Black-owned property development and investment firm specializing in rural and traditional land developments. Restoring community dignity with eco-friendly infrastructure, solar grids, and clean water treatment systems.
           </p>
+          <div style={styles.nationalAlignment}>
+            <Landmark size={16} color="var(--accent-gold)" />
+            <span style={{ fontSize: '0.85rem', color: 'var(--accent-gold)', fontWeight: 600 }}>Aligned to the National Development Plan (NDP) 2030</span>
+          </div>
         </div>
 
         <div>
-          <h4 style={styles.footerSectionTitle}>Quick Navigation</h4>
+          <h4 style={styles.footerSectionTitle}>Quick Links</h4>
           <div style={styles.footerLinksGrid}>
             <Link to="/" style={styles.footerLink}>Overview</Link>
             <Link to="/about" style={styles.footerLink}>About & Leadership</Link>
@@ -161,21 +185,23 @@ function Footer() {
             Homes Haven, Krugersdorp, 1739<br />
             South Africa
           </p>
+          <p style={styles.footerContactText}>
+            <span style={{ color: 'var(--accent-gold)' }}>General Inquiry:</span><br />
+            <a href="mailto:info@rashed.co.za" style={styles.inlineMail}>info@rashed.co.za</a>
+          </p>
         </div>
 
         <div>
-          <h4 style={styles.footerSectionTitle}>Direct Contact</h4>
+          <h4 style={styles.footerSectionTitle}>Direct Outreach</h4>
           <p style={styles.footerContactText}>
             <strong>Ndivhuwo Khangale</strong><br />
-            072 254 9448 | ndivhuwo@rashed.co.za
+            <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Executive Director</span><br />
+            <a href="tel:0722549448" style={styles.footerTel}>072 254 9448</a> | <a href="mailto:ndivhuwo@rashed.co.za" style={styles.inlineMail}>ndivhuwo@rashed.co.za</a>
           </p>
           <p style={styles.footerContactText}>
             <strong>Vhahangwele Khangale</strong><br />
-            067 285 5095 | vhahangwele@rashed.co.za
-          </p>
-          <p style={styles.footerContactText}>
-            <strong>General Inquiry</strong><br />
-            info@rashed.co.za
+            <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Technical Director</span><br />
+            <a href="tel:0672855095" style={styles.footerTel}>067 285 5095</a> | <a href="mailto:vhahangwele@rashed.co.za" style={styles.inlineMail}>vhahangwele@rashed.co.za</a>
           </p>
         </div>
       </div>
@@ -183,7 +209,7 @@ function Footer() {
       <div style={styles.footerBottom}>
         <div className="container" style={styles.footerBottomContainer}>
           <p style={styles.copyrightText}>
-            &copy; {new Date().getFullYear()} Rashed Investments. All Rights Reserved. Aligned to the NDP 2030.
+            &copy; {new Date().getFullYear()} Rashed Investments. All Rights Reserved. 
           </p>
           <div style={styles.footerLegal}>
             <span style={styles.legalLink}>Privacy Policy</span>
@@ -223,6 +249,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
+    backgroundColor: 'var(--bg-primary)',
   },
   mainContent: {
     flex: '1 0 auto',
@@ -234,12 +261,12 @@ const styles = {
     left: 0,
     width: '100%',
     height: '80px',
-    background: 'rgba(10, 13, 20, 0.85)',
-    backdropFilter: 'blur(16px)',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+    backdropFilter: 'blur(20px)',
+    WebkitBackdropFilter: 'blur(20px)',
     zIndex: 1000,
     display: 'flex',
     alignItems: 'center',
+    transition: 'var(--transition-smooth)',
   },
   navContainer: {
     display: 'flex',
@@ -250,10 +277,10 @@ const styles = {
   logoLink: {
     display: 'flex',
     alignItems: 'center',
-    gap: '0.75rem',
+    gap: '0.85rem',
   },
   logoImg: {
-    height: '42px',
+    height: '46px',
     width: 'auto',
   },
   logoTextWrapper: {
@@ -263,85 +290,98 @@ const styles = {
   logoTitle: {
     fontFamily: 'var(--font-display)',
     fontWeight: 800,
-    fontSize: '1.4rem',
+    fontSize: '1.45rem',
     color: '#FFFFFF',
-    letterSpacing: '0.05em',
+    letterSpacing: '0.04em',
     lineHeight: 1,
   },
   logoSubtitle: {
     fontFamily: 'var(--font-display)',
-    fontWeight: 600,
-    fontSize: '0.65rem',
+    fontWeight: 700,
+    fontSize: '0.62rem',
     color: 'var(--accent-gold)',
-    letterSpacing: '0.25em',
-    marginTop: '2px',
+    letterSpacing: '0.27em',
+    marginTop: '3px',
   },
   desktopNav: {
     display: 'flex',
     alignItems: 'center',
-    gap: '1.75rem',
+    gap: '2rem',
   },
   navLink: {
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
     fontFamily: 'var(--font-display)',
-    fontWeight: 500,
-    fontSize: '0.95rem',
+    fontSize: '0.92rem',
     padding: '0.5rem 0',
-    borderBottom: '2px solid transparent',
+    position: 'relative',
     transition: 'var(--transition-fast)',
   },
+  activeIndicator: {
+    position: 'absolute',
+    bottom: '-4px',
+    left: 0,
+    right: 0,
+    height: '2px',
+    background: 'var(--accent-gold)',
+    borderRadius: '2px',
+    boxShadow: '0 0 8px var(--accent-gold)',
+  },
   navBtn: {
-    padding: '0.6rem 1.25rem',
-    fontSize: '0.9rem',
+    padding: '0.55rem 1.15rem',
+    fontSize: '0.85rem',
     borderRadius: '6px',
   },
   mobileToggle: {
     display: 'none',
     background: 'none',
     border: 'none',
-    color: '#FFFFFF',
     cursor: 'pointer',
+    padding: '0.5rem',
   },
   mobileDrawer: {
     position: 'absolute',
     top: '80px',
     left: 0,
     width: '100%',
-    background: 'rgba(10, 13, 20, 0.98)',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+    background: 'rgba(7, 9, 14, 0.98)',
+    borderBottom: '1px solid var(--border-gold)',
     padding: '1.5rem',
     display: 'flex',
     flexDirection: 'column',
-    gap: '1rem',
+    gap: '0.75rem',
     zIndex: 999,
   },
   mobileNavLink: {
     display: 'flex',
     alignItems: 'center',
     gap: '0.75rem',
-    padding: '0.85rem 1rem',
+    padding: '0.9rem 1.25rem',
     borderRadius: '8px',
     fontFamily: 'var(--font-display)',
-    fontWeight: 500,
+    fontWeight: 600,
+    fontSize: '0.98rem',
+    transition: 'var(--transition-fast)',
   },
   mobileNavBtn: {
     width: '100%',
     marginTop: '0.5rem',
-    padding: '0.85rem',
+    padding: '0.9rem',
   },
   footer: {
-    background: '#07090E',
-    borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-    padding: '5rem 0 0 0',
+    background: '#040508',
+    borderTop: '1px solid rgba(255, 255, 255, 0.04)',
+    padding: '6rem 0 0 0',
     marginTop: 'auto',
+    position: 'relative',
+    zIndex: 2,
   },
   footerGrid: {
     display: 'grid',
-    gridTemplateColumns: '1.5fr 1fr 1fr 1fr',
-    gap: '3rem',
-    paddingBottom: '4rem',
+    gridTemplateColumns: '1.3fr 0.8fr 1fr 1.1fr',
+    gap: '3.5rem',
+    paddingBottom: '5rem',
   },
   footerBrand: {
     display: 'flex',
@@ -351,88 +391,109 @@ const styles = {
   footerLogo: {
     display: 'flex',
     alignItems: 'center',
-    gap: '0.75rem',
+    gap: '0.85rem',
   },
   footerBrandDesc: {
     fontSize: '0.95rem',
+    lineHeight: '1.65',
+    color: 'var(--text-secondary)',
     maxWidth: '360px',
   },
+  nationalAlignment: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.6rem',
+    background: 'rgba(212, 175, 55, 0.05)',
+    border: '1px solid rgba(212, 175, 55, 0.1)',
+    padding: '0.6rem 1rem',
+    borderRadius: '6px',
+    width: 'fit-content',
+  },
   footerSectionTitle: {
-    fontSize: '1.1rem',
+    fontSize: '1.05rem',
     color: '#FFFFFF',
-    marginBottom: '1.5rem',
+    marginBottom: '1.75rem',
     fontFamily: 'var(--font-display)',
+    fontWeight: 700,
+    letterSpacing: '0.05em',
+    textTransform: 'uppercase',
   },
   footerLinksGrid: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '0.75rem',
+    gap: '0.9rem',
   },
   footerLink: {
-    color: 'var(--text-secondary)',
+    color: 'var(--text-muted)',
     fontSize: '0.95rem',
     transition: 'var(--transition-fast)',
+    display: 'inline-block',
+    width: 'fit-content',
+    borderBottom: '1px solid transparent',
+    paddingBottom: '2px',
+    ':hover': {
+      color: 'var(--accent-gold)',
+      borderBottom: '1px solid var(--accent-gold)',
+    }
   },
   footerContactText: {
     fontSize: '0.95rem',
-    marginBottom: '1.25rem',
+    lineHeight: '1.65',
+    color: 'var(--text-secondary)',
+    marginBottom: '1.5rem',
+  },
+  footerTel: {
+    color: 'var(--text-primary)',
+    fontWeight: 600,
+  },
+  inlineMail: {
+    color: 'var(--accent-gold)',
+    textDecoration: 'underline',
   },
   footerBottom: {
-    borderTop: '1px solid rgba(255, 255, 255, 0.03)',
+    borderTop: '1px solid rgba(255, 255, 255, 0.02)',
     padding: '2rem 0',
-    background: '#040508',
+    background: '#020304',
   },
   footerBottomContainer: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexWrap: 'wrap',
-    gap: '1rem',
+    gap: '1.25rem',
   },
   copyrightText: {
-    fontSize: '0.85rem',
+    fontSize: '0.88rem',
     color: 'var(--text-muted)',
   },
   footerLegal: {
     display: 'flex',
-    gap: '1.5rem',
-    fontSize: '0.85rem',
+    gap: '2rem',
+    fontSize: '0.88rem',
     color: 'var(--text-muted)',
   },
   legalLink: {
     cursor: 'pointer',
     transition: 'var(--transition-fast)',
-  },
-  /* Media Query Helpers simulated in styles */
-  '@media (max-width: 991px)': {
-    footerGrid: {
-      gridTemplateColumns: '1fr 1fr',
+    ':hover': {
+      color: 'var(--accent-gold)',
     }
   },
-  '@media (max-width: 768px)': {
-    mobileToggle: {
-      display: 'block',
-    },
-    desktopNav: {
-      display: 'none',
-    },
-    footerGrid: {
-      gridTemplateColumns: '1fr',
-      gap: '2rem',
-    }
-  }
 }
 
-// Inline CSS for Responsive Simulation in JavaScript
+// Global responsive simulator styling injection
 const styleSheet = document.createElement("style")
 styleSheet.innerText = `
-  @media (max-width: 900px) {
+  @media (max-width: 991px) {
     .nav-bar-desktop { display: none !important; }
     .nav-toggle-mobile { display: block !important; }
-    footer .container { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+    footer .container { grid-template-columns: 1fr 1fr !important; gap: 3rem !important; }
   }
   @media (max-width: 600px) {
-    footer .container { grid-template-columns: 1fr !important; }
+    footer .container { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  }
+  a:hover {
+    color: var(--accent-gold-hover) !important;
   }
 `
 document.head.appendChild(styleSheet)

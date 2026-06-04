@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckCircle, Search, Compass, DollarSign, HardHat, ShieldCheck, ShoppingBag, Droplet, Fuel, Home as HomeIcon, Sun, Heart } from 'lucide-react'
+import { Search, Compass, DollarSign, HardHat, ShieldCheck, ShoppingBag, Droplet, Fuel, Home as HomeIcon, Sun, Heart, CheckCircle2 } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 
 export default function Services() {
@@ -8,31 +8,31 @@ export default function Services() {
       step: "01",
       title: "Pre-Feasibility & Feasibility",
       icon: Search,
-      desc: "Comprehensive analysis including geotechnical surveys, environmental impact assessments (EIA), town planning, and traditional/municipal consultations to ensure project viability."
+      desc: "Conducting rigorous site studies including geo-technical drilling, zoning verification, Environmental Impact Assessments (EIA), and structured consultations with traditional leaders and municipal authorities."
     },
     {
       step: "02",
-      title: "Bespoke Property Development",
+      title: "Bespoke Spatial Design",
       icon: Compass,
-      desc: "Translating conceptual layouts into structural reality. Coordinating architectural technologists, structural engineers, and spatial planners to design eco-friendly developments."
+      desc: "Translating conceptual visions into modern blueprints. Coordinating structural engineers, architectural technologists, and spatial planners to draft state-of-the-art, eco-conscious structures."
     },
     {
       step: "03",
-      title: "Joint-Venture & Investment",
+      title: "Joint-Venture & Capital Investment",
       icon: DollarSign,
-      desc: "Structuring capital investments and partnering with major banking systems, retail anchors, and public finance entities to fund multi-million-rand developments."
+      desc: "Structuring investments and partnering with major banking systems, national retail anchors, and government infrastructure funds to secure financing for high-impact developments."
     },
     {
       step: "04",
-      title: "Turnkey Construction",
+      title: "Turnkey Civil Construction",
       icon: HardHat,
-      desc: "Complete civil and architectural construction. Employing local labor forces, organizing artisan training, and maintaining high engineering and safety standards on site."
+      desc: "Executing the entire construction lifecycle safely and on time. Deploying local workforces, hosting accredited artisan academies, and enforcing premium engineering standards."
     },
     {
       step: "05",
-      title: "Operations & Maintenance",
+      title: "Operations & Facility Management",
       icon: ShieldCheck,
-      desc: "Long-term facility management, security coordination, water/waste system maintenance, and managing retail tenant operations to secure investment returns."
+      desc: "Providing ongoing property maintenance, security services, renewable energy monitoring, water treatment plant operations, and retail tenant leasing management."
     }
   ]
 
@@ -45,7 +45,7 @@ export default function Services() {
     {
       title: "Water & Sanitation",
       icon: Droplet,
-      color: "#38BDF8",
+      isGreen: true,
       desc: "Building specialized water treatment facilities and wastewater purification systems to support communities and secure water resource preservation."
     },
     {
@@ -61,6 +61,7 @@ export default function Services() {
     {
       title: "Renewable Energy (Solar)",
       icon: Sun,
+      isGreen: true,
       desc: "Supplementing grid infrastructure with localized photovoltaic solar panels and battery storage to power businesses and decrease load shedding pressure."
     },
     {
@@ -74,30 +75,36 @@ export default function Services() {
     <div style={styles.page}>
       <Helmet>
         <title>Our Services | Rashed Investments</title>
-        <meta name="description" content="Discover our turnkey solutions in retail, commercial, water, sanitation, and renewable energy sectors." />
+        <meta name="description" content="Discover Rashed Investments' property development process and structural sectors including commercial, solar energy, and water treatment." />
       </Helmet>
       
       {/* Vision Banner */}
       <section style={styles.visionBanner}>
         <div className="container" style={styles.visionContainer}>
-          <h2 style={styles.visionTitle}>Our Vision</h2>
-          <p style={styles.visionText}>To lead the transformation of rural communities through high-quality, sustainable infrastructure and development, fostering economic growth and restoring dignity.</p>
+          <div className="glow-badge-green" style={{ marginBottom: '1.25rem' }}>
+            <span>Corporate Vision</span>
+          </div>
+          <h2 style={styles.visionTitle}>Developing Dignified Spaces</h2>
+          <p style={styles.visionText}>
+            To lead the architectural and economic transformation of rural communities through high-quality, sustainable property developments, restoring dignity to historically underserved areas.
+          </p>
         </div>
       </section>
+
       {/* Services Header */}
       <section style={styles.headerSection}>
-        <div className="container" style={styles.headerContainer}>
+        <div className="container animate-fade-in" style={styles.headerContainer}>
           <span className="section-tag">Our Capabilities</span>
           <h1 className="section-title">
             Tailor-Made <span className="text-gold-gradient">Turnkey Solutions</span>
           </h1>
           <p style={styles.headerDesc}>
-            From initial geotechnical drilling and community leader consultations to the final tenant keys, Rashed Investments manages the complete life cycle of property and infrastructure development.
+            From initial geo-technical drilling and traditional leader consultations to final keys handover, Rashed Investments manages the complete life cycle of property and infrastructure development.
           </p>
         </div>
       </section>
 
-      {/* Development Lifecycle Process */}
+      {/* Process Lifecycle Section */}
       <section style={styles.lifecycleSection}>
         <div className="container">
           <div style={styles.subHeader}>
@@ -108,19 +115,21 @@ export default function Services() {
             </p>
           </div>
 
-          <div style={styles.lifecycleTimeline}>
+          <div className="lifecycle-timeline">
             {lifecycle.map((stage, idx) => {
               const Icon = stage.icon
               return (
-                <div key={idx} className="glass-panel animate-fade-in" style={styles.timelineItem}>
-                  <div style={styles.timelineHeader}>
-                    <span style={styles.timelineStep} className="text-gold-gradient">{stage.step}</span>
-                    <div style={styles.timelineIconWrapper}>
-                      <Icon size={22} color="var(--accent-gold)" />
+                <div key={idx} className="timeline-item">
+                  <div className="timeline-node">{stage.step}</div>
+                  <div className="glass-panel timeline-body">
+                    <div style={styles.timelineHeader}>
+                      <h3 style={styles.timelineTitle}>{stage.title}</h3>
+                      <div style={styles.timelineIconWrapper}>
+                        <Icon size={20} color="var(--accent-gold)" />
+                      </div>
                     </div>
+                    <p style={styles.timelineDesc}>{stage.desc}</p>
                   </div>
-                  <h3 style={styles.timelineTitle}>{stage.title}</h3>
-                  <p style={styles.timelineDesc}>{stage.desc}</p>
                 </div>
               )
             })}
@@ -132,7 +141,7 @@ export default function Services() {
       <section style={styles.sectorsSection}>
         <div className="container">
           <div style={styles.subHeader}>
-            <span className="section-tag">Sectors We Serve</span>
+            <span className="section-tag-green">Sectors We Serve</span>
             <h2 className="section-title">Infrastructure Development</h2>
             <p className="section-subtitle">
               We leverage our extensive builder network and regulatory knowledge to deliver custom infrastructure solutions across diverse sectors.
@@ -143,9 +152,17 @@ export default function Services() {
             {sectors.map((sector, idx) => {
               const Icon = sector.icon
               return (
-                <div key={idx} className="glass-panel" style={styles.sectorCard}>
-                  <div style={styles.sectorIconWrapper}>
-                    <Icon size={24} color="var(--accent-gold)" />
+                <div 
+                  key={idx} 
+                  className={sector.isGreen ? "glass-panel-green" : "glass-panel"} 
+                  style={styles.sectorCard}
+                >
+                  <div style={{
+                    ...styles.sectorIconWrapper,
+                    background: sector.isGreen ? 'rgba(82, 183, 136, 0.08)' : 'rgba(212, 175, 55, 0.08)',
+                    borderColor: sector.isGreen ? 'var(--border-green)' : 'var(--border-gold)',
+                  }}>
+                    <Icon size={24} color={sector.isGreen ? "var(--accent-green)" : "var(--accent-gold)"} />
                   </div>
                   <h3 style={styles.sectorTitle}>{sector.title}</h3>
                   <p style={styles.sectorDesc}>{sector.desc}</p>
@@ -162,26 +179,36 @@ export default function Services() {
 const styles = {
   page: {
     backgroundColor: 'var(--bg-primary)',
+    overflowX: 'hidden',
   },
   visionBanner: {
-    background: 'var(--bg-secondary)',
-    padding: '3rem 0',
+    background: '#040508',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.03)',
+    padding: '4.5rem 0',
     textAlign: 'center',
   },
   visionContainer: {
-    maxWidth: '800px',
+    maxWidth: '850px',
     margin: '0 auto',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   visionTitle: {
-    fontSize: '2rem',
-    color: 'var(--accent-gold)',
+    fontSize: '2.2rem',
+    color: '#FFFFFF',
     marginBottom: '1rem',
+    fontFamily: 'var(--font-display)',
+    fontWeight: 800,
   },
   visionText: {
     fontSize: '1.2rem',
+    lineHeight: '1.7',
+    color: 'var(--text-secondary)',
+    maxWidth: '720px',
   },
   headerSection: {
-    background: 'radial-gradient(circle at 90% 10%, rgba(212, 175, 55, 0.05) 0%, transparent 50%)',
+    background: 'radial-gradient(circle at 90% 10%, rgba(212, 175, 55, 0.04) 0%, transparent 60%)',
     textAlign: 'center',
     paddingTop: '6rem',
     paddingBottom: '4rem',
@@ -192,10 +219,14 @@ const styles = {
   },
   headerDesc: {
     fontSize: '1.2rem',
+    lineHeight: '1.75',
+    color: 'var(--text-secondary)',
     marginTop: '1.5rem',
   },
   lifecycleSection: {
     background: 'var(--bg-secondary)',
+    borderTop: '1px solid rgba(255,255,255,0.02)',
+    borderBottom: '1px solid rgba(255,255,255,0.02)',
   },
   subHeader: {
     textAlign: 'center',
@@ -204,33 +235,12 @@ const styles = {
     alignItems: 'center',
     marginBottom: '5rem',
   },
-  lifecycleTimeline: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '2rem',
-    position: 'relative',
-    maxWidth: '900px',
-    margin: '0 auto',
-  },
-  timelineItem: {
-    padding: '2.5rem',
-    borderRadius: '16px',
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-  },
   timelineHeader: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
     marginBottom: '1.25rem',
-  },
-  timelineStep: {
-    fontSize: '2rem',
-    fontWeight: 800,
-    fontFamily: 'var(--font-display)',
   },
   timelineIconWrapper: {
     width: '44px',
@@ -240,41 +250,47 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid rgba(212, 175, 55, 0.15)',
+    border: '1px solid var(--border-gold)',
   },
   timelineTitle: {
-    fontSize: '1.4rem',
-    fontWeight: 700,
-    marginBottom: '0.75rem',
+    fontSize: '1.45rem',
+    fontWeight: 800,
+    color: '#FFFFFF',
   },
   timelineDesc: {
     fontSize: '1.05rem',
+    lineHeight: '1.7',
+    color: 'var(--text-secondary)',
   },
-  sectorsSection: {},
+  sectorsSection: {
+    background: 'var(--bg-primary)',
+  },
   sectorCard: {
-    padding: '2.5rem',
-    borderRadius: '16px',
+    padding: '3rem 2.5rem',
+    borderRadius: '20px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
   },
   sectorIconWrapper: {
-    width: '50px',
-    height: '50px',
-    borderRadius: '12px',
-    background: 'rgba(212, 175, 55, 0.1)',
+    width: '56px',
+    height: '56px',
+    borderRadius: '14px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: '1.5rem',
-    border: '1px solid rgba(212, 175, 55, 0.2)',
+    marginBottom: '2rem',
+    border: '1px solid transparent',
   },
   sectorTitle: {
-    fontSize: '1.3rem',
-    fontWeight: 700,
+    fontSize: '1.4rem',
+    fontWeight: 800,
+    color: '#FFFFFF',
     marginBottom: '1rem',
   },
   sectorDesc: {
-    fontSize: '0.95rem',
+    fontSize: '0.98rem',
+    lineHeight: '1.65',
+    color: 'var(--text-secondary)',
   }
 }

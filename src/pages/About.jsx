@@ -1,46 +1,50 @@
 import React from 'react'
-import { Award, Briefcase, GraduationCap, Linkedin, Mail } from 'lucide-react'
+import { Award, Briefcase, GraduationCap, Linkedin, Mail, Phone, ExternalLink } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 
 export default function About() {
   const team = [
     {
       name: "Ndivhuwo Khangale",
-      role: "Executive Director",
-      image: "/dad.png",
+      role: "Executive Director & CEO",
+      image: "/director_ndivhuwo.png",
+      email: "ndivhuwo@rashed.co.za",
+      phone: "072 254 9448",
       bio: "Seasoned serial entrepreneur, Business Development champion, and Marketing Communications Specialist with over 26 years of corporate leadership experience.",
       details: [
-        "Former spokesperson for the South African Minister of Energy.",
-        "Responsible for content development at Eskom for the Chairman and CEO.",
-        "Former Content Manager for the SABC and founding journalist for the government magazine Vuk'unzele.",
-        "Managing Director of RPGenX (Water, Sanitation, and Renewable Energy).",
-        "Honours degree in Journalism and Media Studies from Wits University."
+        "Former spokesperson for the South African Minister of Energy and Director of Communications.",
+        "Created executive communications and speech writing for Eskom Board Chairpersons and CEOs.",
+        "Former Content Manager for the SABC and founding journalist for the national magazine Vuk'unzele.",
+        "Managing Director of RPGenX, a firm specializing in water, sanitation, and renewable energy grids.",
+        "Honours graduate in Journalism and Media Studies from Wits University, with business credentials from leading institutions."
       ]
     },
     {
       name: "Vhahangwele Khangale",
       role: "Technical Director",
-      image: "/lady.jpeg",
-      bio: "Registered professional Architectural Technologist with 11 years post-registration experience and over 15 years in built environment consulting and construction management.",
+      image: "/director_vhahangwele.png",
+      email: "vhahangwele@rashed.co.za",
+      phone: "067 285 5095",
+      bio: "Registered professional Architectural Technologist with 15+ years experience spanning public sector capital works and private built environment consulting.",
       details: [
-        "MD of UBK Projects and UBKRothoma Projects (architecture, engineering, and construction).",
-        "Spent 8 years in Transnet SOC's Capital Projects division as Engineering Manager and Project Lead.",
-        "Executed strategic capital investment projects for Transnet Operating Divisions.",
-        "Graduate of Wits Business School (WBS) Junior Managers Program.",
-        "Diploma in Architecture from Tshwane University of Technology (TUT)."
+        "Managing Director of UBK Projects and UBKRothoma Projects (design, project, and construction management).",
+        "Spent 8 years executing key strategic investments as Engineering Manager & Project Lead inside Transnet SOC Capital Projects.",
+        "Experienced built environment consultant across residential and commercial developments from feasibility study to keys handover.",
+        "Architectural graduate of Tshwane University of Technology (TUT) and Wits Business School (WBS) Junior Managers Program."
       ]
     },
     {
       name: "Ompha Monica Khangale",
       role: "Marketing Communications Executive",
-      image: "/small%20daddy.png", // Updated team image
-      bio: "Dynamic and creatively-driven Marketing and Communications professional with 8+ years of experience across corporate, public, and entertainment industries.",
+      image: "/director_monica.png",
+      email: "info@rashed.co.za", // General or director email
+      phone: "072 254 9448",
+      bio: "Dynamic and creatively-driven Marketing & Communications professional with over 8 years experience across public relations, event management, and entertainment.",
       details: [
-        "Collaborated with large-scale SA productions (Idols SA, Big Brother Mzansi, SAMA, Metro FM).",
-        "Performer alongside Oscar-winning composer Hans Zimmer and Disney's Lebo M (Lion King).",
-        "Led communications for the Murumba Cultural Parade with the Dept. of Sport, Arts & Culture.",
-        "Owner and founder of Ralo Studio (multimedia entertainment business entity).",
-        "Honours graduate in Theatre & Performance from Wits University."
+        "Social media marketer and brand manager for national cultural projects, including the Murumba Cultural Parade (in partnership with DSAC).",
+        "Performer and artist manager collaborating alongside Academy Award-winning Hans Zimmer and Disney's Lebo M (Lion King).",
+        "TV and media appearances on Netflix's dance film series JIVA! and SABC Phalaphala FM broadcasts.",
+        "Owner of Ralo Studio (multimedia entertainment) and Wits University Theatre & Performance Honours graduate (2022)."
       ]
     }
   ]
@@ -49,23 +53,26 @@ export default function About() {
     <div style={styles.page}>
       <Helmet>
         <title>About Us | Rashed Investments</title>
-        <meta name="description" content="Learn about Rashed Investments, a 100% Black-owned property development company advancing rural communities." />
+        <meta name="description" content="Meet the leadership of Rashed Investments, a 100% Black-owned firm focused on sustainable rural infrastructure." />
       </Helmet>
+
       {/* Intro Hero */}
       <section style={styles.introSection}>
         <div className="container" style={styles.introContainer}>
-          <div style={styles.introContent}>
-            <span className="section-tag">Corporate Profile</span>
+          <div style={styles.introContent} className="animate-fade-in">
+            <div className="glow-badge" style={{ marginBottom: '1.5rem' }}>
+              <span>Corporate Profile</span>
+            </div>
             <h1 className="section-title">
               Advancing Rural Communities Through <span className="text-gold-gradient">Socio-Economic Development</span>
             </h1>
             <p style={styles.introDesc}>
-              Registered in 2022, Rashed Investments is a 100% Black-owned property development company specializing in rural and traditional leader-owned land. Our core mission is to reverse the trend of substandard rural developments and actively contribute towards restoring dignity in previously marginalized communities.
+              Registered in 2022, Rashed Investments is a 100% Black-owned property development company specializing in rural and traditional leader-owned land. Our core objective is to reverse the demeaning trend of substandard rural development by building modern commercial, retail, and industrial facilities.
             </p>
           </div>
-          <div style={styles.introVisual}>
+          <div style={styles.introVisual} className="animate-fade-in">
             <div style={styles.panelCard} className="glass-panel">
-              <h3 style={styles.panelTitle} className="text-gold-gradient">Our Core Focus</h3>
+              <h3 style={styles.panelTitle} className="text-gold-gradient">Our Investment Scope</h3>
               <p style={styles.panelText}>
                 We partner with traditional councils, government departments, and private financial organizations to construct infrastructure that supports essential basic services, including water preservation, sustainable sanitation, and solar grid installations.
               </p>
@@ -74,25 +81,25 @@ export default function About() {
         </div>
       </section>
 
-      {/* Corporate Philosophy */}
+      {/* Corporate Philosophy / Values */}
       <section style={styles.philosophySection}>
         <div className="container">
           <div style={styles.sectionHeader}>
-            <span className="section-tag">Our Values</span>
+            <span className="section-tag-green">Corporate Values</span>
             <h2 className="section-title">The Foundation of Our Business</h2>
           </div>
           <div style={styles.philosophyGrid}>
-            <div className="glass-panel" style={styles.philCard}>
-              <h3 style={styles.philTitle}>100% Black-Owned</h3>
-              <p>Specialized in property and infrastructure consulting. Actively driving black economic empowerment across architectural and civil engineering projects.</p>
+            <div className="glass-panel-green" style={styles.philCard}>
+              <h3 style={styles.philTitle} className="text-green-gradient">100% Black-Owned</h3>
+              <p style={styles.philText}>Level 1 B-BBEE property and infrastructure consultant. Actively driving black economic empowerment across structural, civil, and architectural fields.</p>
             </div>
-            <div className="glass-panel" style={styles.philCard}>
-              <h3 style={styles.philTitle}>Skills Development</h3>
-              <p>We transfer engineering and artisan skills to local communities where we construct developments, ensuring local youth gain employment.</p>
+            <div className="glass-panel-green" style={styles.philCard}>
+              <h3 style={styles.philTitle} className="text-green-gradient">Skills Development</h3>
+              <p style={styles.philText}>We believe in leaving an indelible mark. We transfer certified engineering, masonry, and artisan skills to local youth in the communities we develop.</p>
             </div>
-            <div className="glass-panel" style={styles.philCard}>
-              <h3 style={styles.philTitle}>Eco-Friendly Designs</h3>
-              <p>Every commercial facility we build integrates water treatment facilities, rain harvesting, and solar power plants to support conservation.</p>
+            <div className="glass-panel-green" style={styles.philCard}>
+              <h3 style={styles.philTitle} className="text-green-gradient">Eco-Friendly Design</h3>
+              <p style={styles.philText}>We integrate sustainable solar PV plants, rain harvesting networks, and waste water treatment facilities into every modern commercial space we build.</p>
             </div>
           </div>
         </div>
@@ -103,9 +110,9 @@ export default function About() {
         <div className="container">
           <div style={styles.sectionHeader}>
             <span className="section-tag">Executive Board</span>
-            <h2 className="section-title">Our Leadership Team</h2>
+            <h2 className="section-title">Our Leadership</h2>
             <p className="section-subtitle">
-              With a combined wealth of over 50 years of experience, our directors have planned, coordinated, and constructed multi-million-rand commercial and residential developments.
+              Combining over 50 years of leadership across corporate communication, architectural design, government relations, and multimedia marketing.
             </p>
           </div>
 
@@ -118,26 +125,32 @@ export default function About() {
                       src={member.image} 
                       alt={member.name} 
                       style={styles.memberImg}
-                      onError={(e) => {
-                        e.target.src = idx === 2 
-                          ? "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
-                          : "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80";
-                      }}
                     />
                   </div>
                   <div style={styles.memberTitles}>
                     <h3 style={styles.memberName}>{member.name}</h3>
                     <p style={styles.memberRole}>{member.role}</p>
                     <p style={styles.memberBio}>{member.bio}</p>
+                    
+                    <div style={styles.contactRow}>
+                      <a href={`mailto:${member.email}`} style={styles.contactIconLink}>
+                        <Mail size={16} />
+                        <span>{member.email}</span>
+                      </a>
+                      <a href={`tel:${member.phone.replace(/\s+/g, '')}`} style={styles.contactIconLink}>
+                        <Phone size={16} />
+                        <span>{member.phone}</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
                 
                 <div style={styles.memberDetails}>
                   <h4 style={styles.detailsHeading}>Key Professional Highlights</h4>
-                  <ul style={styles.detailsList}>
+                  <ul className="custom-list">
                     {member.details.map((detail, dIdx) => (
-                      <li key={dIdx} style={styles.detailItem}>
-                        <div style={styles.bullet}></div>
+                      <li key={dIdx} className="custom-list-item">
+                        <span className="custom-list-bullet"></span>
                         <span>{detail}</span>
                       </li>
                     ))}
@@ -155,25 +168,29 @@ export default function About() {
 const styles = {
   page: {
     backgroundColor: 'var(--bg-primary)',
+    overflowX: 'hidden',
   },
   introSection: {
-    background: 'radial-gradient(circle at 10% 20%, rgba(197, 168, 128, 0.05) 0%, transparent 50%)',
+    background: 'radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.04) 0%, transparent 60%)',
+    padding: '6rem 0',
   },
   introContainer: {
     display: 'grid',
     gridTemplateColumns: '1.2fr 1fr',
-    gap: '4rem',
+    gap: '5rem',
     alignItems: 'center',
   },
   introContent: {},
   introDesc: {
     fontSize: '1.15rem',
+    lineHeight: '1.75',
+    color: 'var(--text-secondary)',
     marginTop: '1.5rem',
   },
   introVisual: {},
   panelCard: {
     padding: '3rem',
-    borderRadius: '16px',
+    borderRadius: '20px',
     border: '1px solid var(--border-gold)',
   },
   panelTitle: {
@@ -181,55 +198,68 @@ const styles = {
     marginBottom: '1rem',
   },
   panelText: {
-    fontSize: '1rem',
+    fontSize: '1.02rem',
+    lineHeight: '1.7',
+    color: 'var(--text-secondary)',
   },
   philosophySection: {
     background: 'var(--bg-secondary)',
+    borderTop: '1px solid rgba(255,255,255,0.02)',
+    borderBottom: '1px solid rgba(255,255,255,0.02)',
   },
   sectionHeader: {
     textAlign: 'center',
-    marginBottom: '4rem',
+    marginBottom: '5rem',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   philosophyGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
-    gap: '2rem',
+    gap: '2.5rem',
   },
   philCard: {
-    padding: '2.5rem',
-    borderRadius: '16px',
+    padding: '3rem 2.5rem',
+    borderRadius: '20px',
   },
   philTitle: {
-    fontSize: '1.35rem',
-    fontWeight: 700,
-    marginBottom: '1rem',
-    color: 'var(--accent-gold)',
+    fontSize: '1.4rem',
+    fontWeight: 800,
+    marginBottom: '1.25rem',
   },
-  teamSection: {},
+  philText: {
+    fontSize: '0.98rem',
+    lineHeight: '1.65',
+    color: 'var(--text-secondary)',
+  },
+  teamSection: {
+    background: 'var(--bg-primary)',
+  },
   teamList: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '4rem',
+    gap: '3.5rem',
   },
   memberCard: {
     padding: '3rem',
-    borderRadius: '20px',
+    borderRadius: '24px',
     display: 'flex',
     flexDirection: 'column',
-    gap: '2.5rem',
+    gap: '3rem',
   },
   memberHeader: {
     display: 'flex',
-    gap: '3rem',
+    gap: '3.5rem',
     alignItems: 'center',
   },
   imgWrapper: {
-    width: '180px',
-    height: '180px',
+    width: '190px',
+    height: '190px',
     borderRadius: '20px',
     overflow: 'hidden',
     border: '2px solid var(--accent-gold)',
-    boxShadow: '0 10px 25px -10px var(--accent-glow)',
+    boxShadow: '0 15px 35px -10px var(--accent-glow-gold)',
     flexShrink: 0,
   },
   memberImg: {
@@ -242,72 +272,77 @@ const styles = {
     flexDirection: 'column',
   },
   memberName: {
-    fontSize: '2rem',
-    fontWeight: 800,
-    marginBottom: '0.25rem',
+    fontSize: '2.2rem',
+    fontWeight: 900,
+    marginBottom: '0.35rem',
+    letterSpacing: '-0.02em',
   },
   memberRole: {
-    fontSize: '1.1rem',
+    fontSize: '1.05rem',
     color: 'var(--accent-gold)',
-    fontWeight: 600,
+    fontWeight: 700,
     textTransform: 'uppercase',
-    letterSpacing: '0.05em',
-    marginBottom: '1rem',
+    letterSpacing: '0.08em',
+    marginBottom: '1.25rem',
   },
   memberBio: {
     fontSize: '1.1rem',
     color: 'var(--text-secondary)',
+    lineHeight: '1.7',
     maxWidth: '750px',
+    marginBottom: '1.5rem',
+  },
+  contactRow: {
+    display: 'flex',
+    gap: '2rem',
+    flexWrap: 'wrap',
+  },
+  contactIconLink: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    fontSize: '0.95rem',
+    color: 'var(--text-muted)',
+    transition: 'var(--transition-fast)',
+    ':hover': {
+      color: 'var(--accent-gold)',
+    }
   },
   memberDetails: {
     borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-    paddingTop: '2rem',
+    paddingTop: '2.5rem',
   },
   detailsHeading: {
     fontSize: '1.1rem',
-    fontWeight: 700,
-    marginBottom: '1.25rem',
+    fontWeight: 800,
+    marginBottom: '1.5rem',
     color: '#FFFFFF',
     textTransform: 'uppercase',
-    letterSpacing: '0.05em',
+    letterSpacing: '0.08em',
   },
-  detailsList: {
-    listStyleType: 'none',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.85rem',
-  },
-  detailItem: {
-    display: 'flex',
-    gap: '1rem',
-    alignItems: 'flex-start',
-    fontSize: '1.05rem',
-    color: 'var(--text-secondary)',
-  },
-  bullet: {
-    width: '6px',
-    height: '6px',
-    borderRadius: '50%',
-    background: 'var(--accent-gold)',
-    marginTop: '9px',
-    flexShrink: 0,
-  },
-  /* Media queries simulated inline */
-  '@media (max-width: 991px)': {
-    introContainer: {
-      gridTemplateColumns: '1fr',
-      gap: '2rem',
-    },
-    philosophyGrid: {
-      gridTemplateColumns: '1fr',
-    },
-    memberHeader: {
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      gap: '1.5rem',
+}
+
+// Inline CSS overrides for responsiveness simulation in About
+const localAboutStyleSheet = document.createElement("style")
+localAboutStyleSheet.innerText = `
+  @media (max-width: 991px) {
+    .intro-container {
+      grid-template-columns: 1fr !important;
+      gap: 3rem !important;
+    }
+    .philosophy-grid {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
+    .member-header {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 2rem !important;
+    }
+    .member-card {
+      padding: 2rem !important;
+      gap: 2rem !important;
     }
   }
-}
-window.addEventListener('resize', () => {
-  // Mobile responsive overrides handled in global layout styles
-})
+`
+document.head.appendChild(localAboutStyleSheet)
