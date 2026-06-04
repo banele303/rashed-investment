@@ -58,7 +58,7 @@ export default function Home() {
               <span style={{ color: '#FFFFFF' }}>Sustainable Property Specialists</span>
             </div>
             <h1 style={styles.heroTitle}>
-              Restoring Dignity Through <span style={{ color: 'var(--accent-primary)', textShadow: '0 0 30px rgba(156, 180, 146, 0.4)' }}>Modern Development</span>
+              Urban Village <span style={{ color: 'var(--accent-primary)', textShadow: '0 0 20px rgba(156, 180, 146, 0.6)' }}>Shopping Centre</span>
             </h1>
             <p style={styles.heroSubtitle}>
               Developing modern commercial, retail, and industrial infrastructure in rural and traditional communities across South Africa. Aligned to the National Development Plan 2030.
@@ -336,7 +336,7 @@ const styles = {
   },
   heroSection: {
     position: 'relative',
-    background: 'url("/hero_modern.png") no-repeat center center',
+    background: 'url("/urban_village_shopping_centre.png") no-repeat center center',
     backgroundSize: 'cover',
     minHeight: '100vh',
     display: 'flex',
