@@ -151,7 +151,7 @@ function Navigation() {
 
 function Footer() {
   return (
-    <footer style={styles.footer}>
+    <footer className="dark-theme" style={styles.footer}>
       <div className="container" style={styles.footerGrid}>
         <div style={styles.footerBrand}>
           <div style={styles.footerLogo}>
@@ -449,7 +449,7 @@ const styles = {
   footerBottom: {
     borderTop: '1px solid var(--border-color)',
     padding: '2rem 0',
-    background: 'var(--bg-secondary)',
+    background: 'var(--bg-primary)',
   },
   footerBottomContainer: {
     display: 'flex',

@@ -3,34 +3,34 @@
 
 :root {
   /* ── Backgrounds ── */
-  --bg-primary:   #9CB492;
-  --bg-secondary: #070908;
-  --bg-tertiary:  #0D120E;
+  --bg-primary:   #070908;
+  --bg-secondary: #9CB492;
+  --bg-tertiary:  #AEC4A5;
 
   /* ── Text ── */
-  --text-primary:   #FFFFFF;
-  --text-secondary: rgba(255, 255, 255, 0.72);
-  --text-muted:     rgba(255, 255, 255, 0.45);
+  --text-primary:   #070908;
+  --text-secondary: rgba(7, 9, 8, 0.8);
+  --text-muted:     rgba(7, 9, 8, 0.55);
 
   /* ── Brand accents — unified sage green palette ── */
-  --accent-primary:       #9CB492;
-  --accent-primary-hover: #B8CEB0;
-  --accent-green:         #6B9E6B;
-  --accent-green-hover:   #85B885;
-  --accent-sage:          #9CB492;
+  --accent-primary:       #070908;
+  --accent-primary-hover: #1A1F1D;
+  --accent-green:         #070908;
+  --accent-green-hover:   #1A1F1D;
+  --accent-sage:          #070908;
 
   /* ── Glow overlays ── */
-  --accent-glow-primary: rgba(156, 180, 146, 0.20);
-  --accent-glow-green:   rgba(107, 158, 107, 0.20);
+  --accent-glow-primary: rgba(7, 9, 8, 0.15);
+  --accent-glow-green:   rgba(7, 9, 8, 0.15);
 
   /* ── Borders ── */
-  --border-color: rgba(156, 180, 146, 0.12);
-  --border-accent: rgba(156, 180, 146, 0.30);
-  --border-green:  rgba(107, 158, 107, 0.30);
+  --border-color: rgba(7, 9, 8, 0.12);
+  --border-accent: rgba(7, 9, 8, 0.25);
+  --border-green:  rgba(7, 9, 8, 0.25);
 
   /* ── Cards ── */
-  --card-glass:       rgba(255, 255, 255, 0.04);
-  --card-glass-hover: rgba(255, 255, 255, 0.08);
+  --card-glass:       rgba(255, 255, 255, 0.25);
+  --card-glass-hover: rgba(255, 255, 255, 0.4);
 
   /* ── Typography ── */
   --font-display: 'Space Grotesk', sans-serif;
@@ -301,7 +301,7 @@ section {
 
 .btn-green {
   background: linear-gradient(135deg, #6B9E6B 0%, #4A7A4A 100%);
-  color: #FFFFFF;
+  color: var(--text-primary);
   border: none;
   box-shadow: 0 4px 20px rgba(107, 158, 107, 0.3);
 }
@@ -496,4 +496,17 @@ section {
   color: var(--accent-green);
   text-transform: uppercase;
   box-shadow: 0 4px 15px var(--accent-glow-green);
+}
+
+.dark-theme {
+  --bg-primary: #070908;
+  --bg-secondary: #0D120E;
+  --bg-tertiary: #131A15;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.72);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --accent-primary: #9CB492;
+  --border-color: rgba(156, 180, 146, 0.12);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
