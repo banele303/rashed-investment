@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, User, ArrowLeft } from 'lucide-react';
@@ -121,7 +121,7 @@ const styles = {
   heroOverlay: {
     position: 'absolute',
     inset: 0,
-    background: 'linear-gradient(to bottom, rgba(7,9,14,0.4) 0%, rgba(7,9,14,1) 100%)',
+    background: 'linear-gradient(to bottom, rgba(15,18,23,0.35) 0%, rgba(15,18,23,1) 100%)',
   },
   contentContainer: {
     maxWidth: '850px',
@@ -203,3 +203,4 @@ if (typeof document !== 'undefined') {
   `;
   document.head.appendChild(styleEl);
 }
+

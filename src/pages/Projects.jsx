@@ -49,7 +49,7 @@ export default function Projects() {
           </div>
           <h1 style={styles.projectTitle}>Urban Village Lifestyle Shopping Centre</h1>
           <p style={styles.projectLocation}>
-            <MapPin size={18} color="var(--accent-gold)" />
+            <MapPin size={18} color="var(--accent-primary)" />
             <span>Tshishushuru Village, Lwamondo, Limpopo</span>
           </p>
           <p style={styles.projectHeroDesc}>
@@ -64,8 +64,8 @@ export default function Projects() {
           <button 
             style={{
               ...styles.tabBtn, 
-              color: activeTab === 'overview' ? 'var(--accent-gold)' : 'var(--text-secondary)', 
-              borderColor: activeTab === 'overview' ? 'var(--accent-gold)' : 'transparent',
+              color: activeTab === 'overview' ? 'var(--accent-primary)' : 'var(--text-secondary)', 
+              borderColor: activeTab === 'overview' ? 'var(--accent-primary)' : 'transparent',
               fontWeight: activeTab === 'overview' ? '700' : '500',
             }}
             onClick={() => setActiveTab('overview')}
@@ -75,8 +75,8 @@ export default function Projects() {
           <button 
             style={{
               ...styles.tabBtn, 
-              color: activeTab === 'components' ? 'var(--accent-gold)' : 'var(--text-secondary)', 
-              borderColor: activeTab === 'components' ? 'var(--accent-gold)' : 'transparent',
+              color: activeTab === 'components' ? 'var(--accent-primary)' : 'var(--text-secondary)', 
+              borderColor: activeTab === 'components' ? 'var(--accent-primary)' : 'transparent',
               fontWeight: activeTab === 'components' ? '700' : '500',
             }}
             onClick={() => setActiveTab('components')}
@@ -86,8 +86,8 @@ export default function Projects() {
           <button 
             style={{
               ...styles.tabBtn, 
-              color: activeTab === 'gallery' ? 'var(--accent-gold)' : 'var(--text-secondary)', 
-              borderColor: activeTab === 'gallery' ? 'var(--accent-gold)' : 'transparent',
+              color: activeTab === 'gallery' ? 'var(--accent-primary)' : 'var(--text-secondary)', 
+              borderColor: activeTab === 'gallery' ? 'var(--accent-primary)' : 'transparent',
               fontWeight: activeTab === 'gallery' ? '700' : '500',
             }}
             onClick={() => setActiveTab('gallery')}
@@ -105,7 +105,7 @@ export default function Projects() {
           {activeTab === 'overview' && (
             <div style={styles.overviewGrid} className="animate-fade-in">
               <div style={styles.overviewContent}>
-                <h2 style={styles.panelHeading} className="text-gold-gradient">The Smart Town Concept</h2>
+                <h2 style={styles.panelHeading} className="text-green-gradient">The Smart Town Concept</h2>
                 <p style={styles.panelParagraph}>
                   Tshishushuru Urban Village represents the pinnacle of modern property engineering on traditional leader-owned land. Rather than constructing standard isolated commercial spaces, Rashed Investments is engineering a self-sustaining eco-system.
                 </p>
@@ -160,7 +160,7 @@ export default function Projects() {
                   </div>
                   <div style={styles.specItem}>
                     <span style={styles.specLabel}>B-BBEE Level</span>
-                    <span style={{...styles.specVal, color: 'var(--accent-gold)', fontWeight: 'bold'}}>Level 1 Contributor</span>
+                    <span style={{...styles.specVal, color: 'var(--accent-primary)', fontWeight: 'bold'}}>Level 1 Contributor</span>
                   </div>
                 </div>
               </div>
@@ -170,12 +170,12 @@ export default function Projects() {
           {/* COMPONENTS PANEL */}
           {activeTab === 'components' && (
             <div className="animate-fade-in">
-              <h2 style={styles.panelHeading} className="text-gold-gradient">Commercial &amp; Transport Layout</h2>
+              <h2 style={styles.panelHeading} className="text-green-gradient">Commercial &amp; Transport Layout</h2>
               <div style={styles.featuresGrid}>
                 {features.map((feat, idx) => (
                   <div key={idx} className="glass-panel" style={styles.featCard}>
                     <div style={styles.checkWrapper}>
-                      <Check size={16} color="var(--accent-gold)" />
+                      <Check size={16} color="var(--accent-primary)" />
                     </div>
                     <div>
                       <h4 style={styles.featTitle}>{feat.name}</h4>
@@ -185,12 +185,12 @@ export default function Projects() {
                 ))}
               </div>
 
-              <h2 style={{...styles.panelHeading, marginTop: '5rem'}} className="text-gold-gradient">Public Health &amp; Safety Desks</h2>
+              <h2 style={{...styles.panelHeading, marginTop: '5rem'}} className="text-green-gradient">Public Health &amp; Safety Desks</h2>
               <div style={styles.featuresGrid}>
                 {publicServices.map((service, idx) => (
                   <div key={idx} className="glass-panel" style={styles.featCard}>
                     <div style={styles.checkWrapper}>
-                      <ShieldCheck size={16} color="var(--accent-gold)" />
+                      <ShieldCheck size={16} color="var(--accent-primary)" />
                     </div>
                     <div>
                       <h4 style={styles.featTitle}>{service.title}</h4>
@@ -205,7 +205,7 @@ export default function Projects() {
           {/* GALLERY PANEL */}
           {activeTab === 'gallery' && (
             <div className="animate-fade-in">
-              <h2 style={styles.panelHeading} className="text-gold-gradient">Architectural Blueprints &amp; Renders</h2>
+              <h2 style={styles.panelHeading} className="text-green-gradient">Architectural Blueprints &amp; Renders</h2>
               <p style={{...styles.panelParagraph, marginBottom: '3rem'}}>
                 The following layouts and blueprints were extracted from the official corporate profile, representing current engineering surveys and site planning for the Limpopo development. Click any image to view details in full resolution.
               </p>
@@ -268,7 +268,7 @@ export default function Projects() {
 
 const styles = {
   page: {
-    backgroundColor: 'var(--bg-primary)',
+    backgroundColor: 'var(--bg-secondary)',
     overflowX: 'hidden',
   },
   projectHero: {
@@ -283,7 +283,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    background: 'linear-gradient(to bottom, transparent 70%, var(--bg-primary))',
+    background: 'linear-gradient(to bottom, transparent 70%, var(--bg-secondary))',
     zIndex: 1,
   },
   projectHeroContainer: {
@@ -306,7 +306,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     fontFamily: 'var(--font-display)',
     fontWeight: 700,
     fontSize: '1.15rem',
@@ -320,7 +320,7 @@ const styles = {
     color: 'var(--text-secondary)',
   },
   tabsWrapper: {
-    background: 'var(--bg-secondary)',
+    background: 'var(--bg-tertiary)',
     borderTop: '1px solid rgba(255, 255, 255, 0.03)',
     borderBottom: '1px solid rgba(255, 255, 255, 0.03)',
     position: 'sticky',
@@ -423,8 +423,8 @@ const styles = {
     width: '32px',
     height: '32px',
     borderRadius: '50%',
-    background: 'rgba(212, 175, 55, 0.08)',
-    border: '1px solid var(--border-gold)',
+    background: 'rgba(156, 180, 146, 0.08)',
+    border: '1px solid var(--border-accent)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -470,7 +470,7 @@ const styles = {
     left: 0,
     width: '100%',
     padding: '1.5rem',
-    background: 'linear-gradient(to top, rgba(7,9,14,0.96) 0%, transparent 100%)',
+    background: 'linear-gradient(to top, rgba(15,18,23,0.86) 0%, transparent 100%)',
   },
   galleryInfo: {
     display: 'flex',
@@ -526,7 +526,7 @@ const styles = {
     transition: 'var(--transition-fast)',
     ':hover': {
       background: 'rgba(255,255,255,0.1)',
-      color: 'var(--accent-gold)',
+      color: 'var(--accent-primary)',
     }
   },
   lightboxContent: {
@@ -542,7 +542,7 @@ const styles = {
     maxHeight: '80vh',
     objectFit: 'contain',
     borderRadius: '12px',
-    boxShadow: '0 30px 60px rgba(0,0,0,0.8), 0 0 30px rgba(212,175,55,0.15)',
+    boxShadow: '0 30px 60px rgba(0,0,0,0.8), 0 0 30px rgba(156,180,146,0.15)',
     border: '1px solid rgba(255,255,255,0.08)',
   },
   lightboxCaption: {

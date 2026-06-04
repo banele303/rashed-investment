@@ -89,7 +89,7 @@ export default function TeamGallery() {
 const styles = {
   section: {
     padding: '7rem 0',
-    background: 'var(--bg-secondary)',
+    background: 'var(--bg-tertiary)',
     borderTop: '1px solid rgba(255,255,255,0.02)',
     borderBottom: '1px solid rgba(255,255,255,0.02)',
   },
@@ -131,7 +131,7 @@ const styles = {
     left: 0,
     width: '100%',
     padding: '1.5rem',
-    background: 'linear-gradient(to top, rgba(7,9,14,0.9) 0%, transparent 100%)',
+    background: 'linear-gradient(to top, rgba(15,18,23,0.80) 0%, transparent 100%)',
     display: 'flex',
     justifyContent: 'flex-end',
     gap: '1rem',
@@ -166,7 +166,7 @@ const styles = {
   },
   role: {
     fontSize: '0.9rem',
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     fontWeight: 700,
     textTransform: 'uppercase',
     letterSpacing: '0.05em',
@@ -174,7 +174,7 @@ const styles = {
   divider: {
     width: '40px',
     height: '2px',
-    background: 'var(--accent-gold)',
+    background: 'var(--accent-primary)',
     margin: '1.25rem 0',
   },
   bio: {
@@ -195,9 +195,9 @@ if (typeof document !== 'undefined') {
       transform: scale(1.05);
     }
     .team-gallery-section .icon-link:hover {
-      background: var(--accent-gold) !important;
+      background: var(--accent-primary) !important;
       color: #000 !important;
-      border-color: var(--accent-gold) !important;
+      border-color: var(--accent-primary) !important;
     }
   `;
   document.head.appendChild(styleEl);

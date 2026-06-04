@@ -42,27 +42,6 @@ export default function Home() {
     { value: "R200M+", label: "Project Capacity", sub: "In Turnkey Scale" }
   ]
 
-  const leadership = [
-    {
-      name: "Ndivhuwo Khangale",
-      role: "Executive Director & CEO",
-      image: "/director_ndivhuwo.png",
-      desc: "Seasoned entrepreneur and communications specialist with 26+ years advisory experience for Cabinet Ministers, Eskom, and SABC boards."
-    },
-    {
-      name: "Vhahangwele Khangale",
-      role: "Technical Director",
-      image: "/director_vhahangwele.png",
-      desc: "Registered professional Architectural Technologist with 15+ years experience lead-managing Transnet SOC Capital Projects and private developments."
-    },
-    {
-      name: "Ompha Monica Khangale",
-      role: "Marketing Communications Executive",
-      image: "/director_monica.png",
-      desc: "Dynamic communications professional with 8+ years experience spanning public sector, national arts initiatives, and multimedia brand design."
-    }
-  ]
-
   return (
     <div style={styles.page}>
       <Helmet>
@@ -103,7 +82,7 @@ export default function Home() {
                 style={styles.heroImg}
               />
               <div style={styles.imageBadge} className="glass-panel">
-                <MapPin size={14} color="var(--accent-gold)" />
+                <MapPin size={14} color="var(--accent-primary)" />
                 <span>Limpopo Development Concept</span>
               </div>
             </div>
@@ -150,10 +129,10 @@ export default function Home() {
                 >
                   <div style={{
                     ...styles.iconWrapper,
-                    background: pillar.isGreen ? 'rgba(82, 183, 136, 0.08)' : 'rgba(212, 175, 55, 0.08)',
-                    borderColor: pillar.isGreen ? 'var(--border-green)' : 'var(--border-gold)',
+                    background: pillar.isGreen ? 'rgba(107, 158, 107, 0.10)' : 'rgba(156, 180, 146, 0.10)',
+                    borderColor: pillar.isGreen ? 'var(--border-green)' : 'var(--border-accent)',
                   }}>
-                    <Icon size={24} color={pillar.isGreen ? "var(--accent-green)" : "var(--accent-gold)"} />
+                    <Icon size={24} color={pillar.isGreen ? "var(--accent-green)" : "var(--accent-primary)"} />
                   </div>
                   <h3 style={styles.pillarTitle}>{pillar.title}</h3>
                   <p style={styles.pillarDesc}>{pillar.desc}</p>
@@ -282,12 +261,12 @@ export default function Home() {
 
 const styles = {
   page: {
-    backgroundColor: 'var(--bg-primary)',
+    backgroundColor: 'var(--bg-secondary)',
     overflowX: 'hidden',
   },
   heroSection: {
     position: 'relative',
-    background: 'radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 60%)',
+    background: 'radial-gradient(circle at 80% 20%, rgba(156, 180, 146, 0.06) 0%, transparent 60%)',
     minHeight: '85vh',
     display: 'flex',
     alignItems: 'center',
@@ -299,7 +278,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    background: 'linear-gradient(to bottom, transparent 80%, var(--bg-primary))',
+    background: 'linear-gradient(to bottom, transparent 80%, var(--bg-secondary))',
     zIndex: 1,
   },
   heroContainer: {
@@ -343,8 +322,8 @@ const styles = {
     position: 'relative',
     borderRadius: '24px',
     overflow: 'hidden',
-    border: '1px solid rgba(255, 255, 255, 0.08)',
-    boxShadow: '0 30px 60px -15px rgba(0,0,0,0.8), 0 0 40px rgba(212,175,55,0.05)',
+    border: '1px solid rgba(156, 180, 146, 0.15)',
+    boxShadow: '0 30px 60px -15px rgba(0,0,0,0.6), 0 0 40px rgba(156,180,146,0.05)',
   },
   heroImg: {
     width: '100%',
@@ -365,7 +344,7 @@ const styles = {
     fontFamily: 'var(--font-display)',
     fontWeight: 600,
     color: '#FFFFFF',
-    border: '1px solid var(--border-gold)',
+    border: '1px solid var(--border-accent)',
   },
   statsSection: {
     padding: '1.5rem 0 3.5rem 0',
@@ -399,7 +378,7 @@ const styles = {
     color: 'var(--text-muted)',
   },
   pillarsSection: {
-    background: 'var(--bg-secondary)',
+    background: 'var(--bg-tertiary)',
     borderTop: '1px solid rgba(255, 255, 255, 0.02)',
     borderBottom: '1px solid rgba(255, 255, 255, 0.02)',
   },
@@ -438,7 +417,7 @@ const styles = {
     lineHeight: '1.65',
   },
   legacySection: {
-    background: 'radial-gradient(circle at 10% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 55%)',
+    background: 'radial-gradient(circle at 10% 80%, rgba(156, 180, 146, 0.04) 0%, transparent 55%)',
   },
   legacyContainer: {
     display: 'grid',
@@ -453,8 +432,8 @@ const styles = {
   legacyImageFrame: {
     borderRadius: '24px',
     overflow: 'hidden',
-    border: '1px solid rgba(255, 255, 255, 0.06)',
-    boxShadow: '0 25px 50px -12px rgba(0,0,0,0.8)',
+    border: '1px solid rgba(156, 180, 146, 0.10)',
+    boxShadow: '0 25px 50px -12px rgba(0,0,0,0.6)',
   },
   legacyImg: {
     width: '100%',
@@ -473,7 +452,7 @@ const styles = {
     lineHeight: '1.75',
   },
   blockquote: {
-    borderLeft: '3px solid var(--accent-gold)',
+    borderLeft: '3px solid var(--accent-primary)',
     paddingLeft: '1.75rem',
     margin: '2rem 0',
     fontStyle: 'italic',
@@ -489,16 +468,16 @@ const styles = {
   signatureName: {
     fontFamily: 'var(--font-display)',
     fontWeight: 800,
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     fontSize: '1.35rem',
     letterSpacing: '0.08em',
     textTransform: 'uppercase',
   },
   carouselSection: {
-    background: 'var(--bg-secondary)',
+    background: 'var(--bg-tertiary)',
   },
   teamSection: {
-    background: 'var(--bg-primary)',
+    background: 'var(--bg-secondary)',
   },
   teamGrid: {
     display: 'grid',
@@ -518,8 +497,8 @@ const styles = {
     height: '140px',
     borderRadius: '50%',
     overflow: 'hidden',
-    border: '2px solid var(--accent-gold)',
-    boxShadow: '0 10px 25px -10px var(--accent-glow-gold)',
+    border: '2px solid var(--accent-primary)',
+    boxShadow: '0 10px 25px -10px var(--accent-glow-primary)',
     marginBottom: '2rem',
   },
   teamImg: {
@@ -535,7 +514,7 @@ const styles = {
   },
   teamRole: {
     fontSize: '0.88rem',
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     fontWeight: 700,
     textTransform: 'uppercase',
     letterSpacing: '0.08em',
@@ -563,12 +542,9 @@ const styles = {
     fontSize: '0.9rem',
     color: '#FFFFFF',
     transition: 'var(--transition-fast)',
-    ':hover': {
-      color: 'var(--accent-gold)',
-    }
   },
   csiSection: {
-    background: 'var(--bg-secondary)',
+    background: 'var(--bg-tertiary)',
     borderTop: '1px solid rgba(255,255,255,0.02)',
     borderBottom: '1px solid rgba(255,255,255,0.02)',
   },
@@ -602,7 +578,7 @@ const styles = {
     width: '46px',
     height: '46px',
     borderRadius: '10px',
-    background: 'rgba(82, 183, 136, 0.08)',
+    background: 'rgba(107, 158, 107, 0.10)',
     border: '1px solid var(--border-green)',
     display: 'flex',
     alignItems: 'center',

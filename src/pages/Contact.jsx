@@ -41,7 +41,7 @@ export default function Contact() {
             <span>Get in Touch</span>
           </div>
           <h1 style={styles.headerTitle}>
-            Connect With Our <span className="text-gold-gradient">Property Specialists</span>
+            Connect With Our <span className="text-green-gradient">Property Specialists</span>
           </h1>
           <p style={styles.headerDesc}>
             Partner with Rashed Investments to build sustainable, premium commercial structures. Fill out the form below or reach out directly to our executive directors.
@@ -55,7 +55,7 @@ export default function Contact() {
 
           {/* Info column */}
           <div style={styles.infoCol}>
-            <h2 style={styles.infoHeading} className="text-gold-gradient">Direct Contact Channels</h2>
+            <h2 style={styles.infoHeading} className="text-green-gradient">Direct Contact Channels</h2>
             <p style={styles.infoText}>
               Our executive board is directly accessible for strategic partnerships, land development proposals, joint-venture structures, and community investment programs.
             </p>
@@ -71,12 +71,12 @@ export default function Contact() {
                 <div style={styles.directorInfo}>
                   <h3 style={styles.directorName}>{d.name}</h3>
                   <p style={styles.directorRole}>{d.role}</p>
-                  <a href={`tel:${d.phone.replace(/\s/g,'')}`} style={styles.contactLink}>
-                    <Phone size={14} color="var(--accent-gold)" />
+                  <a href={`tel:${d.phone.replace(/\\s/g,'')}`} style={styles.contactLink}>
+                    <Phone size={14} color="var(--accent-primary)" />
                     <span>{d.phone}</span>
                   </a>
                   <a href={`mailto:${d.email}`} style={styles.contactLink}>
-                    <Mail size={14} color="var(--accent-gold)" />
+                    <Mail size={14} color="var(--accent-primary)" />
                     <span>{d.email}</span>
                   </a>
                 </div>
@@ -86,7 +86,7 @@ export default function Contact() {
             {/* Office */}
             <div className="glass-panel" style={styles.officeCard}>
               <div style={styles.officeRow}>
-                <Building2 size={20} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: 3 }} />
+                <Building2 size={20} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: 3 }} />
                 <div>
                   <h4 style={styles.officeHeading}>Corporate Headquarters</h4>
                   <p style={styles.officeText}>
@@ -97,7 +97,7 @@ export default function Contact() {
                 </div>
               </div>
               <div style={styles.officeRow}>
-                <Mail size={20} color="var(--accent-gold)" style={{ flexShrink: 0, marginTop: 3 }} />
+                <Mail size={20} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: 3 }} />
                 <div>
                   <h4 style={styles.officeHeading}>General Inquiries</h4>
                   <a href="mailto:info@rashed.co.za" style={styles.mailLink}>info@rashed.co.za</a>
@@ -111,7 +111,7 @@ export default function Contact() {
             <div className="glass-panel" style={styles.formCard}>
               {isSubmitted ? (
                 <div style={styles.successBox}>
-                  <CheckCircle2 size={64} color="var(--accent-gold)" />
+                  <CheckCircle2 size={64} color="var(--accent-primary)" />
                   <h3 style={styles.successTitle}>Inquiry Sent!</h3>
                   <p style={styles.successText}>
                     Thank you for contacting Rashed Investments. Our directors will review your inquiry and be in touch within 24 hours.
@@ -119,7 +119,7 @@ export default function Contact() {
                 </div>
               ) : (
                 <>
-                  <h2 style={styles.formTitle} className="text-gold-gradient">Send an Inquiry</h2>
+                  <h2 style={styles.formTitle} className="text-green-gradient">Send an Inquiry</h2>
                   <p style={styles.formSub}>We respond within 24 business hours.</p>
 
                   <form onSubmit={handleSubmit} style={styles.form}>
@@ -204,11 +204,11 @@ export default function Contact() {
 }
 
 const styles = {
-  page: { backgroundColor: 'var(--bg-primary)', overflowX: 'hidden' },
+  page: { backgroundColor: 'var(--bg-secondary)', overflowX: 'hidden' },
 
   /* Header */
   headerSection: {
-    background: 'radial-gradient(circle at 10% 90%, rgba(212,175,55,0.04) 0%, transparent 60%)',
+    background: 'radial-gradient(circle at 10% 90%, rgba(156,180,146,0.04) 0%, transparent 60%)',
     textAlign: 'center',
     paddingTop: '7rem',
     paddingBottom: '5rem',
@@ -236,13 +236,13 @@ const styles = {
   directorAvatar: {
     width: '70px', height: '70px', borderRadius: '12px',
     objectFit: 'cover',
-    border: '2px solid var(--border-gold)',
+    border: '2px solid var(--border-accent)',
     flexShrink: 0,
   },
   directorInfo: { display: 'flex', flexDirection: 'column', gap: '0.4rem' },
   directorName: { fontSize: '1.2rem', fontWeight: 800, color: '#FFF' },
   directorRole: {
-    fontSize: '0.8rem', color: 'var(--accent-gold)', fontWeight: 700,
+    fontSize: '0.8rem', color: 'var(--accent-primary)', fontWeight: 700,
     textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '0.5rem',
   },
   contactLink: {
@@ -254,7 +254,7 @@ const styles = {
   officeRow: { display: 'flex', gap: '1rem', alignItems: 'flex-start' },
   officeHeading: { fontSize: '0.88rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.35rem', fontWeight: 600 },
   officeText: { fontSize: '0.98rem', lineHeight: '1.65', color: 'var(--text-secondary)' },
-  mailLink: { color: 'var(--accent-gold)', fontSize: '0.98rem', fontWeight: 600, textDecoration: 'underline' },
+  mailLink: { color: 'var(--accent-primary)', fontSize: '0.98rem', fontWeight: 600, textDecoration: 'underline' },
 
   /* Form */
   formCol: {},
@@ -265,7 +265,7 @@ const styles = {
   formRow: { display: 'flex', gap: '1.25rem', flexWrap: 'wrap' },
   selectInput: {
     cursor: 'pointer', appearance: 'none',
-    backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+    backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239CB492' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
     backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.1rem',
     paddingRight: '3rem',
   },
@@ -277,7 +277,7 @@ const styles = {
   successText: { fontSize: '1.1rem', lineHeight: '1.7', color: 'var(--text-secondary)', maxWidth: '400px' },
 
   /* Partners */
-  partnersSection: { background: 'var(--bg-secondary)', borderTop: '1px solid rgba(255,255,255,0.02)', padding: '7rem 0' },
+  partnersSection: { background: 'var(--bg-tertiary)', borderTop: '1px solid rgba(255,255,255,0.02)', padding: '7rem 0' },
   partnersHeader: { textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '4rem' },
   partnersGrid: { display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1.5rem' },
   partnerLogoBox: {

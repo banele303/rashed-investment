@@ -65,7 +65,7 @@ export default function About() {
               <span>Corporate Profile</span>
             </div>
             <h1 className="section-title">
-              Advancing Rural Communities Through <span className="text-gold-gradient">Socio-Economic Development</span>
+              Advancing Rural Communities Through <span className="text-green-gradient">Socio-Economic Development</span>
             </h1>
             <p style={styles.introDesc}>
               Registered in 2022, Rashed Investments is a 100% Black-owned property development company specializing in rural and traditional leader-owned land. Our core objective is to reverse the demeaning trend of substandard rural development by building modern commercial, retail, and industrial facilities.
@@ -73,7 +73,7 @@ export default function About() {
           </div>
           <div style={styles.introVisual} className="animate-fade-in">
             <div style={styles.panelCard} className="glass-panel">
-              <h3 style={styles.panelTitle} className="text-gold-gradient">Our Investment Scope</h3>
+              <h3 style={styles.panelTitle} className="text-green-gradient">Our Investment Scope</h3>
               <p style={styles.panelText}>
                 We partner with traditional councils, government departments, and private financial organizations to construct infrastructure that supports essential basic services, including water preservation, sustainable sanitation, and solar grid installations.
               </p>
@@ -114,11 +114,11 @@ export default function About() {
 
 const styles = {
   page: {
-    backgroundColor: 'var(--bg-primary)',
+    backgroundColor: 'var(--bg-secondary)',
     overflowX: 'hidden',
   },
   introSection: {
-    background: 'radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.04) 0%, transparent 60%)',
+    background: 'radial-gradient(circle at 10% 20%, rgba(156, 180, 146, 0.04) 0%, transparent 60%)',
     padding: '6rem 0',
   },
   introContainer: {
@@ -138,7 +138,7 @@ const styles = {
   panelCard: {
     padding: '3rem',
     borderRadius: '20px',
-    border: '1px solid var(--border-gold)',
+    border: '1px solid var(--border-accent)',
   },
   panelTitle: {
     fontSize: '1.5rem',
@@ -150,7 +150,7 @@ const styles = {
     color: 'var(--text-secondary)',
   },
   philosophySection: {
-    background: 'var(--bg-secondary)',
+    background: 'var(--bg-tertiary)',
     borderTop: '1px solid rgba(255,255,255,0.02)',
     borderBottom: '1px solid rgba(255,255,255,0.02)',
   },
@@ -181,7 +181,7 @@ const styles = {
     color: 'var(--text-secondary)',
   },
   teamSection: {
-    background: 'var(--bg-primary)',
+    background: 'var(--bg-secondary)',
   },
   teamList: {
     display: 'flex',
@@ -205,8 +205,8 @@ const styles = {
     height: '190px',
     borderRadius: '20px',
     overflow: 'hidden',
-    border: '2px solid var(--accent-gold)',
-    boxShadow: '0 15px 35px -10px var(--accent-glow-gold)',
+    border: '2px solid var(--accent-primary)',
+    boxShadow: '0 15px 35px -10px var(--accent-glow-primary)',
     flexShrink: 0,
   },
   memberImg: {
@@ -226,7 +226,7 @@ const styles = {
   },
   memberRole: {
     fontSize: '1.05rem',
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     fontWeight: 700,
     textTransform: 'uppercase',
     letterSpacing: '0.08em',
@@ -252,7 +252,7 @@ const styles = {
     color: 'var(--text-muted)',
     transition: 'var(--transition-fast)',
     ':hover': {
-      color: 'var(--accent-gold)',
+      color: 'var(--accent-primary)',
     }
   },
   memberDetails: {

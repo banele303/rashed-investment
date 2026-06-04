@@ -96,7 +96,7 @@ export default function Services() {
         <div className="container animate-fade-in" style={styles.headerContainer}>
           <span className="section-tag">Our Capabilities</span>
           <h1 className="section-title">
-            Tailor-Made <span className="text-gold-gradient">Turnkey Solutions</span>
+            Tailor-Made <span className="text-green-gradient">Turnkey Solutions</span>
           </h1>
           <p style={styles.headerDesc}>
             From initial geo-technical drilling and traditional leader consultations to final keys handover, Rashed Investments manages the complete life cycle of property and infrastructure development.
@@ -125,7 +125,7 @@ export default function Services() {
                     <div style={styles.timelineHeader}>
                       <h3 style={styles.timelineTitle}>{stage.title}</h3>
                       <div style={styles.timelineIconWrapper}>
-                        <Icon size={20} color="var(--accent-gold)" />
+                        <Icon size={20} color="var(--accent-primary)" />
                       </div>
                     </div>
                     <p style={styles.timelineDesc}>{stage.desc}</p>
@@ -159,10 +159,10 @@ export default function Services() {
                 >
                   <div style={{
                     ...styles.sectorIconWrapper,
-                    background: sector.isGreen ? 'rgba(82, 183, 136, 0.08)' : 'rgba(212, 175, 55, 0.08)',
-                    borderColor: sector.isGreen ? 'var(--border-green)' : 'var(--border-gold)',
+                    background: sector.isGreen ? 'rgba(82, 183, 136, 0.08)' : 'rgba(156, 180, 146, 0.08)',
+                    borderColor: sector.isGreen ? 'var(--border-green)' : 'var(--border-accent)',
                   }}>
-                    <Icon size={24} color={sector.isGreen ? "var(--accent-green)" : "var(--accent-gold)"} />
+                    <Icon size={24} color={sector.isGreen ? "var(--accent-green)" : "var(--accent-primary)"} />
                   </div>
                   <h3 style={styles.sectorTitle}>{sector.title}</h3>
                   <p style={styles.sectorDesc}>{sector.desc}</p>
@@ -178,11 +178,11 @@ export default function Services() {
 
 const styles = {
   page: {
-    backgroundColor: 'var(--bg-primary)',
+    backgroundColor: 'var(--bg-secondary)',
     overflowX: 'hidden',
   },
   visionBanner: {
-    background: '#040508',
+    background: 'var(--bg-tertiary)',
     borderBottom: '1px solid rgba(255, 255, 255, 0.03)',
     padding: '4.5rem 0',
     textAlign: 'center',
@@ -208,7 +208,7 @@ const styles = {
     maxWidth: '720px',
   },
   headerSection: {
-    background: 'radial-gradient(circle at 90% 10%, rgba(212, 175, 55, 0.04) 0%, transparent 60%)',
+    background: 'radial-gradient(circle at 90% 10%, rgba(156, 180, 146, 0.04) 0%, transparent 60%)',
     textAlign: 'center',
     paddingTop: '6rem',
     paddingBottom: '4rem',
@@ -224,7 +224,7 @@ const styles = {
     marginTop: '1.5rem',
   },
   lifecycleSection: {
-    background: 'var(--bg-secondary)',
+    background: 'var(--bg-tertiary)',
     borderTop: '1px solid rgba(255,255,255,0.02)',
     borderBottom: '1px solid rgba(255,255,255,0.02)',
   },
@@ -246,11 +246,11 @@ const styles = {
     width: '44px',
     height: '44px',
     borderRadius: '10px',
-    background: 'rgba(212, 175, 55, 0.08)',
+    background: 'rgba(156, 180, 146, 0.08)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid var(--border-gold)',
+    border: '1px solid var(--border-accent)',
   },
   timelineTitle: {
     fontSize: '1.45rem',
@@ -263,7 +263,7 @@ const styles = {
     color: 'var(--text-secondary)',
   },
   sectorsSection: {
-    background: 'var(--bg-primary)',
+    background: 'var(--bg-secondary)',
   },
   sectorCard: {
     padding: '3rem 2.5rem',

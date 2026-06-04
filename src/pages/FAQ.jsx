@@ -67,11 +67,11 @@ export default function FAQ() {
 
 const styles = {
   page: {
-    backgroundColor: 'var(--bg-primary)',
+    backgroundColor: 'var(--bg-secondary)',
     minHeight: '100vh',
   },
   headerSection: {
-    background: 'radial-gradient(circle at 50% 100%, rgba(212,175,55,0.05) 0%, transparent 70%)',
+    background: 'radial-gradient(circle at 50% 100%, rgba(156,180,146,0.05) 0%, transparent 70%)',
     padding: '6rem 0',
     textAlign: 'center',
     borderBottom: '1px solid rgba(255,255,255,0.02)',
@@ -101,7 +101,7 @@ const styles = {
   faqCard: {
     padding: '2.5rem',
     borderRadius: '16px',
-    border: '1px solid var(--border-gold)',
+    border: '1px solid var(--border-accent)',
   },
   question: {
     fontSize: '1.3rem',

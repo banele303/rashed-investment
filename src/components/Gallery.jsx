@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { X, Maximize2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
@@ -151,7 +151,7 @@ const styles = {
     left: 0,
     width: '100%',
     padding: '1.5rem',
-    background: 'linear-gradient(to top, rgba(7,9,14,0.95) 0%, transparent 100%)',
+    background: 'linear-gradient(to top, rgba(15,18,23,0.85) 0%, transparent 100%)',
     opacity: 1,
     transition: 'opacity 0.3s ease',
   },
@@ -254,3 +254,4 @@ const styles = {
     color: 'var(--text-muted)',
   },
 };
+

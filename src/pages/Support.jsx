@@ -71,7 +71,7 @@ export default function Support() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                 >
                   <div style={styles.iconWrapper}>
-                    <Icon size={24} color="var(--accent-gold)" />
+                    <Icon size={24} color="var(--accent-primary)" />
                   </div>
                   <h3 style={styles.title}>{channel.title}</h3>
                   <p style={styles.desc}>{channel.desc}</p>
@@ -97,11 +97,11 @@ export default function Support() {
 
 const styles = {
   page: {
-    backgroundColor: 'var(--bg-primary)',
+    backgroundColor: 'var(--bg-secondary)',
     minHeight: '100vh',
   },
   headerSection: {
-    background: 'radial-gradient(circle at 10% 10%, rgba(212,175,55,0.06) 0%, transparent 60%)',
+    background: 'radial-gradient(circle at 10% 10%, rgba(156,180,146,0.06) 0%, transparent 60%)',
     padding: '7rem 0 5rem 0',
     textAlign: 'center',
     borderBottom: '1px solid rgba(255,255,255,0.02)',
@@ -131,14 +131,14 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
-    border: '1px solid var(--border-gold)',
+    border: '1px solid var(--border-accent)',
   },
   iconWrapper: {
     width: '60px',
     height: '60px',
     borderRadius: '50%',
-    background: 'rgba(212, 175, 55, 0.08)',
-    border: '1px solid rgba(212, 175, 55, 0.2)',
+    background: 'rgba(156, 180, 146, 0.08)',
+    border: '1px solid rgba(156, 180, 146, 0.2)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -163,7 +163,7 @@ const styles = {
     padding: '0.8rem 1.5rem',
     borderRadius: '8px',
     background: 'rgba(255,255,255,0.05)',
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     fontWeight: 600,
     textDecoration: 'none',
     border: '1px solid rgba(255,255,255,0.1)',

@@ -52,12 +52,12 @@ function Navigation() {
   return (
     <nav style={{
       ...styles.navBar,
-      background: scrolled ? 'rgba(7, 9, 14, 0.92)' : 'rgba(7, 9, 14, 0.7)',
-      borderBottom: scrolled ? '1px solid var(--border-gold)' : '1px solid rgba(255, 255, 255, 0.05)',
+      background: scrolled ? 'rgba(7, 9, 8, 0.95)' : 'rgba(7, 9, 8, 0.75)',
+      borderBottom: scrolled ? '1px solid var(--border-accent)' : '1px solid rgba(255, 255, 255, 0.05)',
       boxShadow: scrolled ? '0 10px 30px rgba(0,0,0,0.5)' : 'none',
     }}>
       <div className="container" style={styles.navContainer}>
-        {/* Logo */}
+        {/* Logo — image only, no text */}
         <Link to="/" style={styles.logoLink}>
           <img 
             src="/rashed-logo.png" 
@@ -67,10 +67,6 @@ function Navigation() {
               e.target.style.display = 'none';
             }}
           />
-          <div style={styles.logoTextWrapper}>
-            <span style={styles.logoTitle}>RASHED</span>
-            <span style={styles.logoSubtitle}>INVESTMENTS</span>
-          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -84,11 +80,11 @@ function Navigation() {
                 to={link.path} 
                 style={{
                   ...styles.navLink,
-                  color: active ? 'var(--accent-gold)' : 'var(--text-secondary)',
+                  color: active ? 'var(--accent-primary)' : 'var(--text-secondary)',
                   fontWeight: active ? '700' : '500',
                 }}
               >
-                <Icon size={14} style={{ color: active ? 'var(--accent-gold)' : 'var(--text-muted)' }} />
+                <Icon size={14} style={{ color: active ? 'var(--accent-primary)' : 'var(--text-muted)' }} />
                 <span>{link.label}</span>
                 {active && <span style={styles.activeIndicator}></span>}
               </Link>
@@ -105,7 +101,7 @@ function Navigation() {
 
         {/* Mobile Toggle */}
         <button style={styles.mobileToggle} onClick={() => setIsOpen(!isOpen)} className="nav-toggle-mobile">
-          {isOpen ? <X size={24} color="var(--accent-gold)" /> : <Menu size={24} />}
+          {isOpen ? <X size={24} color="var(--accent-primary)" /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -122,9 +118,9 @@ function Navigation() {
                 onClick={() => setIsOpen(false)}
                 style={{
                   ...styles.mobileNavLink,
-                  color: active ? 'var(--accent-gold)' : 'var(--text-primary)',
-                  background: active ? 'rgba(212, 175, 55, 0.08)' : 'transparent',
-                  borderLeft: active ? '3px solid var(--accent-gold)' : '3px solid transparent',
+                  color: active ? 'var(--accent-primary)' : 'var(--text-primary)',
+                  background: active ? 'rgba(156, 180, 146, 0.08)' : 'transparent',
+                  borderLeft: active ? '3px solid var(--accent-primary)' : '3px solid transparent',
                 }}
               >
                 <Icon size={16} />
@@ -167,17 +163,13 @@ function Footer() {
                 e.target.style.display = 'none';
               }}
             />
-            <div style={styles.logoTextWrapper}>
-              <span style={styles.logoTitle}>RASHED</span>
-              <span style={styles.logoSubtitle}>INVESTMENTS</span>
-            </div>
           </div>
           <p style={styles.footerBrandDesc}>
             A 100% Black-owned property development and investment firm specializing in rural and traditional land developments. Restoring community dignity with eco-friendly infrastructure, solar grids, and clean water treatment systems.
           </p>
           <div style={styles.nationalAlignment}>
-            <Landmark size={16} color="var(--accent-gold)" />
-            <span style={{ fontSize: '0.85rem', color: 'var(--accent-gold)', fontWeight: 600 }}>Aligned to the National Development Plan (NDP) 2030</span>
+            <Landmark size={16} color="var(--accent-primary)" />
+            <span style={{ fontSize: '0.85rem', color: 'var(--accent-primary)', fontWeight: 600 }}>Aligned to the National Development Plan (NDP) 2030</span>
           </div>
         </div>
 
@@ -209,7 +201,7 @@ function Footer() {
             South Africa
           </p>
           <p style={styles.footerContactText}>
-            <span style={{ color: 'var(--accent-gold)' }}>General Inquiry:</span><br />
+            <span style={{ color: 'var(--accent-primary)' }}>General Inquiry:</span><br />
             <a href="mailto:info@rashed.co.za" style={styles.inlineMail}>info@rashed.co.za</a>
           </p>
         </div>
@@ -276,7 +268,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
-    backgroundColor: 'var(--bg-primary)',
+    backgroundColor: 'var(--bg-secondary)',
   },
   mainContent: {
     flex: '1 0 auto',
@@ -310,26 +302,6 @@ const styles = {
     height: '46px',
     width: 'auto',
   },
-  logoTextWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  logoTitle: {
-    fontFamily: 'var(--font-display)',
-    fontWeight: 800,
-    fontSize: '1.45rem',
-    color: '#FFFFFF',
-    letterSpacing: '0.04em',
-    lineHeight: 1,
-  },
-  logoSubtitle: {
-    fontFamily: 'var(--font-display)',
-    fontWeight: 700,
-    fontSize: '0.62rem',
-    color: 'var(--accent-gold)',
-    letterSpacing: '0.27em',
-    marginTop: '3px',
-  },
   desktopNav: {
     display: 'flex',
     alignItems: 'center',
@@ -351,9 +323,9 @@ const styles = {
     left: 0,
     right: 0,
     height: '2px',
-    background: 'var(--accent-gold)',
+    background: 'var(--accent-primary)',
     borderRadius: '2px',
-    boxShadow: '0 0 8px var(--accent-gold)',
+    boxShadow: '0 0 8px var(--accent-primary)',
   },
   navBtn: {
     padding: '0.55rem 1.15rem',
@@ -372,13 +344,14 @@ const styles = {
     top: '80px',
     left: 0,
     width: '100%',
-    background: 'rgba(7, 9, 14, 0.98)',
-    borderBottom: '1px solid var(--border-gold)',
+    background: 'var(--bg-secondary)',
+    borderBottom: '1px solid var(--border-accent)',
     padding: '1.5rem',
     display: 'flex',
     flexDirection: 'column',
     gap: '0.75rem',
     zIndex: 999,
+    boxShadow: '0 12px 32px rgba(0,0,0,0.3)',
   },
   mobileNavLink: {
     display: 'flex',
@@ -397,8 +370,8 @@ const styles = {
     padding: '0.9rem',
   },
   footer: {
-    background: '#040508',
-    borderTop: '1px solid rgba(255, 255, 255, 0.04)',
+    background: 'var(--bg-tertiary)',
+    borderTop: '1px solid var(--border-color)',
     padding: '6rem 0 0 0',
     marginTop: 'auto',
     position: 'relative',
@@ -430,15 +403,15 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '0.6rem',
-    background: 'rgba(212, 175, 55, 0.05)',
-    border: '1px solid rgba(212, 175, 55, 0.1)',
+    background: 'rgba(156, 180, 146, 0.06)',
+    border: '1px solid rgba(156, 180, 146, 0.12)',
     padding: '0.6rem 1rem',
     borderRadius: '6px',
     width: 'fit-content',
   },
   footerSectionTitle: {
     fontSize: '1.05rem',
-    color: '#FFFFFF',
+    color: 'var(--text-primary)',
     marginBottom: '1.75rem',
     fontFamily: 'var(--font-display)',
     fontWeight: 700,
@@ -458,10 +431,6 @@ const styles = {
     width: 'fit-content',
     borderBottom: '1px solid transparent',
     paddingBottom: '2px',
-    ':hover': {
-      color: 'var(--accent-gold)',
-      borderBottom: '1px solid var(--accent-gold)',
-    }
   },
   footerContactText: {
     fontSize: '0.95rem',
@@ -474,13 +443,13 @@ const styles = {
     fontWeight: 600,
   },
   inlineMail: {
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     textDecoration: 'underline',
   },
   footerBottom: {
-    borderTop: '1px solid rgba(255, 255, 255, 0.02)',
+    borderTop: '1px solid var(--border-color)',
     padding: '2rem 0',
-    background: '#020304',
+    background: 'var(--bg-secondary)',
   },
   footerBottomContainer: {
     display: 'flex',
@@ -502,9 +471,6 @@ const styles = {
   legalLink: {
     cursor: 'pointer',
     transition: 'var(--transition-fast)',
-    ':hover': {
-      color: 'var(--accent-gold)',
-    }
   },
 }
 
@@ -520,7 +486,7 @@ styleSheet.innerText = `
     footer .container { grid-template-columns: 1fr !important; gap: 2rem !important; }
   }
   a:hover {
-    color: var(--accent-gold-hover) !important;
+    color: var(--accent-primary-hover) !important;
   }
 `
 document.head.appendChild(styleSheet)

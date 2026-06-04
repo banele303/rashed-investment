@@ -80,11 +80,11 @@ export default function Blog() {
                 <div style={styles.content}>
                   <div style={styles.meta}>
                     <div style={styles.metaItem}>
-                      <Calendar size={14} color="var(--accent-gold)" />
+                      <Calendar size={14} color="var(--accent-primary)" />
                       <span>{post.date}</span>
                     </div>
                     <div style={styles.metaItem}>
-                      <User size={14} color="var(--accent-gold)" />
+                      <User size={14} color="var(--accent-primary)" />
                       <span>{post.author}</span>
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export default function Blog() {
 
 const styles = {
   page: {
-    backgroundColor: 'var(--bg-primary)',
+    backgroundColor: 'var(--bg-secondary)',
     minHeight: '100vh',
   },
   headerSection: {
@@ -198,7 +198,7 @@ const styles = {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '0.5rem',
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     fontWeight: 700,
     fontSize: '0.95rem',
     textDecoration: 'none',
@@ -214,7 +214,7 @@ if (typeof document !== 'undefined') {
       transform: scale(1.05);
     }
     .title-link:hover h3 {
-      color: var(--accent-gold) !important;
+      color: var(--accent-primary) !important;
     }
     .read-more:hover {
       gap: 0.8rem !important;

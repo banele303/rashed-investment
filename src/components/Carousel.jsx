@@ -83,9 +83,9 @@ export default function Carousel() {
             key={idx}
             style={{
               ...styles.dot,
-              background: idx === current ? 'var(--accent-gold)' : 'rgba(255,255,255,0.2)',
+              background: idx === current ? 'var(--accent-primary)' : 'rgba(255,255,255,0.2)',
               width:  idx === current ? '28px' : '10px',
-              boxShadow: idx === current ? '0 0 8px var(--accent-gold)' : 'none',
+              boxShadow: idx === current ? '0 0 8px var(--accent-primary)' : 'none',
             }}
             onClick={() => goTo(idx)}
           />
@@ -119,7 +119,7 @@ const styles = {
   gradientOverlay: {
     position: 'absolute',
     inset: 0,
-    background: 'linear-gradient(to top, rgba(7,9,14,0.92) 0%, rgba(7,9,14,0.1) 60%)',
+    background: 'linear-gradient(to top, rgba(15,18,23,0.82) 0%, rgba(15,18,23,0.08) 60%)',
   },
   caption: {
     position: 'absolute',
@@ -173,3 +173,4 @@ const styles = {
     transition: 'all 0.35s ease',
   },
 };
+

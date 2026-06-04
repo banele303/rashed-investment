@@ -181,7 +181,7 @@ function ReviewCard({ review, index }) {
           <div
             style={{
               ...styles.avatarInitialBox,
-              background: review.avatarBg || 'linear-gradient(135deg, #D4AF37 0%, #8B6914 100%)',
+              background: review.avatarBg || 'linear-gradient(135deg, #9CB492 0%, #6B9E6B 100%)',
               display: review.avatar ? 'none' : 'flex',
             }}
           >
@@ -217,7 +217,7 @@ function ReviewCard({ review, index }) {
 
       {/* Location */}
       <div style={styles.locationRow}>
-        <MapPin size={12} color="var(--accent-gold)" />
+        <MapPin size={12} color="var(--accent-primary)" />
         <span style={styles.locationText}>{review.location}</span>
       </div>
 
@@ -355,7 +355,7 @@ export default function Testimonials() {
 const styles = {
   section: {
     padding: '8rem 0',
-    background: 'var(--bg-primary)',
+    background: 'var(--bg-secondary)',
     borderTop: '1px solid rgba(255,255,255,0.03)',
   },
   header: {
@@ -393,7 +393,7 @@ const styles = {
     fontFamily: 'var(--font-display)',
     fontSize: '3.5rem',
     fontWeight: 800,
-    color: '#FFFFFF',
+    color: 'var(--text-primary)',
     lineHeight: 1,
   },
   reviewCount: {
@@ -454,7 +454,7 @@ const styles = {
     fontFamily: 'var(--font-display)',
     fontWeight: 700,
     fontSize: '0.9rem',
-    color: '#FFFFFF',
+    color: 'var(--text-primary)',
   },
   gmSub: {
     fontSize: '0.72rem',
@@ -511,7 +511,7 @@ const styles = {
     fontFamily: 'var(--font-display)',
     fontWeight: 800,
     fontSize: '1.1rem',
-    color: '#FFFFFF',
+    color: 'var(--text-primary)',
     letterSpacing: '-0.02em',
   },
   authorInfo: {
@@ -529,7 +529,7 @@ const styles = {
     fontFamily: 'var(--font-display)',
     fontWeight: 700,
     fontSize: '0.95rem',
-    color: '#FFFFFF',
+    color: 'var(--text-primary)',
   },
   roleText: {
     fontSize: '0.75rem',
@@ -558,13 +558,13 @@ const styles = {
   },
   locationText: {
     fontSize: '0.75rem',
-    color: 'var(--accent-gold)',
+    color: 'var(--accent-primary)',
     fontWeight: 500,
   },
   reviewText: {
     fontSize: '0.88rem',
     lineHeight: 1.75,
-    color: 'rgba(255,255,255,0.8)',
+    color: 'var(--text-primary)',
     flex: 1,
   },
   moreBtn: {
