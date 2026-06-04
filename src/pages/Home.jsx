@@ -2,6 +2,8 @@ import React from 'react'
 import { ArrowRight, Zap, Droplet, Shield, Award, BookOpen, HeartHandshake, MapPin, Users, Lightbulb } from 'lucide-react'
 import Carousel from '../components/Carousel'
 import Testimonials from '../components/Testimonials'
+import TeamGallery from '../components/TeamGallery'
+import AnimatedSection from '../components/AnimatedSection'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
@@ -110,9 +112,10 @@ export default function Home() {
       </section>
 
       {/* Stats Counter Section */}
-      <section style={styles.statsSection}>
-        <div className="container">
-          <div style={styles.statsGrid}>
+      <AnimatedSection direction="up" delay={0.2}>
+        <section style={styles.statsSection}>
+          <div className="container">
+            <div style={styles.statsGrid}>
             {stats.map((stat, idx) => (
               <div key={idx} className="glass-panel" style={styles.statCard}>
                 <h3 style={styles.statVal} className="text-gold-gradient">{stat.value}</h3>
@@ -123,6 +126,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Overview & Pillars */}
       <section style={styles.pillarsSection}>
@@ -208,35 +212,7 @@ export default function Home() {
       </section>
 
       {/* Executive Leadership Team */}
-      <section style={styles.teamSection}>
-        <div className="container">
-          <div style={styles.sectionHeader}>
-            <span className="section-tag">Executive Board</span>
-            <h2 className="section-title">Our Leadership Team</h2>
-            <p className="section-subtitle">
-              With a combined wealth of over 50 years of experience, our directors have lead-managed multi-million-rand commercial, residential, and corporate projects.
-            </p>
-          </div>
-          
-          <div style={styles.teamGrid}>
-            {leadership.map((member, idx) => (
-              <div key={idx} className="glass-panel" style={styles.teamCard}>
-                <div style={styles.teamImgWrapper}>
-                  <img src={member.image} alt={member.name} style={styles.teamImg} />
-                </div>
-                <h4 style={styles.teamName}>{member.name}</h4>
-                <p style={styles.teamRole}>{member.role}</p>
-                <span style={styles.divider}></span>
-                <p style={styles.teamDesc}>{member.desc}</p>
-                <Link to="/about" style={styles.cardLink}>
-                  <span>Read Profile</span>
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeamGallery />
 
       {/* CSI Section */}
       <section style={styles.csiSection}>

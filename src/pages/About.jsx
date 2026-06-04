@@ -1,6 +1,7 @@
 import React from 'react'
 import { Award, Briefcase, GraduationCap, Linkedin, Mail, Phone, ExternalLink } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
+import TeamGallery from '../components/TeamGallery'
 
 export default function About() {
   const team = [
@@ -106,61 +107,7 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section style={styles.teamSection}>
-        <div className="container">
-          <div style={styles.sectionHeader}>
-            <span className="section-tag">Executive Board</span>
-            <h2 className="section-title">Our Leadership</h2>
-            <p className="section-subtitle">
-              Combining over 50 years of leadership across corporate communication, architectural design, government relations, and multimedia marketing.
-            </p>
-          </div>
-
-          <div style={styles.teamList}>
-            {team.map((member, idx) => (
-              <div key={idx} className="glass-panel" style={styles.memberCard}>
-                <div style={styles.memberHeader}>
-                  <div style={styles.imgWrapper}>
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      style={styles.memberImg}
-                    />
-                  </div>
-                  <div style={styles.memberTitles}>
-                    <h3 style={styles.memberName}>{member.name}</h3>
-                    <p style={styles.memberRole}>{member.role}</p>
-                    <p style={styles.memberBio}>{member.bio}</p>
-                    
-                    <div style={styles.contactRow}>
-                      <a href={`mailto:${member.email}`} style={styles.contactIconLink}>
-                        <Mail size={16} />
-                        <span>{member.email}</span>
-                      </a>
-                      <a href={`tel:${member.phone.replace(/\s+/g, '')}`} style={styles.contactIconLink}>
-                        <Phone size={16} />
-                        <span>{member.phone}</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                
-                <div style={styles.memberDetails}>
-                  <h4 style={styles.detailsHeading}>Key Professional Highlights</h4>
-                  <ul className="custom-list">
-                    {member.details.map((detail, dIdx) => (
-                      <li key={dIdx} className="custom-list-item">
-                        <span className="custom-list-bullet"></span>
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeamGallery />
     </div>
   )
 }
