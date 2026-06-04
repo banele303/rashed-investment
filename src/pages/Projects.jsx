@@ -22,8 +22,8 @@ export default function Projects() {
   ]
 
   const galleryImages = [
-    { src: "/extracted_images/image_2.png", title: "Main Center Architectural Layout" },
-    { src: "/extracted_images/image_3.png", title: "Shopping Center Front Elevation" },
+    { src: "/project_gallery_1.png", title: "Main Center Architectural Layout" },
+    { src: "/project_gallery_2.png", title: "Shopping Center Front Elevation" },
     { src: "/extracted_images/image_14.png", title: "Site Layout Master Plan" },
     { src: "/extracted_images/image_17.png", title: "Lifestyle Complex 3D Render" },
     { src: "/extracted_images/image_25.png", title: "Geotechnical Survey Map" },
@@ -112,6 +112,21 @@ export default function Projects() {
                 <p style={styles.panelParagraph}>
                   Powered by clean photovoltaic solar grids and supplied by our on-site water purification systems, this smart development is built to withstand national infrastructure failures while actively promoting water preservation and green energy usage.
                 </p>
+
+                <div style={styles.statsGrid}>
+                  <div style={styles.statBox}>
+                    <h4 style={styles.statNumber}>15k+</h4>
+                    <p style={styles.statLabel}>Expected Daily Visitors</p>
+                  </div>
+                  <div style={styles.statBox}>
+                    <h4 style={styles.statNumber}>120</h4>
+                    <p style={styles.statLabel}>Retail Units</p>
+                  </div>
+                  <div style={styles.statBox}>
+                    <h4 style={styles.statNumber}>250</h4>
+                    <p style={styles.statLabel}>Permanent Jobs Created</p>
+                  </div>
+                </div>
 
                 <div style={styles.socialImpactBox} className="glass-panel-green">
                   <h3 style={styles.impactTitle} className="text-green-gradient">Corporate Social Investment Integration</h3>
@@ -273,7 +288,7 @@ const styles = {
   },
   projectHero: {
     position: 'relative',
-    background: 'linear-gradient(rgba(7, 9, 14, 0.88) 0%, rgba(7, 9, 14, 0.95) 100%), url("/extracted_images/image_2.png") no-repeat center center / cover',
+    background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 100%), url("/project_gallery_1.png") no-repeat center center / cover',
     textAlign: 'center',
     padding: '7rem 0 5rem 0',
   },
@@ -449,10 +464,14 @@ const styles = {
   galleryCard: {
     borderRadius: '16px',
     overflow: 'hidden',
-    border: '1px solid rgba(255,255,255,0.05)',
+    border: '1px solid rgba(255,255,255,0.08)',
     position: 'relative',
     height: '260px',
     cursor: 'pointer',
+    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    backdropFilter: 'blur(16px)',
+    WebkitBackdropFilter: 'blur(16px)',
+    boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
   },
   galleryImgWrapper: {
     width: '100%',
@@ -493,6 +512,33 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
+  },
+  statsGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: '1.5rem',
+    marginTop: '2.5rem',
+    marginBottom: '2.5rem',
+  },
+  statBox: {
+    padding: '1.5rem',
+    borderRadius: '12px',
+    backgroundColor: 'var(--bg-tertiary)',
+    border: '1px solid rgba(255, 255, 255, 0.05)',
+    textAlign: 'center',
+  },
+  statNumber: {
+    fontSize: '2rem',
+    fontWeight: 900,
+    color: 'var(--accent-primary)',
+    marginBottom: '0.5rem',
+  },
+  statLabel: {
+    fontSize: '0.9rem',
+    color: 'var(--text-secondary)',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+    fontWeight: 600,
   },
   /* Lightbox Styles */
   lightbox: {
