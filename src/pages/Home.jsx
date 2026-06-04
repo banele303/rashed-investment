@@ -146,7 +146,7 @@ export default function Home() {
           <div style={styles.blogGrid}>
             <Link to="/blog/2" className="glass-panel" style={styles.blogCard}>
               <div style={styles.blogImgWrapper}>
-                <img src="https://images.unsplash.com/photo-1541888081688-6c84fdb6c729?auto=format&fit=crop&w=800&q=80" alt="Construction Progress" style={styles.blogImg} />
+                <img src="/news_insights_1.png" alt="Construction Progress" style={styles.blogImg} />
               </div>
               <div style={styles.blogCardBody}>
                 <div style={styles.blogMeta}>
