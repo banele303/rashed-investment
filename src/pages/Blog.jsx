@@ -12,7 +12,7 @@ export default function Blog() {
       excerpt: 'Rashed Investments has officially commenced preliminary earthworks for the highly anticipated Lifestyle Shopping Centre, bringing over 200 immediate local jobs.',
       date: 'May 12, 2026',
       author: 'Corporate Comms',
-      image: '/extracted_images/image_14.png'
+      image: '/blog_construction.png'
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export default function Blog() {
       excerpt: 'How our engineering team is addressing load shedding by incorporating 1.5MW photovoltaic systems into the core infrastructure of our commercial builds.',
       date: 'April 28, 2026',
       author: 'Vhahangwele Khangale',
-      image: '/extracted_images/image_17.png'
+      image: '/blog_solar.png'
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ export default function Blog() {
       excerpt: 'We are proud to announce the first cohort of 50 local youths entering our certified masonry and electrical artisan skills program.',
       date: 'April 10, 2026',
       author: 'Monica Khangale',
-      image: '/extracted_images/image_31.png' // Using partner/event image placeholder
+      image: '/blog_artisan.png'
     }
   ];
 

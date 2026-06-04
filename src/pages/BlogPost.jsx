@@ -10,7 +10,7 @@ const getPostData = (id) => {
       title: 'Groundbreaking at Tshishushuru Village: A New Era for Lwamondo',
       date: 'May 12, 2026',
       author: 'Corporate Comms',
-      image: '/extracted_images/image_14.png',
+      image: '/blog_construction.png',
       content: `
         <p>The dawn of a new era has arrived in Lwamondo. Yesterday marked the official groundbreaking ceremony for the Tshishushuru Village Lifestyle Shopping Centre, an ambitious mixed-use project spearheaded by Rashed Investments.</p>
         <p>In attendance were prominent traditional leaders, municipal authorities, and community members who celebrated the commencement of earthworks. This development represents more than just commercial retail; it is a profound investment into rural infrastructure.</p>
@@ -23,7 +23,7 @@ const getPostData = (id) => {
       title: 'Integrating Solar Grids in Rural Developments',
       date: 'April 28, 2026',
       author: 'Vhahangwele Khangale',
-      image: '/extracted_images/image_17.png',
+      image: '/blog_solar.png',
       content: `
         <p>As South Africa continues to navigate energy challenges, property developers must innovate to ensure their commercial structures remain viable and functional regardless of national grid stability.</p>
         <p>At Rashed Investments, our Technical Directorate has engineered a comprehensive 1.5MW photovoltaic (PV) solar system integrated directly into the architectural blueprints of our flagship projects.</p>
@@ -36,7 +36,7 @@ const getPostData = (id) => {
       title: 'Community First: Launching the Artisan Training Program',
       date: 'April 10, 2026',
       author: 'Monica Khangale',
-      image: '/extracted_images/image_31.png',
+      image: '/blog_artisan.png',
       content: `
         <p>True broad-based empowerment occurs when communities are equipped with tangible, marketable skills. In partnership with local TVET colleges, Rashed Investments has officially launched the Community Artisan Training Program.</p>
         <p>Our first cohort of 50 youths has begun an intensive 12-month program covering essential construction skills: electrical wiring, plumbing, and bricklaying.</p>
