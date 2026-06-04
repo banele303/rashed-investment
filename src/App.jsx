@@ -85,15 +85,12 @@ function Navigation() {
                   fontWeight: active ? '700' : '500',
                 }}
               >
-                <Icon size={14} style={{ color: active ? 'var(--accent-primary)' : 'var(--text-muted)' }} />
                 <span>{link.label}</span>
                 {active && <span style={styles.activeIndicator}></span>}
               </Link>
             )
           })}
           
-          <DarkModeToggle />
-
           <Link to="/contact" className="btn-premium btn-primary" style={styles.navBtn}>
             <span>Get in Touch</span>
             <ArrowUpRight size={14} />
@@ -110,7 +107,6 @@ function Navigation() {
       {isOpen && (
         <div style={styles.mobileDrawer}>
           {navLinks.map((link) => {
-            const Icon = link.icon
             const active = isActive(link.path)
             return (
               <Link 
@@ -124,17 +120,11 @@ function Navigation() {
                   borderLeft: active ? '3px solid var(--accent-primary)' : '3px solid transparent',
                 }}
               >
-                <Icon size={16} />
                 <span>{link.label}</span>
               </Link>
             )
           })}
           
-          <div style={{ padding: '0.5rem 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', fontWeight: 600 }}>Theme</span>
-            <DarkModeToggle />
-          </div>
-
           <Link 
             to="/contact" 
             className="btn-premium btn-primary" 
