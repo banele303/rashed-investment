@@ -7,7 +7,7 @@ const teamMembers = [
     id: 1,
     name: 'Ndivhuwo Khangale',
     role: 'Executive Director & CEO',
-    image: '/director_ndivhuwo.png',
+    image: '/dad.png',
     bio: 'Ndivhuwo leads the strategic vision of Rashed Investments, driving sustainable development and strategic partnerships across rural and urban sectors.',
     email: 'ndivhuwo@rashed.co.za'
   },
@@ -15,7 +15,7 @@ const teamMembers = [
     id: 2,
     name: 'Vhahangwele Khangale',
     role: 'Technical Director',
-    image: '/director_vhahangwele.png',
+    image: '/small daddy.png',
     bio: 'Overseeing all engineering and construction phases, Vhahangwele ensures every project meets premium quality and strict safety standards.',
     email: 'vhahangwele@rashed.co.za'
   },
@@ -23,7 +23,7 @@ const teamMembers = [
     id: 3,
     name: 'Monica Khangale',
     role: 'Operations Director',
-    image: '/director_monica.png',
+    image: '/lady.jpeg',
     bio: 'Monica manages daily operations, community stakeholder engagement, and the integration of CSI programs into core business activities.',
     email: 'monica@rashed.co.za'
   }
@@ -59,7 +59,7 @@ export default function TeamGallery() {
                   alt={`Portrait of ${member.name}, ${member.role}`} 
                   style={styles.image}
                   onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80';
+                    e.target.style.display = 'none';
                   }}
                 />
                 <div style={styles.overlay}>
