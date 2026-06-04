@@ -129,6 +129,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW RECENT INSIGHTS / BLOG SECTION */}
+      <section style={styles.blogSection}>
+        <div className="container">
+          <div style={styles.blogHeaderRow}>
+            <div>
+              <span className="section-tag">Latest Updates</span>
+              <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>News & Insights</h2>
+            </div>
+            <Link to="/blog" className="btn-premium btn-secondary" style={styles.viewAllBtn}>
+              <span>View All Posts</span>
+              <ChevronRight size={16} />
+            </Link>
+          </div>
+          
+          <div style={styles.blogGrid}>
+            <Link to="/blog/2" className="glass-panel" style={styles.blogCard}>
+              <div style={styles.blogImgWrapper}>
+                <img src="https://images.unsplash.com/photo-1541888081688-6c84fdb6c729?auto=format&fit=crop&w=800&q=80" alt="Construction Progress" style={styles.blogImg} />
+              </div>
+              <div style={styles.blogCardBody}>
+                <div style={styles.blogMeta}>
+                  <Calendar size={14} />
+                  <span>October 12, 2023</span>
+                </div>
+                <h3 style={styles.blogCardTitle}>Lwamondo Urban Village: Earthworks Phase Completed Ahead of Schedule</h3>
+                <p style={styles.blogCardDesc}>We are excited to announce that phase one of our flagship development has successfully concluded its geotechnical earthworks.</p>
+                <span style={styles.blogReadMore}>Read Article &rarr;</span>
+              </div>
+            </Link>
+            
+            <Link to="/blog/1" className="glass-panel" style={styles.blogCard}>
+              <div style={styles.blogImgWrapper}>
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar Panels" style={styles.blogImg} />
+              </div>
+              <div style={styles.blogCardBody}>
+                <div style={styles.blogMeta}>
+                  <Calendar size={14} />
+                  <span>August 05, 2023</span>
+                </div>
+                <h3 style={styles.blogCardTitle}>Integrating Independent Solar Grids in Rural Commercial Centres</h3>
+                <p style={styles.blogCardDesc}>A deep dive into how Rashed Investments is future-proofing retail developments against national grid failures using PV technology.</p>
+                <span style={styles.blogReadMore}>Read Article &rarr;</span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Overview & Pillars */}
       <section style={styles.pillarsSection}>
         <div className="container">
@@ -209,54 +257,6 @@ export default function Home() {
             </p>
           </div>
           <Carousel />
-        </div>
-      </section>
-
-      {/* NEW RECENT INSIGHTS / BLOG SECTION */}
-      <section style={styles.blogSection}>
-        <div className="container">
-          <div style={styles.blogHeaderRow}>
-            <div>
-              <span className="section-tag">Latest Updates</span>
-              <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>News & Insights</h2>
-            </div>
-            <Link to="/blog" className="btn-premium btn-secondary" style={styles.viewAllBtn}>
-              <span>View All Posts</span>
-              <ChevronRight size={16} />
-            </Link>
-          </div>
-          
-          <div style={styles.blogGrid}>
-            <Link to="/blog/2" className="glass-panel" style={styles.blogCard}>
-              <div style={styles.blogImgWrapper}>
-                <img src="https://images.unsplash.com/photo-1541888081688-6c84fdb6c729?auto=format&fit=crop&w=800&q=80" alt="Construction Progress" style={styles.blogImg} />
-              </div>
-              <div style={styles.blogCardBody}>
-                <div style={styles.blogMeta}>
-                  <Calendar size={14} />
-                  <span>October 12, 2023</span>
-                </div>
-                <h3 style={styles.blogCardTitle}>Lwamondo Urban Village: Earthworks Phase Completed Ahead of Schedule</h3>
-                <p style={styles.blogCardDesc}>We are excited to announce that phase one of our flagship development has successfully concluded its geotechnical earthworks.</p>
-                <span style={styles.blogReadMore}>Read Article &rarr;</span>
-              </div>
-            </Link>
-            
-            <Link to="/blog/1" className="glass-panel" style={styles.blogCard}>
-              <div style={styles.blogImgWrapper}>
-                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Solar Panels" style={styles.blogImg} />
-              </div>
-              <div style={styles.blogCardBody}>
-                <div style={styles.blogMeta}>
-                  <Calendar size={14} />
-                  <span>August 05, 2023</span>
-                </div>
-                <h3 style={styles.blogCardTitle}>Integrating Independent Solar Grids in Rural Commercial Centres</h3>
-                <p style={styles.blogCardDesc}>A deep dive into how Rashed Investments is future-proofing retail developments against national grid failures using PV technology.</p>
-                <span style={styles.blogReadMore}>Read Article &rarr;</span>
-              </div>
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -349,7 +349,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    background: 'linear-gradient(to bottom, rgba(7,9,8,0.7) 0%, rgba(7,9,8,0.4) 50%, var(--bg-secondary) 100%)',
+    background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 60%, var(--bg-secondary) 100%)',
     zIndex: 1,
   },
   heroContainer: {
