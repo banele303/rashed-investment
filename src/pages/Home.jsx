@@ -64,11 +64,11 @@ export default function Home() {
               Developing modern commercial, retail, and industrial infrastructure in rural and traditional communities across South Africa. Aligned to the National Development Plan 2030.
             </p>
             <div style={styles.heroBtns}>
-              <Link to="/projects" className="btn-premium btn-primary" style={{ background: 'var(--bg-secondary)', color: 'var(--bg-primary)' }}>
+              <Link to="/projects" className="btn-premium btn-primary">
                 <span>Explore Flagship Project</span>
                 <ArrowRight size={16} />
               </Link>
-              <Link to="/about" className="btn-premium" style={{ border: '1px solid rgba(255,255,255,0.5)', color: '#FFFFFF', background: 'rgba(0,0,0,0.3)', backdropFilter: 'blur(10px)' }}>
+              <Link to="/about" className="btn-premium btn-secondary">
                 <span>Meet Our Leadership</span>
               </Link>
             </div>
