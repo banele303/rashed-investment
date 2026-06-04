@@ -394,4 +394,4 @@ contactSheet.innerText = `
   .partner-logo-box:hover .partner-logo { filter: grayscale(0) brightness(1) !important; opacity: 1 !important; }
 `
 document.head.appendChild(contactSheet)
-t)
+
