@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { Building2, Info, LayoutList, Hammer, Phone, ArrowUpRight, Menu, X, Landmark, ExternalLink } from 'lucide-react'
+import { Building2, Info, LayoutList, Hammer, Phone, ArrowUpRight, Menu, X, Landmark, ExternalLink, BookOpen } from 'lucide-react'
 import { HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -46,15 +46,16 @@ function Navigation() {
     { path: '/about', label: 'About & Team', icon: Info },
     { path: '/services', label: 'Our Services', icon: Hammer },
     { path: '/projects', label: 'Flagship Project', icon: LayoutList },
+    { path: '/blog', label: 'Insights & News', icon: BookOpen },
     { path: '/contact', label: 'Contact Us', icon: Phone },
   ]
 
   return (
     <nav style={{
       ...styles.navBar,
-      background: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.8)',
-      borderBottom: scrolled ? '1px solid rgba(7, 9, 8, 0.05)' : '1px solid transparent',
-      boxShadow: scrolled ? '0 10px 30px rgba(0,0,0,0.05)' : 'none',
+      background: scrolled ? 'rgba(7, 9, 8, 0.95)' : 'rgba(7, 9, 8, 0.75)',
+      borderBottom: scrolled ? '1px solid var(--border-accent)' : '1px solid rgba(255, 255, 255, 0.05)',
+      boxShadow: scrolled ? '0 10px 30px rgba(0,0,0,0.5)' : 'none',
     }}>
       <div className="container" style={styles.navContainer}>
         {/* Logo — image only, no text */}
@@ -151,7 +152,7 @@ function Navigation() {
 
 function Footer() {
   return (
-    <footer className="dark-theme" style={styles.footer}>
+    <footer style={styles.footer}>
       <div className="container" style={styles.footerGrid}>
         <div style={styles.footerBrand}>
           <div style={styles.footerLogo}>
@@ -344,8 +345,8 @@ const styles = {
     top: '80px',
     left: 0,
     width: '100%',
-    background: '#FFFFFF',
-    borderBottom: '1px solid rgba(7, 9, 8, 0.05)',
+    background: 'var(--bg-secondary)',
+    borderBottom: '1px solid var(--border-accent)',
     padding: '1.5rem',
     display: 'flex',
     flexDirection: 'column',
