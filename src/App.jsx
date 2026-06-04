@@ -52,9 +52,9 @@ function Navigation() {
   return (
     <nav style={{
       ...styles.navBar,
-      background: scrolled ? 'rgba(7, 9, 8, 0.95)' : 'rgba(7, 9, 8, 0.75)',
-      borderBottom: scrolled ? '1px solid var(--border-accent)' : '1px solid rgba(255, 255, 255, 0.05)',
-      boxShadow: scrolled ? '0 10px 30px rgba(0,0,0,0.5)' : 'none',
+      background: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.8)',
+      borderBottom: scrolled ? '1px solid rgba(7, 9, 8, 0.05)' : '1px solid transparent',
+      boxShadow: scrolled ? '0 10px 30px rgba(0,0,0,0.05)' : 'none',
     }}>
       <div className="container" style={styles.navContainer}>
         {/* Logo — image only, no text */}
@@ -344,8 +344,8 @@ const styles = {
     top: '80px',
     left: 0,
     width: '100%',
-    background: 'var(--bg-secondary)',
-    borderBottom: '1px solid var(--border-accent)',
+    background: '#FFFFFF',
+    borderBottom: '1px solid rgba(7, 9, 8, 0.05)',
     padding: '1.5rem',
     display: 'flex',
     flexDirection: 'column',
