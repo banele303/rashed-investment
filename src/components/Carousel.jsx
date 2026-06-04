@@ -3,9 +3,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    src: '/extracted_images/image_2.png',
-    title: 'Retail Shopping Centre Layout',
-    sub: 'Main architectural floor plan — Lwamondo, Limpopo',
+    src: '/urban_village_shopping_centre.png',
+    title: 'Urban Village Shopping Centre',
+    sub: 'Modern rural retail development — Lwamondo, Limpopo',
   },
   {
     src: '/extracted_images/image_3.png',

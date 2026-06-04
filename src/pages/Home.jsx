@@ -58,7 +58,7 @@ export default function Home() {
               <span style={{ color: '#FFFFFF' }}>Sustainable Property Specialists</span>
             </div>
             <h1 style={styles.heroTitle}>
-              Restoring Dignity Through <span style={{ color: 'var(--bg-secondary)' }}>Modern Development</span>
+              Restoring Dignity Through <span style={{ color: 'var(--accent-primary)', textShadow: '0 0 30px rgba(156, 180, 146, 0.4)' }}>Modern Development</span>
             </h1>
             <p style={styles.heroSubtitle}>
               Developing modern commercial, retail, and industrial infrastructure in rural and traditional communities across South Africa. Aligned to the National Development Plan 2030.
