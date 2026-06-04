@@ -367,8 +367,8 @@ const styles = {
     maxWidth: '900px',
   },
   heroTitle: {
-    fontSize: '4.8rem',
-    fontWeight: 900,
+    fontSize: '3.8rem',
+    fontWeight: 800,
     lineHeight: 1.1,
     marginBottom: '1.5rem',
     fontFamily: 'var(--font-display)',
