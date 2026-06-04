@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    src: '/urban_village_shopping_centre.png',
+    src: '/urban_village_carousel.png',
     title: 'Urban Village Shopping Centre',
     sub: 'Modern rural retail development — Lwamondo, Limpopo',
   },
