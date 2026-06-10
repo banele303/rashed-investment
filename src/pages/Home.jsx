@@ -49,9 +49,47 @@ export default function Home() {
         <meta name="description" content="100% Black-owned property development firm specializing in rural and traditional land developments. Aligned with South African NDP 2030." />
       </Helmet>
 
+      {/* Landing Page Overview Hero */}
+      <section className="home-hero-section" style={styles.overviewHeroSection}>
+        <div style={styles.overviewHeroOverlay}></div>
+        <div className="container responsive-two-col" style={styles.overviewHeroContainer}>
+          <div style={styles.overviewHeroContent}>
+            <span className="section-tag-green">Landing Page</span>
+            <h1 className="page-hero-title" style={styles.overviewHeroTitle}>OVERVIEW</h1>
+          </div>
+          <div className="mobile-copy-panel" style={styles.overviewHeroCopy}>
+            <p style={styles.overviewHeroText}>
+              Our company is aligned to the National Development Plan 2030 which seeks to create economic activities in communities in order to reduce poverty, grow the economy and create jobs in a sustainable and environmentally friendly manner. As such, our projects supplement power by using renewable energy (solar) to reduce pressure from the national grid. We also develop our own water treatment plants to support water preservation, recognising that water is a scarce resource in our country.
+            </p>
+            <p style={styles.overviewHeroText}>
+              Our key objective is to reverse the demeaning trend of substandard rural development and actively contribute towards restoring the dignity of previously marginalised communities through the development of modern commercial, retail, and industrial facilities that were historically exclusive to urban areas.
+            </p>
+            <p style={styles.overviewHeroText}>
+              Our biggest investment is in people. We believe in transferring skills to the communities in which we operate. Our fundamental principle is to empower individuals by nurturing their talent across various sectors, including education, entertainment, small businesses development, artisan training, leadership and economic development. This is achieved through our Corporate Social Investment wing which addresses social ills affecting communities, such as poverty, crime, diseases, child-headed families, support for the elderly, Early Childhood Development (ECD) and other community development programs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Counter Section */}
+      <AnimatedSection direction="up" delay={0.2}>
+        <section style={styles.statsSection}>
+          <div className="container">
+            <div className="responsive-grid home-stats-grid" style={styles.statsGrid}>
+            {stats.map((stat, idx) => (
+              <div key={idx} className="glass-panel" style={styles.statCard}>
+                <h3 style={styles.statVal}>{stat.value}</h3>
+                <h4 style={styles.statLabel}>{stat.label}</h4>
+                <p style={styles.statSub}>{stat.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      </AnimatedSection>
+
       {/* About Us */}
-      <section className="home-hero-section" style={styles.aboutHomeSection}>
-        <div style={styles.aboutHeroOverlay}></div>
+      <section style={styles.aboutHomeSection}>
         <div className="container responsive-two-col" style={styles.aboutHomeContainer}>
           <div style={styles.aboutHomeContent}>
             <span className="section-tag-green">About Us</span>
@@ -77,23 +115,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Stats Counter Section */}
-      <AnimatedSection direction="up" delay={0.2}>
-        <section style={styles.statsSection}>
-          <div className="container">
-            <div className="responsive-grid home-stats-grid" style={styles.statsGrid}>
-            {stats.map((stat, idx) => (
-              <div key={idx} className="glass-panel" style={styles.statCard}>
-                <h3 style={styles.statVal}>{stat.value}</h3>
-                <h4 style={styles.statLabel}>{stat.label}</h4>
-                <p style={styles.statSub}>{stat.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      </AnimatedSection>
 
       {/* NEW FEATURED INFRASTRUCTURE SECTION */}
       <section style={styles.gallerySection}>
@@ -440,7 +461,7 @@ const styles = {
     zIndex: 10,
     marginTop: 0,
   },
-  aboutHomeSection: {
+  overviewHeroSection: {
     position: 'relative',
     background: 'url("/about-img.jpeg") no-repeat center center',
     backgroundSize: 'cover',
@@ -451,13 +472,13 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
   },
-  aboutHeroOverlay: {
+  overviewHeroOverlay: {
     position: 'absolute',
     inset: 0,
     background: 'linear-gradient(90deg, rgba(7,9,8,0.94) 0%, rgba(7,9,8,0.76) 48%, rgba(7,9,8,0.46) 100%), linear-gradient(to bottom, rgba(7,9,8,0.18), var(--bg-secondary))',
     zIndex: 1,
   },
-  aboutHomeContainer: {
+  overviewHeroContainer: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
     gap: '5rem',
@@ -465,17 +486,53 @@ const styles = {
     position: 'relative',
     zIndex: 2,
   },
+  overviewHeroContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  overviewHeroTitle: {
+    fontSize: '4.5rem',
+    fontWeight: 900,
+    lineHeight: 1,
+    color: '#FFFFFF',
+    marginBottom: 0,
+    textShadow: '0 10px 35px rgba(0,0,0,0.55)',
+  },
+  overviewHeroCopy: {
+    padding: '2rem 3rem 2rem 2rem',
+    border: '1px solid var(--border-accent)',
+    borderRadius: '14px',
+    background: 'rgba(7, 9, 8, 0.64)',
+    backdropFilter: 'blur(14px)',
+  },
+  overviewHeroText: {
+    fontSize: '1.05rem',
+    lineHeight: '1.75',
+    color: 'rgba(255,255,255,0.82)',
+    marginBottom: '1.25rem',
+  },
+  aboutHomeSection: {
+    background: 'var(--bg-tertiary)',
+    padding: '7rem 0',
+    borderTop: '1px solid rgba(255,255,255,0.02)',
+    borderBottom: '1px solid rgba(255,255,255,0.02)',
+  },
+  aboutHomeContainer: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
+    gap: '5rem',
+    alignItems: 'start',
+  },
   aboutHomeContent: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
   },
   aboutHomeCopy: {
-    padding: '2rem',
-    border: '1px solid var(--border-accent)',
-    borderRadius: '14px',
-    background: 'rgba(7, 9, 8, 0.64)',
-    backdropFilter: 'blur(14px)',
+    paddingLeft: '2.5rem',
+    paddingRight: '1rem',
+    borderLeft: '1px solid var(--border-accent)',
   },
   aboutHomeText: {
     fontSize: '1.08rem',
