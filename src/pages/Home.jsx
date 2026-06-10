@@ -49,25 +49,9 @@ export default function Home() {
         <meta name="description" content="100% Black-owned property development firm specializing in rural and traditional land developments. Aligned with South African NDP 2030." />
       </Helmet>
 
-      {/* Stats Counter Section */}
-      <AnimatedSection direction="up" delay={0.2}>
-        <section style={styles.statsSection}>
-          <div className="container">
-            <div className="responsive-grid home-stats-grid" style={styles.statsGrid}>
-            {stats.map((stat, idx) => (
-              <div key={idx} className="glass-panel" style={styles.statCard}>
-                <h3 style={styles.statVal}>{stat.value}</h3>
-                <h4 style={styles.statLabel}>{stat.label}</h4>
-                <p style={styles.statSub}>{stat.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      </AnimatedSection>
-
       {/* About Us */}
-      <section style={styles.aboutHomeSection}>
+      <section className="home-hero-section" style={styles.aboutHomeSection}>
+        <div style={styles.aboutHeroOverlay}></div>
         <div className="container responsive-two-col" style={styles.aboutHomeContainer}>
           <div style={styles.aboutHomeContent}>
             <span className="section-tag-green">About Us</span>
@@ -93,6 +77,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Stats Counter Section */}
+      <AnimatedSection direction="up" delay={0.2}>
+        <section style={styles.statsSection}>
+          <div className="container">
+            <div className="responsive-grid home-stats-grid" style={styles.statsGrid}>
+            {stats.map((stat, idx) => (
+              <div key={idx} className="glass-panel" style={styles.statCard}>
+                <h3 style={styles.statVal}>{stat.value}</h3>
+                <h4 style={styles.statLabel}>{stat.label}</h4>
+                <p style={styles.statSub}>{stat.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      </AnimatedSection>
 
       {/* NEW FEATURED INFRASTRUCTURE SECTION */}
       <section style={styles.gallerySection}>
@@ -440,16 +441,29 @@ const styles = {
     marginTop: 0,
   },
   aboutHomeSection: {
-    background: 'var(--bg-tertiary)',
-    padding: '7rem 0',
+    position: 'relative',
+    background: 'url("/about-img.jpeg") no-repeat center center',
+    backgroundSize: 'cover',
+    minHeight: 'calc(100vh - 80px)',
+    padding: '9rem 0',
     borderTop: '1px solid rgba(255,255,255,0.02)',
     borderBottom: '1px solid rgba(255,255,255,0.02)',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  aboutHeroOverlay: {
+    position: 'absolute',
+    inset: 0,
+    background: 'linear-gradient(90deg, rgba(7,9,8,0.94) 0%, rgba(7,9,8,0.76) 48%, rgba(7,9,8,0.46) 100%), linear-gradient(to bottom, rgba(7,9,8,0.18), var(--bg-secondary))',
+    zIndex: 1,
   },
   aboutHomeContainer: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
     gap: '5rem',
-    alignItems: 'start',
+    alignItems: 'center',
+    position: 'relative',
+    zIndex: 2,
   },
   aboutHomeContent: {
     display: 'flex',
@@ -457,8 +471,11 @@ const styles = {
     alignItems: 'flex-start',
   },
   aboutHomeCopy: {
-    paddingLeft: '2.5rem',
-    borderLeft: '1px solid var(--border-accent)',
+    padding: '2rem',
+    border: '1px solid var(--border-accent)',
+    borderRadius: '14px',
+    background: 'rgba(7, 9, 8, 0.64)',
+    backdropFilter: 'blur(14px)',
   },
   aboutHomeText: {
     fontSize: '1.08rem',
