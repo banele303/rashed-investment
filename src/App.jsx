@@ -98,8 +98,13 @@ function Navigation() {
         </div>
 
         {/* Mobile Toggle */}
-        <button style={styles.mobileToggle} onClick={() => setIsOpen(!isOpen)} className="nav-toggle-mobile">
-          {isOpen ? <X size={24} color="var(--accent-primary)" /> : <Menu size={24} />}
+        <button
+          style={styles.mobileToggle}
+          onClick={() => setIsOpen(!isOpen)}
+          className="nav-toggle-mobile"
+          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+        >
+          {isOpen ? <X size={24} color="var(--accent-primary)" /> : <Menu size={24} color="#FFFFFF" />}
         </button>
       </div>
 
@@ -351,10 +356,17 @@ const styles = {
   },
   mobileToggle: {
     display: 'none',
-    background: 'none',
-    border: 'none',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '44px',
+    height: '44px',
+    background: 'rgba(255, 255, 255, 0.08)',
+    border: '1px solid rgba(156, 180, 146, 0.25)',
+    borderRadius: '8px',
+    color: '#FFFFFF',
     cursor: 'pointer',
-    padding: '0.5rem',
+    padding: 0,
+    flexShrink: 0,
   },
   mobileDrawer: {
     position: 'absolute',
@@ -531,12 +543,13 @@ const styleSheet = document.createElement("style")
 styleSheet.innerText = `
   @media (max-width: 991px) {
     .nav-bar-desktop { display: none !important; }
-    .nav-toggle-mobile { display: block !important; }
+    .nav-toggle-mobile { display: inline-flex !important; }
     .app-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 3rem !important; }
     .site-cta-inner { flex-direction: column !important; align-items: flex-start !important; }
     .site-cta-actions { justify-content: flex-start !important; width: 100% !important; }
   }
   @media (max-width: 600px) {
+    nav img { max-width: 185px !important; height: 64px !important; }
     .app-footer-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
     .app-footer-bottom { flex-direction: column !important; align-items: flex-start !important; }
     .site-cta-band { padding: 3rem 0 !important; }
