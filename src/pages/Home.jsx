@@ -76,6 +76,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Landing Page Overview */}
+      <section style={styles.overviewSection}>
+        <div className="container responsive-two-col" style={styles.overviewContainer}>
+          <div style={styles.overviewIntro}>
+            <div style={styles.overviewImageFrame}>
+              <img
+                src="/about-img.jpeg"
+                alt="Modern construction and property development site"
+                style={styles.overviewImage}
+              />
+            </div>
+            <span className="section-tag-green">Landing Page</span>
+            <h2 className="section-title">OVERVIEW</h2>
+          </div>
+          <div className="mobile-copy-panel" style={styles.overviewCopy}>
+            <p style={styles.overviewText}>
+              Our company is aligned to the National Development Plan 2030 which seeks to create economic activities in communities in order to reduce poverty, grow the economy and create jobs in a sustainable and environmentally friendly manner. As such, our projects supplement power by using renewable energy (solar) to reduce pressure from the national grid. We also develop our own water treatment plants to support water preservation, recognising that water is a scarce resource in our country.
+            </p>
+            <p style={styles.overviewText}>
+              Our key objective is to reverse the demeaning trend of substandard rural development and actively contribute towards restoring the dignity of previously marginalised communities through the development of modern commercial, retail, and industrial facilities that were historically exclusive to urban areas.
+            </p>
+            <p style={styles.overviewText}>
+              Our biggest investment is in people. We believe in transferring skills to the communities in which we operate. Our fundamental principle is to empower individuals by nurturing their talent across various sectors, including education, entertainment, small businesses development, artisan training, leadership and economic development. This is achieved through our Corporate Social Investment wing which addresses social ills affecting communities, such as poverty, crime, diseases, child-headed families, support for the elderly, Early Childhood Development (ECD) and other community development programs.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Counter Section */}
       <AnimatedSection direction="up" delay={0.2}>
         <section style={styles.statsSection}>
@@ -92,30 +120,6 @@ export default function Home() {
         </div>
       </section>
       </AnimatedSection>
-
-      {/* Landing Page Overview */}
-      <section style={styles.overviewSection}>
-        <div className="container responsive-two-col" style={styles.overviewContainer}>
-          <div style={styles.overviewIntro}>
-            <span className="section-tag-green">Overview</span>
-            <h2 className="section-title">Development with Dignity, Sustainability, and Local Growth</h2>
-          </div>
-          <div className="mobile-copy-panel" style={styles.overviewCopy}>
-            <p style={styles.overviewText}>
-              Rashed Investments is aligned to the National Development Plan 2030, which seeks to create economic activity in communities, reduce poverty, grow the economy, and create jobs in a sustainable and environmentally friendly manner.
-            </p>
-            <p style={styles.overviewText}>
-              Our projects supplement power through renewable solar energy to reduce pressure on the national grid. We also develop dedicated water treatment plants to support water preservation, recognising that water is a scarce resource in South Africa.
-            </p>
-            <p style={styles.overviewText}>
-              Our key objective is to reverse the demeaning trend of substandard rural development and help restore the dignity of previously marginalised communities through modern commercial, retail, and industrial facilities that were historically exclusive to urban areas.
-            </p>
-            <p style={styles.overviewText}>
-              Our biggest investment is in people. Through our Corporate Social Investment wing, we transfer skills and nurture talent across education, entertainment, small business development, artisan training, leadership, and economic development, while addressing social challenges such as poverty, crime, disease, child-headed families, support for the elderly, Early Childhood Development, and other community development programmes.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* About Us */}
       <section style={styles.aboutHomeSection}>
@@ -473,8 +477,25 @@ const styles = {
     alignItems: 'start',
   },
   overviewIntro: {
-    position: 'sticky',
-    top: '7rem',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  overviewImageFrame: {
+    width: '100%',
+    borderRadius: '18px',
+    overflow: 'hidden',
+    border: '1px solid var(--border-accent)',
+    boxShadow: '0 25px 50px -12px rgba(0,0,0,0.35)',
+    marginBottom: '2rem',
+    background: 'var(--bg-tertiary)',
+  },
+  overviewImage: {
+    width: '100%',
+    height: '360px',
+    display: 'block',
+    objectFit: 'cover',
+    objectPosition: 'center',
   },
   overviewCopy: {
     display: 'grid',

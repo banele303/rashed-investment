@@ -7,7 +7,7 @@ const teamMembers = [
     id: 1,
     name: 'Ndivhuwo Khangale',
     role: 'Executive Director',
-    image: '/dad.png',
+    image: '/director_ndivhuwo.png',
     bio: 'Ndivhuwo leads the strategic vision of Rashed Investments, driving sustainable development and strategic partnerships across rural and urban sectors.',
     email: 'ndivhuwo@rashed.co.za'
   },
@@ -15,7 +15,7 @@ const teamMembers = [
     id: 2,
     name: 'Vhahangwele Khangale',
     role: 'Technical Director',
-    image: '/small daddy.png',
+    image: '/director_vhahangwele.png',
     bio: 'Overseeing all engineering and construction phases, Vhahangwele ensures every project meets premium quality and strict safety standards.',
     email: 'vhahangwele@rashed.co.za'
   },
@@ -23,7 +23,7 @@ const teamMembers = [
     id: 3,
     name: 'Monica Khangale',
     role: 'Marketing and Communications Executive',
-    image: '/lady.jpeg',
+    image: '/director_monica.png',
     bio: 'Monica manages daily operations, community stakeholder engagement, and the integration of CSI programs into core business activities.',
     email: 'monica@rashed.co.za'
   }
