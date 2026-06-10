@@ -67,8 +67,8 @@ export default function Contact() {
 
               {/* Director cards */}
               {[
-                { name: 'Ndivhuwo Khangale', role: 'Executive Director', phone: '072 254 9448', email: 'ndivhuwo@rashed.co.za', img: '/director_ndivhuwo.png' },
-                { name: 'Vhahangwele Khangale', role: 'Technical Director', phone: '067 285 5095', email: 'vhahangwele@rashed.co.za', img: '/director_vhahangwele.png' },
+                { name: 'Ndivhuwo Khangale', role: 'Executive Director', phone: '072 254 9448', email: 'ndivhuwo@rashed.co.za', img: '/dad.png' },
+                { name: 'Vhahangwele Khangale', role: 'Technical Director', phone: '067 285 5095', email: 'vhahangwele@rashed.co.za', img: '/small daddy.png' },
               ].map((d, idx) => (
                 <div key={idx} style={styles.directorCard}>
                   <img src={d.img} alt={d.name} style={styles.directorAvatar}

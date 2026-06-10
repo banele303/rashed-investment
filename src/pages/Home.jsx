@@ -49,61 +49,6 @@ export default function Home() {
         <meta name="description" content="100% Black-owned property development firm specializing in rural and traditional land developments. Aligned with South African NDP 2030." />
       </Helmet>
 
-      {/* NEW HERO SECTION WITH FULL BACKGROUND IMAGE */}
-      <section className="home-hero-section" style={styles.heroSection}>
-        <div style={styles.heroOverlay}></div>
-        <div className="container" style={styles.heroContainer}>
-          <div style={styles.heroContent} className="animate-fade-in">
-            <div className="glow-badge" style={{ marginBottom: '1.5rem', background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)' }}>
-              <span style={{ color: '#FFFFFF' }}>Sustainable Property Specialists</span>
-            </div>
-            <p className="home-hero-subtitle" style={styles.heroSubtitle}>
-              Developing modern commercial, retail, and industrial infrastructure in rural and traditional communities across South Africa. Aligned to the National Development Plan 2030.
-            </p>
-            <div className="responsive-button-row home-hero-buttons" style={styles.heroBtns}>
-              <Link to="/projects" className="btn-premium btn-primary">
-                <span>Explore Flagship Project</span>
-                <ArrowRight size={16} />
-              </Link>
-              <Link to="/about" className="btn-premium btn-secondary">
-                <span>Meet Our Leadership</span>
-              </Link>
-            </div>
-            <h1 className="home-flagship-label" style={styles.flagshipLabel}>
-              Urban Village <span style={styles.flagshipLabelAccent}>Shopping Centre</span>
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      {/* Landing Page Overview */}
-      <section style={styles.overviewSection}>
-        <div className="container responsive-two-col" style={styles.overviewContainer}>
-          <div style={styles.overviewIntro}>
-            <div style={styles.overviewImageFrame}>
-              <img
-                src="/about-img.jpeg"
-                alt="Modern construction and property development site"
-                style={styles.overviewImage}
-              />
-            </div>
-            <span className="section-tag-green">Landing Page</span>
-            <h2 className="section-title">OVERVIEW</h2>
-          </div>
-          <div className="mobile-copy-panel" style={styles.overviewCopy}>
-            <p style={styles.overviewText}>
-              Our company is aligned to the National Development Plan 2030 which seeks to create economic activities in communities in order to reduce poverty, grow the economy and create jobs in a sustainable and environmentally friendly manner. As such, our projects supplement power by using renewable energy (solar) to reduce pressure from the national grid. We also develop our own water treatment plants to support water preservation, recognising that water is a scarce resource in our country.
-            </p>
-            <p style={styles.overviewText}>
-              Our key objective is to reverse the demeaning trend of substandard rural development and actively contribute towards restoring the dignity of previously marginalised communities through the development of modern commercial, retail, and industrial facilities that were historically exclusive to urban areas.
-            </p>
-            <p style={styles.overviewText}>
-              Our biggest investment is in people. We believe in transferring skills to the communities in which we operate. Our fundamental principle is to empower individuals by nurturing their talent across various sectors, including education, entertainment, small businesses development, artisan training, leadership and economic development. This is achieved through our Corporate Social Investment wing which addresses social ills affecting communities, such as poverty, crime, diseases, child-headed families, support for the elderly, Early Childhood Development (ECD) and other community development programs.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Stats Counter Section */}
       <AnimatedSection direction="up" delay={0.2}>
         <section style={styles.statsSection}>
@@ -492,49 +437,7 @@ const styles = {
     padding: '3.5rem 0',
     position: 'relative',
     zIndex: 10,
-    marginTop: '-80px',
-  },
-  overviewSection: {
-    background: 'var(--bg-secondary)',
-    padding: '7rem 0',
-  },
-  overviewContainer: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
-    gap: '5rem',
-    alignItems: 'start',
-  },
-  overviewIntro: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-  },
-  overviewImageFrame: {
-    width: '100%',
-    borderRadius: '18px',
-    overflow: 'hidden',
-    border: '1px solid var(--border-accent)',
-    boxShadow: '0 25px 50px -12px rgba(0,0,0,0.35)',
-    marginBottom: '2rem',
-    background: 'var(--bg-tertiary)',
-  },
-  overviewImage: {
-    width: '100%',
-    height: '360px',
-    display: 'block',
-    objectFit: 'cover',
-    objectPosition: 'center',
-  },
-  overviewCopy: {
-    display: 'grid',
-    gap: '1.5rem',
-    paddingLeft: '2.5rem',
-    borderLeft: '1px solid var(--border-accent)',
-  },
-  overviewText: {
-    fontSize: '1.08rem',
-    lineHeight: '1.8',
-    color: 'var(--text-secondary)',
+    marginTop: 0,
   },
   aboutHomeSection: {
     background: 'var(--bg-tertiary)',
