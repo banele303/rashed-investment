@@ -6,7 +6,7 @@ const teamMembers = [
   {
     id: 1,
     name: 'Ndivhuwo Khangale',
-    role: 'Executive Director & CEO',
+    role: 'Executive Director',
     image: '/dad.png',
     bio: 'Ndivhuwo leads the strategic vision of Rashed Investments, driving sustainable development and strategic partnerships across rural and urban sectors.',
     email: 'ndivhuwo@rashed.co.za'
@@ -22,7 +22,7 @@ const teamMembers = [
   {
     id: 3,
     name: 'Monica Khangale',
-    role: 'Operations Director',
+    role: 'Marketing and Communications Executive',
     image: '/lady.jpeg',
     bio: 'Monica manages daily operations, community stakeholder engagement, and the integration of CSI programs into core business activities.',
     email: 'monica@rashed.co.za'

@@ -7,7 +7,7 @@ export default function About() {
   const team = [
     {
       name: "Ndivhuwo Khangale",
-      role: "Executive Director & CEO",
+      role: "Executive Director",
       image: "/director_ndivhuwo.png",
       email: "ndivhuwo@rashed.co.za",
       phone: "072 254 9448",
@@ -36,7 +36,7 @@ export default function About() {
     },
     {
       name: "Ompha Monica Khangale",
-      role: "Marketing Communications Executive",
+      role: "Marketing and Communications Executive",
       image: "/director_monica.png",
       email: "info@rashed.co.za",
       phone: "072 254 9448",
@@ -66,20 +66,33 @@ export default function About() {
               <Building size={16} style={{ marginRight: '8px' }} />
               <span>Corporate Profile</span>
             </div>
-            <h1 style={styles.heroTitle}>
-              Shaping the Future of <br />
-              <span className="text-green-gradient">Sustainable Infrastructure</span>
+            <h1 className="about-hero-title" style={styles.heroTitle}>
+              About Us & Team
             </h1>
             <p style={styles.heroDesc}>
-              Rashed Investments is a premier, 100% Black-owned property development and investment firm. We are dedicated to redefining rural and commercial landscapes through innovative, world-class infrastructure development and strategic partnerships.
+              Rashed Investments is a 100% Black-owned property development and investment firm redefining rural and commercial landscapes through modern infrastructure, sustainable services, and strategic partnerships.
             </p>
+            <div className="about-hero-stats" style={styles.heroStats}>
+              <div style={styles.heroStat}>
+                <strong style={styles.heroStatValue}>2022</strong>
+                <span style={styles.heroStatLabel}>Registered</span>
+              </div>
+              <div style={styles.heroStat}>
+                <strong style={styles.heroStatValue}>Level 1</strong>
+                <span style={styles.heroStatLabel}>B-BBEE</span>
+              </div>
+              <div style={styles.heroStat}>
+                <strong style={styles.heroStatValue}>100%</strong>
+                <span style={styles.heroStatLabel}>Black-Owned</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Intro Section */}
       <section style={styles.introSection}>
-        <div className="container" style={styles.introContainer}>
+        <div className="container about-intro-container" style={styles.introContainer}>
           <div style={styles.introContent} className="animate-fade-in">
             <h2 className="section-title" style={{ fontSize: '2.5rem' }}>
               Advancing Communities Through <span className="text-green-gradient">Socio-Economic Excellence</span>
@@ -106,15 +119,17 @@ export default function About() {
             </div>
           </div>
           <div style={styles.introVisual} className="animate-fade-in">
-            <div style={styles.imageWrapper}>
-              <img src="https://images.unsplash.com/photo-1541888081622-6b940e4ab786?q=80&w=2070&auto=format&fit=crop" alt="Our Investment Scope" style={styles.scopeImage} />
-              <div style={styles.imageOverlay} />
-            </div>
-            <div style={styles.panelCard} className="glass-panel">
+            <div style={styles.panelCard} className="glass-panel about-scope-card">
               <h3 style={styles.panelTitle} className="text-green-gradient">Our Investment Scope</h3>
               <p style={styles.panelText}>
                 We partner with traditional councils, government departments, and private financial institutions to construct infrastructure that supports essential services, spanning water preservation, sustainable sanitation, and extensive solar grid installations.
               </p>
+              <div style={styles.scopeList}>
+                <span style={styles.scopePill}>Commercial Property</span>
+                <span style={styles.scopePill}>Water & Sanitation</span>
+                <span style={styles.scopePill}>Renewable Energy</span>
+                <span style={styles.scopePill}>Job Creation</span>
+              </div>
             </div>
           </div>
         </div>
@@ -130,7 +145,7 @@ export default function About() {
               We are driven by a commitment to integrity, innovation, and impact. These core pillars guide every project we undertake, ensuring we deliver value that transcends the built environment.
             </p>
           </div>
-          <div style={styles.philosophyGrid}>
+          <div className="about-philosophy-grid" style={styles.philosophyGrid}>
             <div className="glass-panel-green" style={styles.philCard}>
               <Shield style={styles.philIcon} />
               <h3 style={styles.philTitle} className="text-green-gradient">Empowerment & Inclusion</h3>
@@ -163,13 +178,13 @@ const styles = {
   },
   heroSection: {
     position: 'relative',
-    height: '70vh',
-    minHeight: '600px',
-    backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop")',
+    minHeight: '82vh',
+    backgroundImage: 'url("/about-img.jpeg")',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center 40%',
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'flex-end',
+    padding: '10rem 0 5rem',
   },
   heroOverlay: {
     position: 'absolute',
@@ -177,30 +192,59 @@ const styles = {
     left: 0,
     right: 0,
     bottom: 0,
-    background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 100%)',
+    background: 'linear-gradient(90deg, rgba(7,9,8,0.94) 0%, rgba(7,9,8,0.72) 42%, rgba(7,9,8,0.35) 100%), linear-gradient(to bottom, rgba(7,9,8,0.45) 0%, rgba(7,9,8,0.25) 48%, var(--bg-secondary) 100%)',
     zIndex: 1,
   },
   heroContent: {
     position: 'relative',
     zIndex: 2,
-    maxWidth: '800px',
+    maxWidth: '760px',
   },
   heroTitle: {
-    fontSize: '4rem',
-    fontWeight: 800,
-    lineHeight: '1.1',
+    fontSize: '4.5rem',
+    fontWeight: 900,
+    lineHeight: '1',
     color: 'var(--text-primary)',
     marginBottom: '1.5rem',
-    letterSpacing: '-0.03em',
+    letterSpacing: 0,
+    textShadow: '0 10px 35px rgba(0,0,0,0.55)',
   },
   heroDesc: {
-    fontSize: '1.25rem',
+    fontSize: '1.22rem',
     lineHeight: '1.7',
-    color: 'var(--text-secondary)',
+    color: 'rgba(255,255,255,0.86)',
     maxWidth: '700px',
+    textShadow: '0 4px 24px rgba(0,0,0,0.45)',
+  },
+  heroStats: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, minmax(120px, 1fr))',
+    gap: '1rem',
+    maxWidth: '620px',
+    marginTop: '2rem',
+  },
+  heroStat: {
+    borderTop: '1px solid rgba(156,180,146,0.45)',
+    paddingTop: '1rem',
+  },
+  heroStatValue: {
+    display: 'block',
+    fontSize: '1.45rem',
+    color: '#FFFFFF',
+    fontWeight: 900,
+    lineHeight: 1,
+  },
+  heroStatLabel: {
+    display: 'block',
+    marginTop: '0.45rem',
+    color: 'rgba(255,255,255,0.68)',
+    fontSize: '0.78rem',
+    textTransform: 'uppercase',
+    letterSpacing: '0.12em',
+    fontWeight: 700,
   },
   introSection: {
-    padding: '8rem 0',
+    padding: '7rem 0',
     background: 'radial-gradient(circle at 10% 20%, rgba(156, 180, 146, 0.04) 0%, transparent 60%)',
   },
   introContainer: {
@@ -243,37 +287,19 @@ const styles = {
   },
   introVisual: {
     position: 'relative',
-  },
-  imageWrapper: {
-    position: 'relative',
-    borderRadius: '24px',
-    overflow: 'hidden',
-    marginBottom: '-4rem',
-    marginLeft: '2rem',
-    boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
-    border: '1px solid rgba(255,255,255,0.05)',
-    zIndex: 1,
-  },
-  scopeImage: {
-    width: '100%',
-    height: '400px',
-    objectFit: 'cover',
-    display: 'block',
-  },
-  imageOverlay: {
-    position: 'absolute',
-    inset: 0,
-    background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%)',
+    alignSelf: 'stretch',
+    display: 'flex',
+    alignItems: 'center',
   },
   panelCard: {
-    padding: '3rem',
+    padding: '3.25rem',
     borderRadius: '20px',
     border: '1px solid var(--border-accent)',
     position: 'relative',
     zIndex: 2,
-    marginRight: '2rem',
-    backgroundColor: 'rgba(20, 20, 20, 0.85)',
+    backgroundColor: 'rgba(13, 18, 14, 0.88)',
     backdropFilter: 'blur(16px)',
+    boxShadow: '0 25px 60px rgba(0,0,0,0.28)',
   },
   panelTitle: {
     fontSize: '1.5rem',
@@ -284,6 +310,24 @@ const styles = {
     fontSize: '1.05rem',
     lineHeight: '1.7',
     color: 'var(--text-secondary)',
+  },
+  scopeList: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '0.85rem',
+    marginTop: '2rem',
+  },
+  scopePill: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    minHeight: '38px',
+    padding: '0.55rem 0.85rem',
+    borderRadius: '6px',
+    background: 'rgba(156, 180, 146, 0.08)',
+    border: '1px solid rgba(156, 180, 146, 0.18)',
+    color: 'rgba(255,255,255,0.82)',
+    fontSize: '0.82rem',
+    fontWeight: 700,
   },
   philosophySection: {
     background: 'var(--bg-tertiary)',
@@ -340,27 +384,27 @@ const styles = {
 const localAboutStyleSheet = document.createElement("style")
 localAboutStyleSheet.innerText = `
   @media (max-width: 991px) {
-    .intro-container {
+    .about-intro-container {
       grid-template-columns: 1fr !important;
       gap: 4rem !important;
     }
-    .philosophy-grid {
+    .about-philosophy-grid {
       grid-template-columns: 1fr !important;
       gap: 2rem !important;
     }
-    div[style*="heroTitle"] {
-      fontSize: 2.8rem !important;
+    .about-hero-title {
+      font-size: 3rem !important;
     }
     div[style*="statsRow"] {
       flex-direction: column !important;
       gap: 1.5rem !important;
     }
-    div[style*="imageWrapper"] {
-      marginLeft: 0 !important;
-      marginBottom: 2rem !important;
+    .about-hero-stats {
+      grid-template-columns: 1fr !important;
+      max-width: 320px !important;
     }
-    div[style*="panelCard"] {
-      marginRight: 0 !important;
+    .about-scope-card {
+      padding: 2rem !important;
     }
   }
 `

@@ -43,7 +43,7 @@ function Navigation() {
 
   const navLinks = [
     { path: '/', label: 'Overview', icon: Building2 },
-    { path: '/about', label: 'About & Team', icon: Info },
+    { path: '/about', label: 'About us & Team', icon: Info },
     { path: '/services', label: 'Our Services', icon: Hammer },
     { path: '/projects', label: 'Flagship Project', icon: LayoutList },
     { path: '/blog', label: 'Insights & News', icon: BookOpen },
@@ -61,7 +61,7 @@ function Navigation() {
         {/* Logo — image only, no text */}
         <Link to="/" style={styles.logoLink}>
           <img 
-            src="/rashed-logo.png" 
+            src="/rashed-white-logo-cropped.png" 
             alt="Rashed Investments Logo" 
             style={styles.logoImg}
             onError={(e) => {
@@ -147,7 +147,7 @@ function Footer() {
         <div style={styles.footerBrand}>
           <div style={styles.footerLogo}>
             <img 
-              src="/rashed-logo.png" 
+              src="/rashed-white-logo-cropped.png" 
               alt="Rashed Logo" 
               style={styles.logoImg}
               onError={(e) => {
@@ -290,8 +290,11 @@ const styles = {
     gap: '0.85rem',
   },
   logoImg: {
-    height: '64px',
+    height: '76px',
     width: 'auto',
+    maxWidth: '230px',
+    objectFit: 'contain',
+    filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.45))',
   },
   desktopNav: {
     display: 'flex',

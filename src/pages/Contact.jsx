@@ -63,7 +63,7 @@ export default function Contact() {
 
               {/* Director cards */}
               {[
-                { name: 'Ndivhuwo Khangale', role: 'Executive Director & CEO', phone: '072 254 9448', email: 'ndivhuwo@rashed.co.za', img: '/director_ndivhuwo.png' },
+                { name: 'Ndivhuwo Khangale', role: 'Executive Director', phone: '072 254 9448', email: 'ndivhuwo@rashed.co.za', img: '/director_ndivhuwo.png' },
                 { name: 'Vhahangwele Khangale', role: 'Technical Director', phone: '067 285 5095', email: 'vhahangwele@rashed.co.za', img: '/director_vhahangwele.png' },
               ].map((d, idx) => (
                 <div key={idx} style={styles.directorCard}>
@@ -394,4 +394,3 @@ contactSheet.innerText = `
   .partner-logo-box:hover .partner-logo { filter: grayscale(0) brightness(1) !important; opacity: 1 !important; }
 `
 document.head.appendChild(contactSheet)
-

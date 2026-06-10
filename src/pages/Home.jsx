@@ -57,9 +57,6 @@ export default function Home() {
             <div className="glow-badge" style={{ marginBottom: '1.5rem', background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)' }}>
               <span style={{ color: '#FFFFFF' }}>Sustainable Property Specialists</span>
             </div>
-            <h1 style={styles.heroTitle}>
-              Urban Village <span style={{ color: 'var(--accent-primary)', textShadow: '0 0 20px rgba(156, 180, 146, 0.6)' }}>Shopping Centre</span>
-            </h1>
             <p style={styles.heroSubtitle}>
               Developing modern commercial, retail, and industrial infrastructure in rural and traditional communities across South Africa. Aligned to the National Development Plan 2030.
             </p>
@@ -72,6 +69,9 @@ export default function Home() {
                 <span>Meet Our Leadership</span>
               </Link>
             </div>
+            <h1 style={styles.flagshipLabel}>
+              Urban Village <span style={styles.flagshipLabelAccent}>Shopping Centre</span>
+            </h1>
           </div>
         </div>
       </section>
@@ -92,6 +92,52 @@ export default function Home() {
         </div>
       </section>
       </AnimatedSection>
+
+      {/* Landing Page Overview */}
+      <section style={styles.overviewSection}>
+        <div className="container" style={styles.overviewContainer}>
+          <div style={styles.overviewIntro}>
+            <span className="section-tag-green">Overview</span>
+            <h2 className="section-title">Development with Dignity, Sustainability, and Local Growth</h2>
+          </div>
+          <div style={styles.overviewCopy}>
+            <p style={styles.overviewText}>
+              Rashed Investments is aligned to the National Development Plan 2030, which seeks to create economic activity in communities, reduce poverty, grow the economy, and create jobs in a sustainable and environmentally friendly manner.
+            </p>
+            <p style={styles.overviewText}>
+              Our projects supplement power through renewable solar energy to reduce pressure on the national grid. We also develop dedicated water treatment plants to support water preservation, recognising that water is a scarce resource in South Africa.
+            </p>
+            <p style={styles.overviewText}>
+              Our key objective is to reverse the demeaning trend of substandard rural development and help restore the dignity of previously marginalised communities through modern commercial, retail, and industrial facilities that were historically exclusive to urban areas.
+            </p>
+            <p style={styles.overviewText}>
+              Our biggest investment is in people. Through our Corporate Social Investment wing, we transfer skills and nurture talent across education, entertainment, small business development, artisan training, leadership, and economic development, while addressing social challenges such as poverty, crime, disease, child-headed families, support for the elderly, Early Childhood Development, and other community development programmes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us */}
+      <section style={styles.aboutHomeSection}>
+        <div className="container" style={styles.aboutHomeContainer}>
+          <div style={styles.aboutHomeContent}>
+            <span className="section-tag-green">About Us</span>
+            <h2 className="section-title">Property Development for Rural and Township Growth</h2>
+          </div>
+          <div style={styles.aboutHomeCopy}>
+            <p style={styles.aboutHomeText}>
+              Rashed Investments is a 100% Black-owned property development company registered in 2022. The company specialises in the development of properties, especially in rural and traditional leaders-owned land.
+            </p>
+            <p style={styles.aboutHomeText}>
+              Our focus is to advance economic activities in rural and township areas through infrastructure development, basic services such as water and sanitation, renewable energy, job creation, health, and education.
+            </p>
+            <Link to="/about" className="btn-premium btn-secondary" style={styles.aboutHomeBtn}>
+              <span>Learn More</span>
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* NEW FEATURED INFRASTRUCTURE SECTION */}
       <section style={styles.gallerySection}>
@@ -184,7 +230,7 @@ export default function Home() {
             <span className="section-tag">Strategic Pillars</span>
             <h2 className="section-title">Aligned with National Progress</h2>
             <p className="section-subtitle">
-              Our projects support the South African National Development Plan 2030 by establishing localized economic hubs, reducing grid pressures through solar, and securing water resources.
+              Our strategic pillars translate national goals into practical development: local economic hubs, renewable energy, water security, dignified facilities, and skills transfer.
             </p>
           </div>
 
@@ -222,13 +268,22 @@ export default function Home() {
               Rashed: What's in the Name?
             </h2>
             <p style={styles.legacyText}>
-              Rashed is short for <strong>Rashede</strong>, our family or clan totem. The Khangales are part of the Vhafamadi clan, whose praise chant, or Tshirendo, carries the name Rashede. We originate from Ha-Mashau.
+              Rashed is short for <strong>Rashede</strong>, our family or clan totem. The Khangales are part of the Vhafamadi clan, whose praise chant, or <strong>Tshirendo</strong>, carries the name Rashede.
+            </p>
+            <p style={styles.legacyText}>
+              We are the Vhafamadi people who originate from Ha-Mashau, and when the praise hits us, it says:
             </p>
             <blockquote style={styles.blockquote}>
-              "Mufamadi. Rashede. Ratshivhomba. Randodza. Mukonde wa mubvumela ndodzi dzi ala, wa Ha-Ramutsindela wa thumbu ya ngwedi..."
+              "Mufamadi. Rashede. Ratshivhomba. Randodza. Mukonde wa mubvumela ndodzi dzi ala, wa Ha-Ramutsindela wa thumbu ya ngwedi ya nkunda ndi a shulula nda vhuya na mpato haya!"
             </blockquote>
             <p style={styles.legacyText}>
-              The name is our daily commitment to serving and nurturing local communities. When our late great-great-grandfather, Khangale, returned from the Anglo-Boer War, locals named him "Boulo". To this day, our family homestead is proudly called <strong>Ha-Boulo</strong>.
+              The name Rashed is a way of preserving our legacy and reminding ourselves of the values of serving and nurturing communities, values which our forefathers held in high esteem.
+            </p>
+            <p style={styles.legacyText}>
+              When our late great-grandfather, Khangale, returned from <strong>Paul Kruger's Second Anglo-Boer War (1899-1902)</strong>, locals were unable to pronounce the name "Paul" and named him <strong>Boulo</strong>. As a result, the Kruger name is referred to as <strong>Vhugala Phuka ha Boulo</strong> in Tshivenda.
+            </p>
+            <p style={styles.legacyText}>
+              Our family homestead is still called <strong>Ha-Boulo</strong> to this day, carrying that history forward as part of the Rashed Investments identity.
             </p>
             <div style={styles.legacyFooter}>
               <span style={styles.signatureName}>Boulo, Rashede!</span>
@@ -270,7 +325,7 @@ export default function Home() {
             <span className="section-tag-green">Social Responsibility</span>
             <h2 className="section-title">Corporate Social Investment (CSI)</h2>
             <p style={styles.csiSubText}>
-              Our biggest investment is in people. We believe in leaving an indelible mark on the communities where we operate. We run extensive training programs under our CSI wing.
+              We invest in people by creating pathways for education, artisan training, leadership, small business development, and community resilience in the areas where we operate.
             </p>
             <div style={styles.csiFeatures}>
               <div style={styles.csiFeatureItem}>
@@ -366,16 +421,6 @@ const styles = {
     alignItems: 'center',
     maxWidth: '900px',
   },
-  heroTitle: {
-    fontSize: '3.8rem',
-    fontWeight: 800,
-    lineHeight: 1.1,
-    marginBottom: '1.5rem',
-    fontFamily: 'var(--font-display)',
-    letterSpacing: '-0.02em',
-    color: '#FFFFFF',
-    textShadow: '0 4px 20px rgba(0,0,0,0.5)',
-  },
   heroSubtitle: {
     fontSize: '1.3rem',
     lineHeight: '1.75',
@@ -389,12 +434,82 @@ const styles = {
     gap: '1.5rem',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: '1.1rem',
+  },
+  flagshipLabel: {
+    fontSize: '2.4rem',
+    fontWeight: 800,
+    lineHeight: 1.15,
+    fontFamily: 'var(--font-display)',
+    color: '#FFFFFF',
+    textAlign: 'center',
+    textShadow: '0 4px 20px rgba(0,0,0,0.5)',
+  },
+  flagshipLabelAccent: {
+    color: 'var(--accent-primary)',
+    textShadow: '0 0 20px rgba(156, 180, 146, 0.6)',
   },
   statsSection: {
     padding: '3.5rem 0',
     position: 'relative',
     zIndex: 10,
     marginTop: '-80px',
+  },
+  overviewSection: {
+    background: 'var(--bg-secondary)',
+    padding: '7rem 0',
+  },
+  overviewContainer: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
+    gap: '5rem',
+    alignItems: 'start',
+  },
+  overviewIntro: {
+    position: 'sticky',
+    top: '7rem',
+  },
+  overviewCopy: {
+    display: 'grid',
+    gap: '1.5rem',
+    paddingLeft: '2.5rem',
+    borderLeft: '1px solid var(--border-accent)',
+  },
+  overviewText: {
+    fontSize: '1.08rem',
+    lineHeight: '1.8',
+    color: 'var(--text-secondary)',
+  },
+  aboutHomeSection: {
+    background: 'var(--bg-tertiary)',
+    padding: '7rem 0',
+    borderTop: '1px solid rgba(255,255,255,0.02)',
+    borderBottom: '1px solid rgba(255,255,255,0.02)',
+  },
+  aboutHomeContainer: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
+    gap: '5rem',
+    alignItems: 'start',
+  },
+  aboutHomeContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  aboutHomeCopy: {
+    paddingLeft: '2.5rem',
+    borderLeft: '1px solid var(--border-accent)',
+  },
+  aboutHomeText: {
+    fontSize: '1.08rem',
+    lineHeight: '1.8',
+    color: 'var(--text-secondary)',
+    marginBottom: '1.35rem',
+  },
+  aboutHomeBtn: {
+    marginTop: '1rem',
   },
   statsGrid: {
     display: 'grid',
