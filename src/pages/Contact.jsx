@@ -35,23 +35,27 @@ export default function Contact() {
       </Helmet>
 
       {/* Hero Banner Section */}
-      <section style={styles.heroSection}>
+      <section className="page-hero-section" style={styles.heroSection}>
         <div className="container animate-fade-in" style={styles.heroContainer}>
           <div className="glow-badge" style={{ marginBottom: '1.5rem' }}>
             <span>Get in Touch</span>
           </div>
-          <h1 style={styles.heroTitle}>
+          <h1 className="page-hero-title hero-title" style={styles.heroTitle}>
             Connect With Our <span className="text-green-gradient">Property Specialists</span>
           </h1>
-          <p style={styles.heroDesc}>
+          <p className="page-hero-copy" style={styles.heroDesc}>
             Partner with Rashed Investments to build sustainable, premium commercial structures. Fill out the form below or reach out directly to our executive directors.
           </p>
+          <div className="responsive-button-row hero-mini-ctas">
+            <a href="tel:0722549448" className="btn-premium btn-primary">Call Executive</a>
+            <a href="mailto:info@rashed.co.za" className="btn-premium btn-secondary">Email Us</a>
+          </div>
         </div>
       </section>
 
       {/* Contact details + form */}
       <section style={styles.contactSection}>
-        <div className="container" style={styles.contactGrid}>
+        <div className="container contact-grid responsive-two-col" style={styles.contactGrid}>
 
           {/* Info column */}
           <div style={styles.infoCol}>
@@ -159,7 +163,7 @@ export default function Contact() {
                   <p style={styles.formSub}>We typically respond within 24 business hours.</p>
 
                   <form onSubmit={handleSubmit} style={styles.form}>
-                    <div style={styles.formRow}>
+                    <div className="form-row" style={styles.formRow}>
                       <div className="premium-form-group" style={{ flex: 1 }}>
                         <label htmlFor="name" className="premium-label">Full Name</label>
                         <input id="name" type="text" name="name" required value={formData.name}
@@ -172,7 +176,7 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    <div style={styles.formRow}>
+                    <div className="form-row" style={styles.formRow}>
                       <div className="premium-form-group" style={{ flex: 1 }}>
                         <label htmlFor="phone" className="premium-label">Phone Number</label>
                         <input id="phone" type="tel" name="phone" value={formData.phone}
@@ -221,12 +225,13 @@ export default function Contact() {
               We collaborate with municipalities, construction specialists, financial institutions, and private investors to execute large-scale rural land development projects.
             </p>
           </div>
-          <div style={styles.partnersGrid}>
+          <div className="partners-grid responsive-grid" style={styles.partnersGrid}>
             {partners.map((p, idx) => (
-              <div key={idx} style={styles.partnerLogoBox}>
+              <div key={idx} className="partner-logo-box" style={styles.partnerLogoBox}>
                 <img
                   src={p.src}
                   alt={p.label}
+                  className="partner-logo"
                   style={styles.partnerLogo}
                   onError={(e) => { e.target.style.display = 'none'; }}
                 />

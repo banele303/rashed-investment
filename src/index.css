@@ -510,3 +510,232 @@ section {
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
+
+/* Mobile-first repair layer for inline-styled page sections */
+.responsive-button-row,
+.hero-mini-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-mini-ctas {
+  margin-top: 1.6rem;
+}
+
+.hero-mini-ctas .btn-premium {
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 1100px) {
+  .responsive-two-col,
+  .about-intro-container,
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  .home-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .project-tabs-container {
+    justify-content: flex-start !important;
+    gap: 1.5rem !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .project-tabs-container button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  section,
+  .home-hero-section,
+  .page-hero-section,
+  .services-hero {
+    padding-top: 4.25rem !important;
+    padding-bottom: 4.25rem !important;
+  }
+
+  .home-hero-section {
+    min-height: calc(100svh - 80px) !important;
+  }
+
+  .page-hero-section {
+    min-height: auto !important;
+  }
+
+  .section-title,
+  .page-hero-title,
+  .about-hero-title,
+  .home-flagship-label {
+    font-size: 2.25rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .home-flagship-label {
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+  }
+
+  .home-hero-subtitle,
+  .page-hero-copy,
+  .section-subtitle,
+  .heroDesc,
+  p {
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .responsive-grid,
+  .home-photo-grid,
+  .home-blog-grid,
+  .project-features-grid,
+  .project-gallery-grid,
+  .services-sector-grid,
+  .blog-card-grid,
+  .team-card-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.35rem !important;
+  }
+
+  .home-stats-grid,
+  .project-stats-grid,
+  .services-hero-stats,
+  .partners-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .responsive-header-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .responsive-button-row,
+  .home-hero-buttons,
+  .hero-mini-ctas {
+    width: 100%;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+  }
+
+  .responsive-button-row > *,
+  .home-hero-buttons > *,
+  .hero-mini-ctas > *,
+  .btn-premium {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .mobile-copy-panel {
+    padding-left: 0 !important;
+    border-left: none !important;
+  }
+
+  .project-location {
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem !important;
+  }
+
+  .project-tabs-container {
+    padding: 0 1rem !important;
+  }
+
+  .services-timeline {
+    gap: 1.5rem !important;
+  }
+
+  .services-timeline-item {
+    gap: 1rem !important;
+  }
+
+  .services-timeline-body,
+  .glass-panel,
+  .glass-panel-green {
+    border-radius: 12px !important;
+  }
+
+  .services-timeline-body,
+  .about-scope-card,
+  .contact-grid .glass-panel,
+  .team-card-grid .glass-panel {
+    padding: 1.4rem !important;
+  }
+
+  .about-hero-stats {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+  }
+
+  .perfect-dark-input,
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  .form-row {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  .site-cta-title {
+    font-size: 1.55rem !important;
+  }
+
+  .section-tag,
+  .section-tag-green,
+  .glow-badge,
+  .glow-badge-green {
+    letter-spacing: 0.08em !important;
+    font-size: 0.72rem !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    padding: 0 0.9rem;
+  }
+
+  .section-title,
+  .page-hero-title,
+  .about-hero-title,
+  .home-flagship-label {
+    font-size: 2rem !important;
+  }
+
+  .app-footer-grid,
+  .app-footer-bottom {
+    text-align: left;
+  }
+
+  .site-cta-actions {
+    width: 100%;
+  }
+}

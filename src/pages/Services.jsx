@@ -1,6 +1,7 @@
 import React from 'react'
 import { Search, Compass, DollarSign, HardHat, ShieldCheck, ShoppingBag, Droplet, Fuel, Home as HomeIcon, Sun, Heart, CheckCircle2, TrendingUp, Users, Target } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 
 export default function Services() {
   const lifecycle = [
@@ -79,16 +80,16 @@ export default function Services() {
       </Helmet>
       
       {/* Hero Banner with Dark Architectural Image overlay */}
-      <section style={styles.heroBanner}>
+      <section className="page-hero-section services-hero" style={styles.heroBanner}>
         <div className="container" style={styles.heroContainer}>
           <div className="glow-badge-green" style={{ marginBottom: '1.5rem' }}>
             <span>Corporate Vision</span>
           </div>
-          <h1 style={styles.heroTitle}>Developing Dignified Spaces</h1>
-          <p style={styles.heroText}>
+          <h1 className="page-hero-title" style={styles.heroTitle}>Developing Dignified Spaces</h1>
+          <p className="page-hero-copy" style={styles.heroText}>
             To lead the architectural and economic transformation of rural communities through high-quality, sustainable property developments, restoring dignity to historically underserved areas. Our turnkey solutions span from visionary blueprints to operational mastery, forging landmarks of progress.
           </p>
-          <div style={styles.heroStats}>
+          <div className="responsive-grid services-hero-stats" style={styles.heroStats}>
             <div style={styles.statBox}>
               <TrendingUp size={28} color="var(--accent-primary)" style={{marginBottom: '0.5rem'}} />
               <div style={styles.statNumber}>$500M+</div>
@@ -104,6 +105,10 @@ export default function Services() {
               <div style={styles.statNumber}>15+</div>
               <div style={styles.statLabel}>Sectors Covered</div>
             </div>
+          </div>
+          <div className="responsive-button-row hero-mini-ctas">
+            <Link to="/contact" className="btn-premium btn-primary">Request Services</Link>
+            <Link to="/projects" className="btn-premium btn-secondary">See Project Work</Link>
           </div>
         </div>
       </section>
@@ -132,23 +137,23 @@ export default function Services() {
             </p>
           </div>
 
-          <div style={styles.timelineContainer}>
+          <div className="services-timeline" style={styles.timelineContainer}>
             {lifecycle.map((stage, idx) => {
               const Icon = stage.icon
               return (
-                <div key={idx} style={styles.timelineItem}>
+                <div key={idx} className="services-timeline-item" style={styles.timelineItem}>
                   <div style={styles.timelineNodeContainer}>
                     <div style={styles.timelineNodeGlow}>{stage.step}</div>
                   </div>
-                  <div className="glass-panel" style={styles.timelineBody}>
-                    <div style={styles.timelineHeader}>
+                  <div className="glass-panel services-timeline-body" style={styles.timelineBody}>
+                    <div className="responsive-header-row" style={styles.timelineHeader}>
                       <h3 style={styles.timelineTitle}>{stage.title}</h3>
                       <div style={styles.timelineIconWrapper}>
                         <Icon size={22} color="var(--accent-primary)" />
                       </div>
                     </div>
                     <p style={styles.timelineDesc}>{stage.desc}</p>
-                    <div style={styles.timelineFeatures}>
+                    <div className="responsive-button-row" style={styles.timelineFeatures}>
                       <div style={styles.featureItem}><CheckCircle2 size={16} color="var(--accent-primary)" /> <span style={{marginLeft: '0.5rem'}}>Quality Assured</span></div>
                       <div style={styles.featureItem}><CheckCircle2 size={16} color="var(--accent-primary)" /> <span style={{marginLeft: '0.5rem'}}>Expert Led</span></div>
                     </div>
@@ -171,7 +176,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          <div className="responsive-grid services-sector-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             {sectors.map((sector, idx) => {
               const Icon = sector.icon
               return (
@@ -422,4 +427,3 @@ const styles = {
     border: '1px solid rgba(255,255,255,0.05)',
   }
 }
-

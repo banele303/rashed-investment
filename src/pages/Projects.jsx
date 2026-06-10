@@ -41,26 +41,30 @@ export default function Projects() {
       </Helmet>
 
       {/* Hero Head */}
-      <section style={styles.projectHero}>
+      <section className="page-hero-section" style={styles.projectHero}>
         <div style={styles.heroOverlay}></div>
         <div className="container" style={styles.projectHeroContainer}>
           <div className="glow-badge" style={{ marginBottom: '1.5rem' }}>
             <span>Flagship Property Development</span>
           </div>
-          <h1 style={styles.projectTitle}>Urban Village Lifestyle Shopping Centre</h1>
-          <p style={styles.projectLocation}>
+          <h1 className="page-hero-title" style={styles.projectTitle}>Urban Village Lifestyle Shopping Centre</h1>
+          <p className="project-location" style={styles.projectLocation}>
             <MapPin size={18} color="var(--accent-primary)" />
             <span>Tshishushuru Village, Lwamondo, Limpopo</span>
           </p>
-          <p style={styles.projectHeroDesc}>
+          <p className="page-hero-copy" style={styles.projectHeroDesc}>
             An eco-friendly, mixed-use smart town development designed to reverse the demeaning trend of substandard rural developments by integrating shopping, dining, security, housing, and public services.
           </p>
+          <div className="responsive-button-row hero-mini-ctas">
+            <button type="button" style={styles.miniCtaBtn} onClick={() => setActiveTab('gallery')}>View Renderings</button>
+            <button type="button" style={styles.miniCtaBtn} onClick={() => setActiveTab('components')}>See Infrastructure</button>
+          </div>
         </div>
       </section>
 
       {/* Tabs Menu */}
       <div style={styles.tabsWrapper}>
-        <div className="container" style={styles.tabsContainer}>
+        <div className="container project-tabs-container" style={styles.tabsContainer}>
           <button 
             style={{
               ...styles.tabBtn, 
@@ -103,7 +107,7 @@ export default function Projects() {
           
           {/* OVERVIEW PANEL */}
           {activeTab === 'overview' && (
-            <div style={styles.overviewGrid} className="animate-fade-in">
+            <div style={styles.overviewGrid} className="animate-fade-in responsive-two-col">
               <div style={styles.overviewContent}>
                 <h2 style={styles.panelHeading} className="text-green-gradient">The Smart Town Concept</h2>
                 <p style={styles.panelParagraph}>
@@ -113,7 +117,7 @@ export default function Projects() {
                   Powered by clean photovoltaic solar grids and supplied by our on-site water purification systems, this smart development is built to withstand national infrastructure failures while actively promoting water preservation and green energy usage.
                 </p>
 
-                <div style={styles.statsGrid}>
+                <div className="responsive-grid project-stats-grid" style={styles.statsGrid}>
                   <div style={styles.statBox}>
                     <h4 style={styles.statNumber}>15k+</h4>
                     <p style={styles.statLabel}>Expected Daily Visitors</p>
@@ -186,7 +190,7 @@ export default function Projects() {
           {activeTab === 'components' && (
             <div className="animate-fade-in">
               <h2 style={styles.panelHeading} className="text-green-gradient">Commercial &amp; Transport Layout</h2>
-              <div style={styles.featuresGrid}>
+              <div className="responsive-grid project-features-grid" style={styles.featuresGrid}>
                 {features.map((feat, idx) => (
                   <div key={idx} className="glass-panel" style={styles.featCard}>
                     <div style={styles.checkWrapper}>
@@ -201,7 +205,7 @@ export default function Projects() {
               </div>
 
               <h2 style={{...styles.panelHeading, marginTop: '5rem'}} className="text-green-gradient">Public Health &amp; Safety Desks</h2>
-              <div style={styles.featuresGrid}>
+              <div className="responsive-grid project-features-grid" style={styles.featuresGrid}>
                 {publicServices.map((service, idx) => (
                   <div key={idx} className="glass-panel" style={styles.featCard}>
                     <div style={styles.checkWrapper}>
@@ -225,7 +229,7 @@ export default function Projects() {
                 The following layouts and blueprints were extracted from the official corporate profile, representing current engineering surveys and site planning for the Limpopo development. Click any image to view details in full resolution.
               </p>
               
-              <div style={styles.galleryGrid}>
+              <div className="responsive-grid project-gallery-grid" style={styles.galleryGrid}>
                 {galleryImages.map((img, idx) => (
                   <div key={idx} className="glass-panel" style={styles.galleryCard} onClick={() => openLightbox(idx)}>
                     <div style={styles.galleryImgWrapper}>
@@ -356,6 +360,16 @@ const styles = {
     fontSize: '1.02rem',
     cursor: 'pointer',
     transition: 'var(--transition-fast)',
+  },
+  miniCtaBtn: {
+    minHeight: '42px',
+    padding: '0.65rem 0.95rem',
+    borderRadius: '6px',
+    border: '1px solid rgba(156, 180, 146, 0.35)',
+    background: 'rgba(156, 180, 146, 0.10)',
+    color: 'var(--text-primary)',
+    fontWeight: 800,
+    cursor: 'pointer',
   },
   panelSection: {
     padding: '5rem 0',

@@ -50,17 +50,17 @@ export default function Home() {
       </Helmet>
 
       {/* NEW HERO SECTION WITH FULL BACKGROUND IMAGE */}
-      <section style={styles.heroSection}>
+      <section className="home-hero-section" style={styles.heroSection}>
         <div style={styles.heroOverlay}></div>
         <div className="container" style={styles.heroContainer}>
           <div style={styles.heroContent} className="animate-fade-in">
             <div className="glow-badge" style={{ marginBottom: '1.5rem', background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)' }}>
               <span style={{ color: '#FFFFFF' }}>Sustainable Property Specialists</span>
             </div>
-            <p style={styles.heroSubtitle}>
+            <p className="home-hero-subtitle" style={styles.heroSubtitle}>
               Developing modern commercial, retail, and industrial infrastructure in rural and traditional communities across South Africa. Aligned to the National Development Plan 2030.
             </p>
-            <div style={styles.heroBtns}>
+            <div className="responsive-button-row home-hero-buttons" style={styles.heroBtns}>
               <Link to="/projects" className="btn-premium btn-primary">
                 <span>Explore Flagship Project</span>
                 <ArrowRight size={16} />
@@ -69,7 +69,7 @@ export default function Home() {
                 <span>Meet Our Leadership</span>
               </Link>
             </div>
-            <h1 style={styles.flagshipLabel}>
+            <h1 className="home-flagship-label" style={styles.flagshipLabel}>
               Urban Village <span style={styles.flagshipLabelAccent}>Shopping Centre</span>
             </h1>
           </div>
@@ -80,7 +80,7 @@ export default function Home() {
       <AnimatedSection direction="up" delay={0.2}>
         <section style={styles.statsSection}>
           <div className="container">
-            <div style={styles.statsGrid}>
+            <div className="responsive-grid home-stats-grid" style={styles.statsGrid}>
             {stats.map((stat, idx) => (
               <div key={idx} className="glass-panel" style={styles.statCard}>
                 <h3 style={styles.statVal}>{stat.value}</h3>
@@ -95,12 +95,12 @@ export default function Home() {
 
       {/* Landing Page Overview */}
       <section style={styles.overviewSection}>
-        <div className="container" style={styles.overviewContainer}>
+        <div className="container responsive-two-col" style={styles.overviewContainer}>
           <div style={styles.overviewIntro}>
             <span className="section-tag-green">Overview</span>
             <h2 className="section-title">Development with Dignity, Sustainability, and Local Growth</h2>
           </div>
-          <div style={styles.overviewCopy}>
+          <div className="mobile-copy-panel" style={styles.overviewCopy}>
             <p style={styles.overviewText}>
               Rashed Investments is aligned to the National Development Plan 2030, which seeks to create economic activity in communities, reduce poverty, grow the economy, and create jobs in a sustainable and environmentally friendly manner.
             </p>
@@ -119,22 +119,28 @@ export default function Home() {
 
       {/* About Us */}
       <section style={styles.aboutHomeSection}>
-        <div className="container" style={styles.aboutHomeContainer}>
+        <div className="container responsive-two-col" style={styles.aboutHomeContainer}>
           <div style={styles.aboutHomeContent}>
             <span className="section-tag-green">About Us</span>
             <h2 className="section-title">Property Development for Rural and Township Growth</h2>
           </div>
-          <div style={styles.aboutHomeCopy}>
+          <div className="mobile-copy-panel" style={styles.aboutHomeCopy}>
             <p style={styles.aboutHomeText}>
               Rashed Investments is a 100% Black-owned property development company registered in 2022. The company specialises in the development of properties, especially in rural and traditional leaders-owned land.
             </p>
             <p style={styles.aboutHomeText}>
               Our focus is to advance economic activities in rural and township areas through infrastructure development, basic services such as water and sanitation, renewable energy, job creation, health, and education.
             </p>
-            <Link to="/about" className="btn-premium btn-secondary" style={styles.aboutHomeBtn}>
-              <span>Learn More</span>
-              <ArrowRight size={16} />
-            </Link>
+            <div className="responsive-button-row" style={styles.aboutHomeActions}>
+              <Link to="/about" className="btn-premium btn-secondary" style={styles.aboutHomeBtn}>
+                <span>Learn More</span>
+                <ArrowRight size={16} />
+              </Link>
+              <Link to="/contact" className="btn-premium btn-primary" style={styles.aboutHomeBtn}>
+                <span>Partner With Us</span>
+                <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -149,7 +155,7 @@ export default function Home() {
               We seamlessly integrate cutting-edge green technologies into our commercial developments, creating self-sustaining micro-cities.
             </p>
           </div>
-          <div style={styles.photoGrid}>
+          <div className="responsive-grid home-photo-grid" style={styles.photoGrid}>
             <div className="glass-panel" style={styles.photoCard}>
               <img src="/solar_infrastructure.png" alt="Commercial Solar Grid" style={styles.photoImg} />
               <div style={styles.photoInfo}>
@@ -178,7 +184,7 @@ export default function Home() {
       {/* NEW RECENT INSIGHTS / BLOG SECTION */}
       <section style={styles.blogSection}>
         <div className="container">
-          <div style={styles.blogHeaderRow}>
+          <div className="responsive-header-row" style={styles.blogHeaderRow}>
             <div>
               <span className="section-tag">Latest Updates</span>
               <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>News & Insights</h2>
@@ -189,7 +195,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div style={styles.blogGrid}>
+          <div className="responsive-grid home-blog-grid" style={styles.blogGrid}>
             <Link to="/blog/2" className="glass-panel" style={styles.blogCard}>
               <div style={styles.blogImgWrapper}>
                 <img src="/news_insights_1.png" alt="Construction Progress" style={styles.blogImg} />
@@ -261,7 +267,7 @@ export default function Home() {
 
       {/* Legacy & Totem Story */}
       <section style={styles.legacySection}>
-        <div className="container" style={styles.legacyContainer}>
+        <div className="container responsive-two-col" style={styles.legacyContainer}>
           <div style={styles.legacyContent} className="animate-fade-in">
             <span className="section-tag">Our Totem & Heritage</span>
             <h2 className="section-title">
@@ -320,7 +326,7 @@ export default function Home() {
 
       {/* CSI Section */}
       <section style={styles.csiSection}>
-        <div className="container" style={styles.csiContainer}>
+        <div className="container responsive-two-col" style={styles.csiContainer}>
           <div style={styles.csiContent}>
             <span className="section-tag-green">Social Responsibility</span>
             <h2 className="section-title">Corporate Social Investment (CSI)</h2>
@@ -509,7 +515,11 @@ const styles = {
     marginBottom: '1.35rem',
   },
   aboutHomeBtn: {
+    padding: '0.9rem 1.25rem',
+  },
+  aboutHomeActions: {
     marginTop: '1rem',
+    justifyContent: 'flex-start',
   },
   statsGrid: {
     display: 'grid',

@@ -143,7 +143,7 @@ function Navigation() {
 function Footer() {
   return (
     <footer style={styles.footer}>
-      <div className="container" style={styles.footerGrid}>
+      <div className="container app-footer-grid" style={styles.footerGrid}>
         <div style={styles.footerBrand}>
           <div style={styles.footerLogo}>
             <img 
@@ -213,7 +213,7 @@ function Footer() {
       </div>
 
       <div style={styles.footerBottom}>
-        <div className="container" style={styles.footerBottomContainer}>
+        <div className="container app-footer-bottom" style={styles.footerBottomContainer}>
           <p style={styles.copyrightText}>
             &copy; {new Date().getFullYear()} Rashed Investments. All Rights Reserved. 
           </p>
@@ -224,6 +224,28 @@ function Footer() {
         </div>
       </div>
     </footer>
+  )
+}
+
+function SiteCTA() {
+  return (
+    <section className="site-cta-band" style={styles.siteCta}>
+      <div className="container site-cta-inner" style={styles.siteCtaInner}>
+        <div>
+          <p style={styles.siteCtaEyebrow}>Ready to build locally?</p>
+          <h2 className="site-cta-title" style={styles.siteCtaTitle}>Start a property development conversation.</h2>
+        </div>
+        <div className="site-cta-actions" style={styles.siteCtaActions}>
+          <Link to="/contact" className="btn-premium btn-primary" style={styles.siteCtaBtn}>
+            <span>Talk to Us</span>
+            <ArrowUpRight size={16} />
+          </Link>
+          <Link to="/projects" className="btn-premium btn-secondary" style={styles.siteCtaBtn}>
+            <span>View Flagship</span>
+          </Link>
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -247,6 +269,7 @@ function App() {
               <Route path="/blog/:id" element={<BlogPost />} />
             </Routes>
           </main>
+          <SiteCTA />
           <Footer />
         </div>
       </Router>
@@ -466,6 +489,41 @@ const styles = {
     cursor: 'pointer',
     transition: 'var(--transition-fast)',
   },
+  siteCta: {
+    padding: '4rem 0',
+    background: 'linear-gradient(135deg, rgba(156,180,146,0.10), rgba(107,158,107,0.04))',
+    borderTop: '1px solid var(--border-color)',
+    borderBottom: '1px solid var(--border-color)',
+  },
+  siteCtaInner: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: '2rem',
+  },
+  siteCtaEyebrow: {
+    color: 'var(--accent-primary)',
+    fontSize: '0.82rem',
+    fontWeight: 800,
+    letterSpacing: '0.14em',
+    textTransform: 'uppercase',
+    marginBottom: '0.7rem',
+  },
+  siteCtaTitle: {
+    fontSize: '2rem',
+    fontWeight: 900,
+    lineHeight: 1.15,
+    margin: 0,
+  },
+  siteCtaActions: {
+    display: 'flex',
+    gap: '1rem',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-end',
+  },
+  siteCtaBtn: {
+    padding: '0.9rem 1.3rem',
+  },
 }
 
 // Global responsive simulator styling injection
@@ -474,10 +532,15 @@ styleSheet.innerText = `
   @media (max-width: 991px) {
     .nav-bar-desktop { display: none !important; }
     .nav-toggle-mobile { display: block !important; }
-    footer .container { grid-template-columns: 1fr 1fr !important; gap: 3rem !important; }
+    .app-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 3rem !important; }
+    .site-cta-inner { flex-direction: column !important; align-items: flex-start !important; }
+    .site-cta-actions { justify-content: flex-start !important; width: 100% !important; }
   }
   @media (max-width: 600px) {
-    footer .container { grid-template-columns: 1fr !important; gap: 2rem !important; }
+    .app-footer-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+    .app-footer-bottom { flex-direction: column !important; align-items: flex-start !important; }
+    .site-cta-band { padding: 3rem 0 !important; }
+    .site-cta-actions .btn-premium { width: 100% !important; }
   }
   a:hover {
     color: var(--accent-primary-hover) !important;

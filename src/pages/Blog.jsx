@@ -39,12 +39,12 @@ export default function Blog() {
         <meta name="description" content="Latest news, project updates, and insights from Rashed Investments." />
       </Helmet>
 
-      <section style={styles.headerSection}>
+      <section className="page-hero-section" style={styles.headerSection}>
         <div className="container" style={styles.headerContainer}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <span className="section-tag-green">Company Updates</span>
-            <h1 className="section-title">News & Insights</h1>
-            <p style={styles.headerDesc}>
+            <h1 className="section-title page-hero-title">News & Insights</h1>
+            <p className="page-hero-copy" style={styles.headerDesc}>
               Stay informed with our latest project milestones, community initiatives, and thought leadership in sustainable property development.
             </p>
           </motion.div>
@@ -53,7 +53,7 @@ export default function Blog() {
 
       <section style={styles.blogSection}>
         <div className="container">
-          <div style={styles.grid}>
+          <div className="responsive-grid blog-card-grid" style={styles.grid}>
             {posts.map((post, idx) => (
               <motion.article 
                 key={post.id} 
@@ -78,7 +78,7 @@ export default function Blog() {
                   </div>
                 </Link>
                 <div style={styles.content}>
-                  <div style={styles.meta}>
+                  <div className="responsive-button-row" style={styles.meta}>
                     <div style={styles.metaItem}>
                       <Calendar size={14} color="var(--accent-primary)" />
                       <span>{post.date}</span>

@@ -41,7 +41,7 @@ export default function TeamGallery() {
           </p>
         </div>
 
-        <div style={styles.grid}>
+        <div className="responsive-grid team-card-grid" style={styles.grid}>
           {teamMembers.map((member, index) => (
             <motion.div 
               key={member.id}
