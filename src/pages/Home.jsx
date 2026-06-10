@@ -325,6 +325,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Strategic Partners */}
+      <section style={styles.partnersSection}>
+        <div className="container">
+          <div style={styles.sectionHeader}>
+            <span className="section-tag-green">Our Partners</span>
+            <h2 className="section-title">Strategic Delivery Partners</h2>
+            <p className="section-subtitle">
+              We collaborate with specialist partners across energy, petroleum, and project delivery to support sustainable rural infrastructure.
+            </p>
+          </div>
+          <div className="responsive-grid home-partners-grid" style={styles.partnersGrid}>
+            {[
+              { src: '/partner-petrogrand.jpeg', name: 'Petrogrand' },
+              { src: '/partner-rpgenx.jpeg', name: 'RPGenX Renewable Power Generation' },
+              { src: '/partner-ubk-projects.jpeg', name: 'UBK Projects' },
+            ].map((partner) => (
+              <div key={partner.name} className="glass-panel" style={styles.partnerCard}>
+                <img
+                  src={partner.src}
+                  alt={`${partner.name} logo`}
+                  style={styles.partnerLogo}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Executive Leadership Team */}
       <TeamGallery />
 
@@ -701,6 +729,32 @@ const styles = {
   },
   carouselSection: {
     background: 'var(--bg-tertiary)',
+  },
+  partnersSection: {
+    background: 'var(--bg-secondary)',
+    padding: '7rem 0',
+  },
+  partnersGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+    gap: '2rem',
+  },
+  partnerCard: {
+    minHeight: '170px',
+    padding: '2rem',
+    borderRadius: '16px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#FFFFFF',
+    border: '1px solid rgba(156, 180, 146, 0.18)',
+  },
+  partnerLogo: {
+    width: '100%',
+    maxWidth: '280px',
+    maxHeight: '105px',
+    objectFit: 'contain',
+    display: 'block',
   },
   blogSection: {
     background: 'var(--bg-secondary)',
