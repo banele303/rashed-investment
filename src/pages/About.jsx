@@ -37,7 +37,7 @@ export default function About() {
     {
       name: "Ompha Monica Khangale",
       role: "Marketing and Communications Executive",
-      image: "/director_monica.png",
+      image: "/monica.jpeg",
       email: "info@rashed.co.za",
       phone: "072 254 9448",
       bio: "Dynamic and creatively-driven Marketing & Communications professional with over 8 years experience across public relations, event management, and entertainment.",
