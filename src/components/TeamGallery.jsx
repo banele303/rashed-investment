@@ -23,7 +23,7 @@ const teamMembers = [
     id: 3,
     name: 'Monica Khangale',
     role: 'Marketing and Communications Executive',
-    image: '/lady.jpeg',
+    image: '/monica.jpeg',
     bio: 'Monica manages daily operations, community stakeholder engagement, and the integration of CSI programs into core business activities.',
     email: 'monica@rashed.co.za'
   }
