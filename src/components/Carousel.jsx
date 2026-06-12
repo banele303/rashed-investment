@@ -3,24 +3,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    src: '/urban_village_carousel.png',
-    title: 'Urban Village Shopping Centre',
+    src: '/urban_village_shopping_centre.png',
+    title: 'Main Retail Frontage',
     sub: 'Modern rural retail development — Lwamondo, Limpopo',
   },
   {
-    src: '/extracted_images/image_3.png',
-    title: 'Centre Front Elevation',
-    sub: 'Engineering render of the street-facing facade',
+    src: '/urban_village_carousel.png',
+    title: 'Lifestyle Village Courtyard',
+    sub: 'Open-air retail and gathering spaces for the Lwamondo community',
   },
   {
-    src: '/extracted_images/image_17.png',
-    title: 'Lifestyle Complex 3D Render',
-    sub: 'Visualisation of the stand-alone lounge and retail wings',
+    src: '/hero_smart_town.png',
+    title: 'Solar-Ready Retail Wing',
+    sub: 'Sustainable commercial layout with integrated green infrastructure',
   },
   {
-    src: '/extracted_images/image_14.png',
-    title: 'Site Master Plan',
-    sub: 'Full-site zoning and infrastructure layout overview',
+    src: '/community_dev.png',
+    title: 'Community Plaza Concept',
+    sub: 'Pedestrian-friendly public realm with retail and civic activity',
   },
 ];
 

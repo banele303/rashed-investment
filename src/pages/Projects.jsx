@@ -292,7 +292,7 @@ const styles = {
   },
   projectHero: {
     position: 'relative',
-    background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 100%), url("/project_gallery_1.png") no-repeat center center / cover',
+    background: 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 100%), url("/urban_village_shopping_centre.png") no-repeat center center / cover',
     textAlign: 'center',
     padding: '7rem 0 5rem 0',
   },
