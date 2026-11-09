@@ -2,6 +2,7 @@ import React from 'react'
 import { Award, Briefcase, GraduationCap, Linkedin, Mail, Phone, ExternalLink, ArrowRight, Building, Leaf, Shield, Globe } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import TeamGallery from '../components/TeamGallery'
+import LeadershipVideoSpotlight from '../components/LeadershipVideoSpotlight'
 
 export default function About() {
   const team = [
@@ -164,6 +165,9 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Leadership Video Spotlight */}
+      <LeadershipVideoSpotlight />
 
       {/* Leadership Team */}
       <TeamGallery />

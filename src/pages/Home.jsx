@@ -3,6 +3,7 @@ import { ArrowRight, Zap, Droplet, Shield, Award, BookOpen, HeartHandshake, MapP
 import Carousel from '../components/Carousel'
 import Testimonials from '../components/Testimonials'
 import TeamGallery from '../components/TeamGallery'
+import LeadershipVideoSpotlight from '../components/LeadershipVideoSpotlight'
 import AnimatedSection from '../components/AnimatedSection'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
@@ -318,6 +319,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Leadership Video Spotlight: Limpopo Provincial Summit */}
+      <LeadershipVideoSpotlight />
 
       {/* Executive Leadership Team */}
       <TeamGallery />

@@ -615,10 +615,11 @@ section {
   .project-gallery-grid,
   .services-sector-grid,
   .blog-card-grid,
-  .team-card-grid {
+  .team-card-grid,
+  .video-spotlight-layout {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 1.35rem !important;
+    gap: 2rem !important;
   }
 
   .home-stats-grid,
